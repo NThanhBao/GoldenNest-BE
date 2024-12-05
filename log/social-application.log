@@ -1,0 +1,1361 @@
+2024-12-05T08:57:45.040+07:00  INFO 4084 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Starting GoldenNestApplication using Java 21.0.2 with PID 4084 (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes started by ntb09 in E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE)
+2024-12-05T08:57:45.056+07:00  INFO 4084 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-12-05T08:57:46.750+07:00  INFO 4084 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-05T08:57:46.837+07:00  INFO 4084 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 1 JPA repository interface.
+2024-12-05T08:57:48.160+07:00  INFO 4084 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2024-12-05T08:57:48.187+07:00  INFO 4084 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-05T08:57:48.188+07:00  INFO 4084 --- [GoldenNest] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-12-05T08:57:48.359+07:00  INFO 4084 --- [GoldenNest] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-05T08:57:48.360+07:00  INFO 4084 --- [GoldenNest] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3230 ms
+2024-12-05T08:57:48.570+07:00  INFO 4084 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-05T08:57:49.383+07:00  INFO 4084 --- [GoldenNest] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@55c50f52
+2024-12-05T08:57:49.388+07:00  INFO 4084 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-05T08:57:49.540+07:00  INFO 4084 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2024-12-05T08:57:49.541+07:00  INFO 4084 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-12-05T08:57:49.541+07:00  INFO 4084 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : 
+2024-12-05T08:57:49.573+07:00  INFO 4084 --- [GoldenNest] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/GoldenNest (MySQL 8.0)
+2024-12-05T08:57:49.720+07:00  INFO 4084 --- [GoldenNest] [main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.096s)
+2024-12-05T08:57:49.762+07:00  INFO 4084 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `goldennest`: 3
+2024-12-05T08:57:49.773+07:00  INFO 4084 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Schema `goldennest` is up to date. No migration necessary.
+2024-12-05T08:57:53.647+07:00  INFO 4084 --- [GoldenNest] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@32fefbe6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3e92bded, org.springframework.security.web.context.SecurityContextHolderFilter@2d2697a8, org.springframework.security.web.header.HeaderWriterFilter@489e1887, org.springframework.web.filter.CorsFilter@3bbab2c9, org.springframework.security.web.authentication.logout.LogoutFilter@3c2188b0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2df79942, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7ee0dbd1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@27b9d5b7, org.springframework.security.web.session.SessionManagementFilter@6e1a8e78, org.springframework.security.web.access.ExceptionTranslationFilter@479f738a, org.springframework.security.web.access.intercept.AuthorizationFilter@38c7ad43]
+2024-12-05T08:57:54.303+07:00  INFO 4084 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path ''
+2024-12-05T08:57:54.316+07:00  INFO 4084 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Started GoldenNestApplication in 9.878 seconds (process running for 17.908)
+2024-12-05T08:57:59.858+07:00  INFO 4084 --- [GoldenNest] [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-05T08:57:59.858+07:00  INFO 4084 --- [GoldenNest] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-05T08:57:59.860+07:00  INFO 4084 --- [GoldenNest] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-12-05T08:58:00.483+07:00  INFO 4084 --- [GoldenNest] [http-nio-8083-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 313 ms
+2024-12-05T08:58:14.405+07:00  INFO 4084 --- [GoldenNest] [http-nio-8083-exec-9] c.e.G.service.impl.AuthServiceImpl       : Đã tìm thấy người dùng: user1
+2024-12-05T08:58:14.482+07:00  INFO 4084 --- [GoldenNest] [http-nio-8083-exec-9] c.e.G.service.impl.AuthServiceImpl       : --LOGIN SUCCESSFUL FOR USER-- : user1
+2024-12-05T08:58:15.091+07:00  INFO 4084 --- [GoldenNest] [http-nio-8083-exec-9] c.e.G.service.impl.AuthServiceImpl       : Token for user user1: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVVNFUiIsInVzZXJJZCI6Ijg0YjQ4NGM4LWIxOWEtMTFlZi04Mjk3LTJjZjA1ZGI2NTkyOSIsInN1YiI6InVzZXIxIiwiaWF0IjoxNzMzMzYzODk0LCJleHAiOjE3MzYwNDIyOTR9.TMDyWemO6h5DWljjL-4GUdfne_dbtIaNjoyCNq_WK7E
+2024-12-05T08:59:37.484+07:00  INFO 4084 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-05T08:59:37.502+07:00  INFO 4084 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-05T09:10:40.532+07:00  INFO 31920 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Starting GoldenNestApplication using Java 21.0.2 with PID 31920 (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes started by ntb09 in E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE)
+2024-12-05T09:10:40.534+07:00  INFO 31920 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-12-05T09:10:41.407+07:00  INFO 31920 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-05T09:10:41.481+07:00  INFO 31920 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 1 JPA repository interface.
+2024-12-05T09:10:42.457+07:00  INFO 31920 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2024-12-05T09:10:42.471+07:00  INFO 31920 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-05T09:10:42.471+07:00  INFO 31920 --- [GoldenNest] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-12-05T09:10:42.571+07:00  INFO 31920 --- [GoldenNest] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-05T09:10:42.571+07:00  INFO 31920 --- [GoldenNest] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1975 ms
+2024-12-05T09:10:42.724+07:00  INFO 31920 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-05T09:10:43.353+07:00  INFO 31920 --- [GoldenNest] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5fd8dd66
+2024-12-05T09:10:43.356+07:00  INFO 31920 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-05T09:10:43.458+07:00  INFO 31920 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2024-12-05T09:10:43.458+07:00  INFO 31920 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-12-05T09:10:43.458+07:00  INFO 31920 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : 
+2024-12-05T09:10:43.484+07:00  INFO 31920 --- [GoldenNest] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/GoldenNest (MySQL 8.0)
+2024-12-05T09:10:43.553+07:00  INFO 31920 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `goldennest`.`flyway_schema_history` does not exist yet
+2024-12-05T09:10:43.559+07:00  INFO 31920 --- [GoldenNest] [main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.044s)
+2024-12-05T09:10:43.596+07:00  INFO 31920 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `goldennest`.`flyway_schema_history` ...
+2024-12-05T09:10:43.775+07:00  INFO 31920 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `goldennest`: << Empty Schema >>
+2024-12-05T09:10:43.796+07:00  INFO 31920 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "1 - Create Table"
+2024-12-05T09:10:43.809+07:00  WARN 31920 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.payments' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:10:43.813+07:00  WARN 31920 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.coupons' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:10:43.818+07:00  WARN 31920 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.product_media' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:10:43.823+07:00  WARN 31920 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.favorites' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:10:43.826+07:00  WARN 31920 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.carts' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:10:43.831+07:00  WARN 31920 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.reviews' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:10:43.835+07:00  WARN 31920 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.order_details' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:10:43.838+07:00  WARN 31920 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.orders' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:10:43.841+07:00  WARN 31920 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.products' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:10:43.844+07:00  WARN 31920 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.categories' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:10:43.849+07:00  WARN 31920 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.users' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:10:44.041+07:00 ERROR 31920 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migration of schema `goldennest` to version "1 - Create Table" failed! Please restore backups and roll back database and code!
+2024-12-05T09:10:44.071+07:00  WARN 31920 --- [GoldenNest] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V1__Create_Table.sql failed
+-------------------------------------
+SQL State  : HY000
+Error Code : 1215
+Message    : Cannot add foreign key constraint
+Location   : db/migration/V1__Create_Table.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V1__Create_Table.sql)
+Line       : 41
+Statement  : -- Tạo bảng products
+CREATE TABLE products (
+                        id CHAR(36) PRIMARY KEY,
+                        name VARCHAR(255) NOT NULL,
+                        price DECIMAL(10, 2) NOT NULL,
+                        description TEXT,
+                        category_id INT,
+                        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                        FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE SET NULL
+)
+
+2024-12-05T09:10:44.072+07:00  INFO 31920 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-05T09:10:44.081+07:00  INFO 31920 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-05T09:10:44.085+07:00  INFO 31920 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-12-05T09:10:44.100+07:00  INFO 31920 --- [GoldenNest] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-12-05T09:10:44.124+07:00 ERROR 31920 --- [GoldenNest] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V1__Create_Table.sql failed
+-------------------------------------
+SQL State  : HY000
+Error Code : 1215
+Message    : Cannot add foreign key constraint
+Location   : db/migration/V1__Create_Table.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V1__Create_Table.sql)
+Line       : 41
+Statement  : -- Tạo bảng products
+CREATE TABLE products (
+                        id CHAR(36) PRIMARY KEY,
+                        name VARCHAR(255) NOT NULL,
+                        price DECIMAL(10, 2) NOT NULL,
+                        description TEXT,
+                        category_id INT,
+                        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                        FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE SET NULL
+)
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.4.jar:3.2.4]
+	at com.example.GoldenNest.GoldenNestApplication.main(GoldenNestApplication.java:10) ~[classes/:na]
+Caused by: org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: Migration V1__Create_Table.sql failed
+-------------------------------------
+SQL State  : HY000
+Error Code : 1215
+Message    : Cannot add foreign key constraint
+Location   : db/migration/V1__Create_Table.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V1__Create_Table.sql)
+Line       : 41
+Statement  : -- Tạo bảng products
+CREATE TABLE products (
+                        id CHAR(36) PRIMARY KEY,
+                        name VARCHAR(255) NOT NULL,
+                        price DECIMAL(10, 2) NOT NULL,
+                        description TEXT,
+                        category_id INT,
+                        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                        FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE SET NULL
+)
+
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:382) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$applyMigrations$1(DbMigrate.java:272) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:55) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.applyMigrations(DbMigrate.java:271) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:244) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$migrateAll$0(DbMigrate.java:139) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.database.mysql.MySQLNamedLockTemplate.execute(MySQLNamedLockTemplate.java:58) ~[flyway-mysql-9.22.3.jar:na]
+	at org.flywaydb.database.mysql.MySQLConnection.lock(MySQLConnection.java:152) ~[flyway-mysql-9.22.3.jar:na]
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:144) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:139) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:97) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.Flyway.lambda$migrate$0(Flyway.java:188) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:213) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140) ~[flyway-core-9.22.3.jar:na]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.2.4.jar:3.2.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-6.1.5.jar:6.1.5]
+	... 18 common frames omitted
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: Migration V1__Create_Table.sql failed
+-------------------------------------
+SQL State  : HY000
+Error Code : 1215
+Message    : Cannot add foreign key constraint
+Location   : db/migration/V1__Create_Table.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V1__Create_Table.sql)
+Line       : 41
+Statement  : -- Tạo bảng products
+CREATE TABLE products (
+                        id CHAR(36) PRIMARY KEY,
+                        name VARCHAR(255) NOT NULL,
+                        price DECIMAL(10, 2) NOT NULL,
+                        description TEXT,
+                        category_id INT,
+                        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                        FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE SET NULL
+)
+
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.handleException(DefaultSqlScriptExecutor.java:267) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:222) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.execute(DefaultSqlScriptExecutor.java:126) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.executeOnce(SqlMigrationExecutor.java:68) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.lambda$execute$0(SqlMigrationExecutor.java:57) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.database.DefaultExecutionStrategy.execute(DefaultExecutionStrategy.java:27) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.execute(SqlMigrationExecutor.java:56) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:374) ~[flyway-core-9.22.3.jar:na]
+	... 34 common frames omitted
+Caused by: java.sql.SQLException: Cannot add foreign key constraint
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.0.1.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.executeStatement(JdbcTemplate.java:201) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.ParsedSqlStatement.execute(ParsedSqlStatement.java:95) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:210) ~[flyway-core-9.22.3.jar:na]
+	... 40 common frames omitted
+
+2024-12-05T09:12:55.313+07:00  INFO 31560 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Starting GoldenNestApplication using Java 21.0.2 with PID 31560 (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes started by ntb09 in E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE)
+2024-12-05T09:12:55.315+07:00  INFO 31560 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-12-05T09:12:56.272+07:00  INFO 31560 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-05T09:12:56.336+07:00  INFO 31560 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 1 JPA repository interface.
+2024-12-05T09:12:57.137+07:00  INFO 31560 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2024-12-05T09:12:57.149+07:00  INFO 31560 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-05T09:12:57.149+07:00  INFO 31560 --- [GoldenNest] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-12-05T09:12:57.234+07:00  INFO 31560 --- [GoldenNest] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-05T09:12:57.234+07:00  INFO 31560 --- [GoldenNest] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1878 ms
+2024-12-05T09:12:57.371+07:00  INFO 31560 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-05T09:12:57.919+07:00  INFO 31560 --- [GoldenNest] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4357524b
+2024-12-05T09:12:57.921+07:00  INFO 31560 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-05T09:12:58.008+07:00  INFO 31560 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2024-12-05T09:12:58.008+07:00  INFO 31560 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-12-05T09:12:58.008+07:00  INFO 31560 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : 
+2024-12-05T09:12:58.024+07:00  INFO 31560 --- [GoldenNest] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/GoldenNest (MySQL 8.0)
+2024-12-05T09:12:58.075+07:00  INFO 31560 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `goldennest`.`flyway_schema_history` does not exist yet
+2024-12-05T09:12:58.081+07:00  INFO 31560 --- [GoldenNest] [main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.039s)
+2024-12-05T09:12:58.102+07:00  INFO 31560 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `goldennest`.`flyway_schema_history` ...
+2024-12-05T09:12:58.219+07:00  INFO 31560 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `goldennest`: << Empty Schema >>
+2024-12-05T09:12:58.237+07:00  INFO 31560 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "1 - Create Table"
+2024-12-05T09:12:58.249+07:00  WARN 31560 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.users' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:12:58.321+07:00  WARN 31560 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.categories' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:12:58.414+07:00  WARN 31560 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.products' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:12:58.484+07:00 ERROR 31560 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migration of schema `goldennest` to version "1 - Create Table" failed! Please restore backups and roll back database and code!
+2024-12-05T09:12:58.514+07:00  WARN 31560 --- [GoldenNest] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V1__Create_Table.sql failed
+-------------------------------------
+SQL State  : HY000
+Error Code : 1215
+Message    : Cannot add foreign key constraint
+Location   : db/migration/V1__Create_Table.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V1__Create_Table.sql)
+Line       : 42
+Statement  : -- Tạo bảng products
+CREATE TABLE products (
+                        id CHAR(36) PRIMARY KEY,
+                        name VARCHAR(255) NOT NULL,
+                        price DECIMAL(10, 2) NOT NULL,
+                        description TEXT,
+                        category_id INT,
+                        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                        FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE SET NULL
+)
+
+2024-12-05T09:12:58.514+07:00  INFO 31560 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-05T09:12:58.521+07:00  INFO 31560 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-05T09:12:58.524+07:00  INFO 31560 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-12-05T09:12:58.534+07:00  INFO 31560 --- [GoldenNest] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-12-05T09:12:58.549+07:00 ERROR 31560 --- [GoldenNest] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V1__Create_Table.sql failed
+-------------------------------------
+SQL State  : HY000
+Error Code : 1215
+Message    : Cannot add foreign key constraint
+Location   : db/migration/V1__Create_Table.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V1__Create_Table.sql)
+Line       : 42
+Statement  : -- Tạo bảng products
+CREATE TABLE products (
+                        id CHAR(36) PRIMARY KEY,
+                        name VARCHAR(255) NOT NULL,
+                        price DECIMAL(10, 2) NOT NULL,
+                        description TEXT,
+                        category_id INT,
+                        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                        FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE SET NULL
+)
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.4.jar:3.2.4]
+	at com.example.GoldenNest.GoldenNestApplication.main(GoldenNestApplication.java:10) ~[classes/:na]
+Caused by: org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: Migration V1__Create_Table.sql failed
+-------------------------------------
+SQL State  : HY000
+Error Code : 1215
+Message    : Cannot add foreign key constraint
+Location   : db/migration/V1__Create_Table.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V1__Create_Table.sql)
+Line       : 42
+Statement  : -- Tạo bảng products
+CREATE TABLE products (
+                        id CHAR(36) PRIMARY KEY,
+                        name VARCHAR(255) NOT NULL,
+                        price DECIMAL(10, 2) NOT NULL,
+                        description TEXT,
+                        category_id INT,
+                        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                        FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE SET NULL
+)
+
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:382) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$applyMigrations$1(DbMigrate.java:272) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:55) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.applyMigrations(DbMigrate.java:271) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:244) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$migrateAll$0(DbMigrate.java:139) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.database.mysql.MySQLNamedLockTemplate.execute(MySQLNamedLockTemplate.java:58) ~[flyway-mysql-9.22.3.jar:na]
+	at org.flywaydb.database.mysql.MySQLConnection.lock(MySQLConnection.java:152) ~[flyway-mysql-9.22.3.jar:na]
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:144) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:139) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:97) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.Flyway.lambda$migrate$0(Flyway.java:188) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:213) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140) ~[flyway-core-9.22.3.jar:na]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.2.4.jar:3.2.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-6.1.5.jar:6.1.5]
+	... 18 common frames omitted
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: Migration V1__Create_Table.sql failed
+-------------------------------------
+SQL State  : HY000
+Error Code : 1215
+Message    : Cannot add foreign key constraint
+Location   : db/migration/V1__Create_Table.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V1__Create_Table.sql)
+Line       : 42
+Statement  : -- Tạo bảng products
+CREATE TABLE products (
+                        id CHAR(36) PRIMARY KEY,
+                        name VARCHAR(255) NOT NULL,
+                        price DECIMAL(10, 2) NOT NULL,
+                        description TEXT,
+                        category_id INT,
+                        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                        FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE SET NULL
+)
+
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.handleException(DefaultSqlScriptExecutor.java:267) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:222) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.execute(DefaultSqlScriptExecutor.java:126) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.executeOnce(SqlMigrationExecutor.java:68) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.lambda$execute$0(SqlMigrationExecutor.java:57) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.database.DefaultExecutionStrategy.execute(DefaultExecutionStrategy.java:27) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.execute(SqlMigrationExecutor.java:56) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:374) ~[flyway-core-9.22.3.jar:na]
+	... 34 common frames omitted
+Caused by: java.sql.SQLException: Cannot add foreign key constraint
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.0.1.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.executeStatement(JdbcTemplate.java:201) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.ParsedSqlStatement.execute(ParsedSqlStatement.java:95) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:210) ~[flyway-core-9.22.3.jar:na]
+	... 40 common frames omitted
+
+2024-12-05T09:13:33.407+07:00  INFO 20984 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Starting GoldenNestApplication using Java 21.0.2 with PID 20984 (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes started by ntb09 in E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE)
+2024-12-05T09:13:33.410+07:00  INFO 20984 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-12-05T09:13:34.335+07:00  INFO 20984 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-05T09:13:34.421+07:00  INFO 20984 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 1 JPA repository interface.
+2024-12-05T09:13:35.447+07:00  INFO 20984 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2024-12-05T09:13:35.466+07:00  INFO 20984 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-05T09:13:35.467+07:00  INFO 20984 --- [GoldenNest] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-12-05T09:13:35.589+07:00  INFO 20984 --- [GoldenNest] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-05T09:13:35.589+07:00  INFO 20984 --- [GoldenNest] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2121 ms
+2024-12-05T09:13:35.740+07:00  INFO 20984 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-05T09:13:36.298+07:00  INFO 20984 --- [GoldenNest] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6df11e91
+2024-12-05T09:13:36.300+07:00  INFO 20984 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-05T09:13:36.412+07:00  INFO 20984 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2024-12-05T09:13:36.412+07:00  INFO 20984 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-12-05T09:13:36.412+07:00  INFO 20984 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : 
+2024-12-05T09:13:36.445+07:00  INFO 20984 --- [GoldenNest] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/GoldenNest (MySQL 8.0)
+2024-12-05T09:13:36.517+07:00  INFO 20984 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `goldennest`.`flyway_schema_history` does not exist yet
+2024-12-05T09:13:36.523+07:00  INFO 20984 --- [GoldenNest] [main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.048s)
+2024-12-05T09:13:36.558+07:00  INFO 20984 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `goldennest`.`flyway_schema_history` ...
+2024-12-05T09:13:36.701+07:00  INFO 20984 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `goldennest`: << Empty Schema >>
+2024-12-05T09:13:36.725+07:00  INFO 20984 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "1 - Create Table"
+2024-12-05T09:13:36.736+07:00  WARN 20984 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.users' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:13:36.798+07:00  WARN 20984 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.products' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:13:36.867+07:00 ERROR 20984 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migration of schema `goldennest` to version "1 - Create Table" failed! Please restore backups and roll back database and code!
+2024-12-05T09:13:36.901+07:00  WARN 20984 --- [GoldenNest] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V1__Create_Table.sql failed
+-------------------------------------
+SQL State  : HY000
+Error Code : 1215
+Message    : Cannot add foreign key constraint
+Location   : db/migration/V1__Create_Table.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V1__Create_Table.sql)
+Line       : 34
+Statement  : -- Tạo bảng products
+CREATE TABLE products (
+                        id CHAR(36) PRIMARY KEY,
+                        name VARCHAR(255) NOT NULL,
+                        price DECIMAL(10, 2) NOT NULL,
+                        description TEXT,
+                        category_id INT,
+                        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                        FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE SET NULL
+)
+
+2024-12-05T09:13:36.902+07:00  INFO 20984 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-05T09:13:36.954+07:00  INFO 20984 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-05T09:13:36.959+07:00  INFO 20984 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-12-05T09:13:36.974+07:00  INFO 20984 --- [GoldenNest] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-12-05T09:13:37.001+07:00 ERROR 20984 --- [GoldenNest] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V1__Create_Table.sql failed
+-------------------------------------
+SQL State  : HY000
+Error Code : 1215
+Message    : Cannot add foreign key constraint
+Location   : db/migration/V1__Create_Table.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V1__Create_Table.sql)
+Line       : 34
+Statement  : -- Tạo bảng products
+CREATE TABLE products (
+                        id CHAR(36) PRIMARY KEY,
+                        name VARCHAR(255) NOT NULL,
+                        price DECIMAL(10, 2) NOT NULL,
+                        description TEXT,
+                        category_id INT,
+                        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                        FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE SET NULL
+)
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.4.jar:3.2.4]
+	at com.example.GoldenNest.GoldenNestApplication.main(GoldenNestApplication.java:10) ~[classes/:na]
+Caused by: org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: Migration V1__Create_Table.sql failed
+-------------------------------------
+SQL State  : HY000
+Error Code : 1215
+Message    : Cannot add foreign key constraint
+Location   : db/migration/V1__Create_Table.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V1__Create_Table.sql)
+Line       : 34
+Statement  : -- Tạo bảng products
+CREATE TABLE products (
+                        id CHAR(36) PRIMARY KEY,
+                        name VARCHAR(255) NOT NULL,
+                        price DECIMAL(10, 2) NOT NULL,
+                        description TEXT,
+                        category_id INT,
+                        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                        FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE SET NULL
+)
+
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:382) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$applyMigrations$1(DbMigrate.java:272) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:55) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.applyMigrations(DbMigrate.java:271) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:244) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$migrateAll$0(DbMigrate.java:139) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.database.mysql.MySQLNamedLockTemplate.execute(MySQLNamedLockTemplate.java:58) ~[flyway-mysql-9.22.3.jar:na]
+	at org.flywaydb.database.mysql.MySQLConnection.lock(MySQLConnection.java:152) ~[flyway-mysql-9.22.3.jar:na]
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:144) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:139) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:97) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.Flyway.lambda$migrate$0(Flyway.java:188) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:213) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140) ~[flyway-core-9.22.3.jar:na]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.2.4.jar:3.2.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-6.1.5.jar:6.1.5]
+	... 18 common frames omitted
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: Migration V1__Create_Table.sql failed
+-------------------------------------
+SQL State  : HY000
+Error Code : 1215
+Message    : Cannot add foreign key constraint
+Location   : db/migration/V1__Create_Table.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V1__Create_Table.sql)
+Line       : 34
+Statement  : -- Tạo bảng products
+CREATE TABLE products (
+                        id CHAR(36) PRIMARY KEY,
+                        name VARCHAR(255) NOT NULL,
+                        price DECIMAL(10, 2) NOT NULL,
+                        description TEXT,
+                        category_id INT,
+                        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                        FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE SET NULL
+)
+
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.handleException(DefaultSqlScriptExecutor.java:267) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:222) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.execute(DefaultSqlScriptExecutor.java:126) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.executeOnce(SqlMigrationExecutor.java:68) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.lambda$execute$0(SqlMigrationExecutor.java:57) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.database.DefaultExecutionStrategy.execute(DefaultExecutionStrategy.java:27) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.execute(SqlMigrationExecutor.java:56) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:374) ~[flyway-core-9.22.3.jar:na]
+	... 34 common frames omitted
+Caused by: java.sql.SQLException: Cannot add foreign key constraint
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.0.1.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.executeStatement(JdbcTemplate.java:201) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.ParsedSqlStatement.execute(ParsedSqlStatement.java:95) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:210) ~[flyway-core-9.22.3.jar:na]
+	... 40 common frames omitted
+
+2024-12-05T09:15:23.793+07:00  INFO 22236 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Starting GoldenNestApplication using Java 21.0.2 with PID 22236 (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes started by ntb09 in E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE)
+2024-12-05T09:15:23.795+07:00  INFO 22236 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-12-05T09:15:24.586+07:00  INFO 22236 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-05T09:15:24.655+07:00  INFO 22236 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 1 JPA repository interface.
+2024-12-05T09:15:25.463+07:00  INFO 22236 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2024-12-05T09:15:25.482+07:00  INFO 22236 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-05T09:15:25.482+07:00  INFO 22236 --- [GoldenNest] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-12-05T09:15:25.567+07:00  INFO 22236 --- [GoldenNest] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-05T09:15:25.568+07:00  INFO 22236 --- [GoldenNest] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1728 ms
+2024-12-05T09:15:25.710+07:00  INFO 22236 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-05T09:15:26.191+07:00  INFO 22236 --- [GoldenNest] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@79f5a6ed
+2024-12-05T09:15:26.194+07:00  INFO 22236 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-05T09:15:26.297+07:00  INFO 22236 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2024-12-05T09:15:26.297+07:00  INFO 22236 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-12-05T09:15:26.297+07:00  INFO 22236 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : 
+2024-12-05T09:15:26.317+07:00  INFO 22236 --- [GoldenNest] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/GoldenNest (MySQL 8.0)
+2024-12-05T09:15:26.367+07:00  INFO 22236 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `goldennest`.`flyway_schema_history` does not exist yet
+2024-12-05T09:15:26.371+07:00  INFO 22236 --- [GoldenNest] [main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.030s)
+2024-12-05T09:15:26.392+07:00  INFO 22236 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `goldennest`.`flyway_schema_history` ...
+2024-12-05T09:15:26.525+07:00  INFO 22236 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `goldennest`: << Empty Schema >>
+2024-12-05T09:15:26.545+07:00  INFO 22236 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "1 - Create Table"
+2024-12-05T09:15:26.555+07:00  WARN 22236 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.users' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:15:26.634+07:00  WARN 22236 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.categories' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:15:26.712+07:00  WARN 22236 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.products' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:15:26.791+07:00  WARN 22236 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.orders' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:15:26.943+07:00  WARN 22236 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.order_details' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:15:27.182+07:00 ERROR 22236 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migration of schema `goldennest` to version "1 - Create Table" failed! Please restore backups and roll back database and code!
+2024-12-05T09:15:27.214+07:00  WARN 22236 --- [GoldenNest] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V1__Create_Table.sql failed
+-------------------------------------
+SQL State  : HY000
+Error Code : 1215
+Message    : Cannot add foreign key constraint
+Location   : db/migration/V1__Create_Table.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V1__Create_Table.sql)
+Line       : 65
+Statement  : -- Tạo bảng order_details
+CREATE TABLE order_details (
+                            id CHAR(36) PRIMARY KEY,
+                            order_id INT NOT NULL,
+                            product_id INT NOT NULL,
+                            quantity INT NOT NULL,
+                            price DECIMAL(10, 2) NOT NULL,
+                            FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE CASCADE,
+                            FOREIGN KEY (product_id) REFERENCES products(id)
+)
+
+2024-12-05T09:15:27.214+07:00  INFO 22236 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-05T09:15:27.220+07:00  INFO 22236 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-05T09:15:27.222+07:00  INFO 22236 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-12-05T09:15:27.232+07:00  INFO 22236 --- [GoldenNest] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-12-05T09:15:27.250+07:00 ERROR 22236 --- [GoldenNest] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V1__Create_Table.sql failed
+-------------------------------------
+SQL State  : HY000
+Error Code : 1215
+Message    : Cannot add foreign key constraint
+Location   : db/migration/V1__Create_Table.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V1__Create_Table.sql)
+Line       : 65
+Statement  : -- Tạo bảng order_details
+CREATE TABLE order_details (
+                            id CHAR(36) PRIMARY KEY,
+                            order_id INT NOT NULL,
+                            product_id INT NOT NULL,
+                            quantity INT NOT NULL,
+                            price DECIMAL(10, 2) NOT NULL,
+                            FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE CASCADE,
+                            FOREIGN KEY (product_id) REFERENCES products(id)
+)
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.4.jar:3.2.4]
+	at com.example.GoldenNest.GoldenNestApplication.main(GoldenNestApplication.java:10) ~[classes/:na]
+Caused by: org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: Migration V1__Create_Table.sql failed
+-------------------------------------
+SQL State  : HY000
+Error Code : 1215
+Message    : Cannot add foreign key constraint
+Location   : db/migration/V1__Create_Table.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V1__Create_Table.sql)
+Line       : 65
+Statement  : -- Tạo bảng order_details
+CREATE TABLE order_details (
+                            id CHAR(36) PRIMARY KEY,
+                            order_id INT NOT NULL,
+                            product_id INT NOT NULL,
+                            quantity INT NOT NULL,
+                            price DECIMAL(10, 2) NOT NULL,
+                            FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE CASCADE,
+                            FOREIGN KEY (product_id) REFERENCES products(id)
+)
+
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:382) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$applyMigrations$1(DbMigrate.java:272) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:55) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.applyMigrations(DbMigrate.java:271) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:244) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$migrateAll$0(DbMigrate.java:139) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.database.mysql.MySQLNamedLockTemplate.execute(MySQLNamedLockTemplate.java:58) ~[flyway-mysql-9.22.3.jar:na]
+	at org.flywaydb.database.mysql.MySQLConnection.lock(MySQLConnection.java:152) ~[flyway-mysql-9.22.3.jar:na]
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:144) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:139) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:97) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.Flyway.lambda$migrate$0(Flyway.java:188) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:213) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140) ~[flyway-core-9.22.3.jar:na]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.2.4.jar:3.2.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-6.1.5.jar:6.1.5]
+	... 18 common frames omitted
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: Migration V1__Create_Table.sql failed
+-------------------------------------
+SQL State  : HY000
+Error Code : 1215
+Message    : Cannot add foreign key constraint
+Location   : db/migration/V1__Create_Table.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V1__Create_Table.sql)
+Line       : 65
+Statement  : -- Tạo bảng order_details
+CREATE TABLE order_details (
+                            id CHAR(36) PRIMARY KEY,
+                            order_id INT NOT NULL,
+                            product_id INT NOT NULL,
+                            quantity INT NOT NULL,
+                            price DECIMAL(10, 2) NOT NULL,
+                            FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE CASCADE,
+                            FOREIGN KEY (product_id) REFERENCES products(id)
+)
+
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.handleException(DefaultSqlScriptExecutor.java:267) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:222) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.execute(DefaultSqlScriptExecutor.java:126) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.executeOnce(SqlMigrationExecutor.java:68) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.lambda$execute$0(SqlMigrationExecutor.java:57) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.database.DefaultExecutionStrategy.execute(DefaultExecutionStrategy.java:27) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.execute(SqlMigrationExecutor.java:56) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:374) ~[flyway-core-9.22.3.jar:na]
+	... 34 common frames omitted
+Caused by: java.sql.SQLException: Cannot add foreign key constraint
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.0.1.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.executeStatement(JdbcTemplate.java:201) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.ParsedSqlStatement.execute(ParsedSqlStatement.java:95) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:210) ~[flyway-core-9.22.3.jar:na]
+	... 40 common frames omitted
+
+2024-12-05T09:17:25.789+07:00  INFO 28064 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Starting GoldenNestApplication using Java 21.0.2 with PID 28064 (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes started by ntb09 in E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE)
+2024-12-05T09:17:25.791+07:00  INFO 28064 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-12-05T09:17:26.596+07:00  INFO 28064 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-05T09:17:26.659+07:00  INFO 28064 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 1 JPA repository interface.
+2024-12-05T09:17:27.526+07:00  INFO 28064 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2024-12-05T09:17:27.541+07:00  INFO 28064 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-05T09:17:27.541+07:00  INFO 28064 --- [GoldenNest] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-12-05T09:17:27.635+07:00  INFO 28064 --- [GoldenNest] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-05T09:17:27.636+07:00  INFO 28064 --- [GoldenNest] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1805 ms
+2024-12-05T09:17:27.773+07:00  INFO 28064 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-05T09:17:28.236+07:00  INFO 28064 --- [GoldenNest] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5fd8dd66
+2024-12-05T09:17:28.238+07:00  INFO 28064 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-05T09:17:28.356+07:00  INFO 28064 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2024-12-05T09:17:28.357+07:00  INFO 28064 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-12-05T09:17:28.357+07:00  INFO 28064 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : 
+2024-12-05T09:17:28.381+07:00  INFO 28064 --- [GoldenNest] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/GoldenNest (MySQL 8.0)
+2024-12-05T09:17:28.433+07:00  INFO 28064 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `goldennest`.`flyway_schema_history` does not exist yet
+2024-12-05T09:17:28.438+07:00  INFO 28064 --- [GoldenNest] [main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.034s)
+2024-12-05T09:17:28.475+07:00  INFO 28064 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `goldennest`.`flyway_schema_history` ...
+2024-12-05T09:17:28.614+07:00  INFO 28064 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `goldennest`: << Empty Schema >>
+2024-12-05T09:17:28.633+07:00  INFO 28064 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "1 - Create Table"
+2024-12-05T09:17:28.643+07:00  WARN 28064 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.users' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:17:28.724+07:00  WARN 28064 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.categories' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:17:28.801+07:00  WARN 28064 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.products' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:17:28.879+07:00  WARN 28064 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.orders' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:17:28.957+07:00  WARN 28064 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.order_details' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:17:29.049+07:00  WARN 28064 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.reviews' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:17:29.148+07:00 ERROR 28064 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migration of schema `goldennest` to version "1 - Create Table" failed! Please restore backups and roll back database and code!
+2024-12-05T09:17:29.196+07:00  WARN 28064 --- [GoldenNest] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V1__Create_Table.sql failed
+-------------------------------------
+SQL State  : HY000
+Error Code : 1215
+Message    : Cannot add foreign key constraint
+Location   : db/migration/V1__Create_Table.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V1__Create_Table.sql)
+Line       : 77
+Statement  : -- Tạo bảng reviews
+CREATE TABLE reviews (
+                        id CHAR(36) PRIMARY KEY,
+                        user_id CHAR(36) NOT NULL,
+                        product_id INT NOT NULL,
+                        rating INT CHECK (rating BETWEEN 1 AND 5),
+                        comment TEXT,
+                        review_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                        FOREIGN KEY (user_id) REFERENCES users(id),
+                        FOREIGN KEY (product_id) REFERENCES products(id)
+)
+
+2024-12-05T09:17:29.196+07:00  INFO 28064 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-05T09:17:29.205+07:00  INFO 28064 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-05T09:17:29.208+07:00  INFO 28064 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-12-05T09:17:29.221+07:00  INFO 28064 --- [GoldenNest] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-12-05T09:17:29.242+07:00 ERROR 28064 --- [GoldenNest] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V1__Create_Table.sql failed
+-------------------------------------
+SQL State  : HY000
+Error Code : 1215
+Message    : Cannot add foreign key constraint
+Location   : db/migration/V1__Create_Table.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V1__Create_Table.sql)
+Line       : 77
+Statement  : -- Tạo bảng reviews
+CREATE TABLE reviews (
+                        id CHAR(36) PRIMARY KEY,
+                        user_id CHAR(36) NOT NULL,
+                        product_id INT NOT NULL,
+                        rating INT CHECK (rating BETWEEN 1 AND 5),
+                        comment TEXT,
+                        review_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                        FOREIGN KEY (user_id) REFERENCES users(id),
+                        FOREIGN KEY (product_id) REFERENCES products(id)
+)
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.4.jar:3.2.4]
+	at com.example.GoldenNest.GoldenNestApplication.main(GoldenNestApplication.java:10) ~[classes/:na]
+Caused by: org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: Migration V1__Create_Table.sql failed
+-------------------------------------
+SQL State  : HY000
+Error Code : 1215
+Message    : Cannot add foreign key constraint
+Location   : db/migration/V1__Create_Table.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V1__Create_Table.sql)
+Line       : 77
+Statement  : -- Tạo bảng reviews
+CREATE TABLE reviews (
+                        id CHAR(36) PRIMARY KEY,
+                        user_id CHAR(36) NOT NULL,
+                        product_id INT NOT NULL,
+                        rating INT CHECK (rating BETWEEN 1 AND 5),
+                        comment TEXT,
+                        review_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                        FOREIGN KEY (user_id) REFERENCES users(id),
+                        FOREIGN KEY (product_id) REFERENCES products(id)
+)
+
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:382) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$applyMigrations$1(DbMigrate.java:272) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:55) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.applyMigrations(DbMigrate.java:271) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:244) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$migrateAll$0(DbMigrate.java:139) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.database.mysql.MySQLNamedLockTemplate.execute(MySQLNamedLockTemplate.java:58) ~[flyway-mysql-9.22.3.jar:na]
+	at org.flywaydb.database.mysql.MySQLConnection.lock(MySQLConnection.java:152) ~[flyway-mysql-9.22.3.jar:na]
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:144) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:139) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:97) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.Flyway.lambda$migrate$0(Flyway.java:188) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:213) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140) ~[flyway-core-9.22.3.jar:na]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.2.4.jar:3.2.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-6.1.5.jar:6.1.5]
+	... 18 common frames omitted
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: Migration V1__Create_Table.sql failed
+-------------------------------------
+SQL State  : HY000
+Error Code : 1215
+Message    : Cannot add foreign key constraint
+Location   : db/migration/V1__Create_Table.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V1__Create_Table.sql)
+Line       : 77
+Statement  : -- Tạo bảng reviews
+CREATE TABLE reviews (
+                        id CHAR(36) PRIMARY KEY,
+                        user_id CHAR(36) NOT NULL,
+                        product_id INT NOT NULL,
+                        rating INT CHECK (rating BETWEEN 1 AND 5),
+                        comment TEXT,
+                        review_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                        FOREIGN KEY (user_id) REFERENCES users(id),
+                        FOREIGN KEY (product_id) REFERENCES products(id)
+)
+
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.handleException(DefaultSqlScriptExecutor.java:267) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:222) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.execute(DefaultSqlScriptExecutor.java:126) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.executeOnce(SqlMigrationExecutor.java:68) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.lambda$execute$0(SqlMigrationExecutor.java:57) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.database.DefaultExecutionStrategy.execute(DefaultExecutionStrategy.java:27) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.execute(SqlMigrationExecutor.java:56) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:374) ~[flyway-core-9.22.3.jar:na]
+	... 34 common frames omitted
+Caused by: java.sql.SQLException: Cannot add foreign key constraint
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.0.1.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.executeStatement(JdbcTemplate.java:201) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.ParsedSqlStatement.execute(ParsedSqlStatement.java:95) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:210) ~[flyway-core-9.22.3.jar:na]
+	... 40 common frames omitted
+
+2024-12-05T09:56:34.812+07:00  INFO 11540 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Starting GoldenNestApplication using Java 21.0.2 with PID 11540 (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes started by ntb09 in E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE)
+2024-12-05T09:56:34.814+07:00  INFO 11540 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-12-05T09:56:35.741+07:00  INFO 11540 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-05T09:56:35.809+07:00  INFO 11540 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 1 JPA repository interface.
+2024-12-05T09:56:36.623+07:00  INFO 11540 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2024-12-05T09:56:36.634+07:00  INFO 11540 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-05T09:56:36.635+07:00  INFO 11540 --- [GoldenNest] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-12-05T09:56:36.733+07:00  INFO 11540 --- [GoldenNest] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-05T09:56:36.734+07:00  INFO 11540 --- [GoldenNest] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1876 ms
+2024-12-05T09:56:36.898+07:00  INFO 11540 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-05T09:56:37.487+07:00  INFO 11540 --- [GoldenNest] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4466cf5d
+2024-12-05T09:56:37.495+07:00  INFO 11540 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-05T09:56:37.602+07:00  INFO 11540 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2024-12-05T09:56:37.603+07:00  INFO 11540 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-12-05T09:56:37.603+07:00  INFO 11540 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : 
+2024-12-05T09:56:37.627+07:00  INFO 11540 --- [GoldenNest] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/GoldenNest (MySQL 8.0)
+2024-12-05T09:56:37.678+07:00  INFO 11540 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `goldennest`.`flyway_schema_history` does not exist yet
+2024-12-05T09:56:37.684+07:00  INFO 11540 --- [GoldenNest] [main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.029s)
+2024-12-05T09:56:37.726+07:00  INFO 11540 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `goldennest`.`flyway_schema_history` ...
+2024-12-05T09:56:37.854+07:00  INFO 11540 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `goldennest`: << Empty Schema >>
+2024-12-05T09:56:37.872+07:00  INFO 11540 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "1 - Create Table"
+2024-12-05T09:56:37.881+07:00  WARN 11540 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.users' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:56:37.961+07:00  WARN 11540 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.products' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:56:38.025+07:00  WARN 11540 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.orders' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:56:38.133+07:00  WARN 11540 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.order_details' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:56:38.257+07:00  WARN 11540 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.categories' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:56:38.334+07:00  WARN 11540 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.reviews' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:56:38.474+07:00  WARN 11540 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.carts' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:56:38.587+07:00 ERROR 11540 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migration of schema `goldennest` to version "1 - Create Table" failed! Please restore backups and roll back database and code!
+2024-12-05T09:56:38.654+07:00  WARN 11540 --- [GoldenNest] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V1__Create_Table.sql failed
+-------------------------------------
+SQL State  : HY000
+Error Code : 1215
+Message    : Cannot add foreign key constraint
+Location   : db/migration/V1__Create_Table.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V1__Create_Table.sql)
+Line       : 86
+Statement  : -- Tạo bảng carts
+CREATE TABLE carts (
+                    id CHAR(36) PRIMARY KEY,
+                    user_id CHAR(36) NOT NULL,
+                    product_id INT NOT NULL,
+                    quantity INT NOT NULL DEFAULT 1,
+                    added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    FOREIGN KEY (user_id) REFERENCES users(id),
+                    FOREIGN KEY (product_id) REFERENCES products(id)
+)
+
+2024-12-05T09:56:38.655+07:00  INFO 11540 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-05T09:56:38.662+07:00  INFO 11540 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-05T09:56:38.665+07:00  INFO 11540 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-12-05T09:56:38.677+07:00  INFO 11540 --- [GoldenNest] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-12-05T09:56:38.700+07:00 ERROR 11540 --- [GoldenNest] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V1__Create_Table.sql failed
+-------------------------------------
+SQL State  : HY000
+Error Code : 1215
+Message    : Cannot add foreign key constraint
+Location   : db/migration/V1__Create_Table.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V1__Create_Table.sql)
+Line       : 86
+Statement  : -- Tạo bảng carts
+CREATE TABLE carts (
+                    id CHAR(36) PRIMARY KEY,
+                    user_id CHAR(36) NOT NULL,
+                    product_id INT NOT NULL,
+                    quantity INT NOT NULL DEFAULT 1,
+                    added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    FOREIGN KEY (user_id) REFERENCES users(id),
+                    FOREIGN KEY (product_id) REFERENCES products(id)
+)
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.4.jar:3.2.4]
+	at com.example.GoldenNest.GoldenNestApplication.main(GoldenNestApplication.java:10) ~[classes/:na]
+Caused by: org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: Migration V1__Create_Table.sql failed
+-------------------------------------
+SQL State  : HY000
+Error Code : 1215
+Message    : Cannot add foreign key constraint
+Location   : db/migration/V1__Create_Table.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V1__Create_Table.sql)
+Line       : 86
+Statement  : -- Tạo bảng carts
+CREATE TABLE carts (
+                    id CHAR(36) PRIMARY KEY,
+                    user_id CHAR(36) NOT NULL,
+                    product_id INT NOT NULL,
+                    quantity INT NOT NULL DEFAULT 1,
+                    added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    FOREIGN KEY (user_id) REFERENCES users(id),
+                    FOREIGN KEY (product_id) REFERENCES products(id)
+)
+
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:382) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$applyMigrations$1(DbMigrate.java:272) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:55) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.applyMigrations(DbMigrate.java:271) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:244) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$migrateAll$0(DbMigrate.java:139) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.database.mysql.MySQLNamedLockTemplate.execute(MySQLNamedLockTemplate.java:58) ~[flyway-mysql-9.22.3.jar:na]
+	at org.flywaydb.database.mysql.MySQLConnection.lock(MySQLConnection.java:152) ~[flyway-mysql-9.22.3.jar:na]
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:144) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:139) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:97) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.Flyway.lambda$migrate$0(Flyway.java:188) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:213) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140) ~[flyway-core-9.22.3.jar:na]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.2.4.jar:3.2.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-6.1.5.jar:6.1.5]
+	... 18 common frames omitted
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: Migration V1__Create_Table.sql failed
+-------------------------------------
+SQL State  : HY000
+Error Code : 1215
+Message    : Cannot add foreign key constraint
+Location   : db/migration/V1__Create_Table.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V1__Create_Table.sql)
+Line       : 86
+Statement  : -- Tạo bảng carts
+CREATE TABLE carts (
+                    id CHAR(36) PRIMARY KEY,
+                    user_id CHAR(36) NOT NULL,
+                    product_id INT NOT NULL,
+                    quantity INT NOT NULL DEFAULT 1,
+                    added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    FOREIGN KEY (user_id) REFERENCES users(id),
+                    FOREIGN KEY (product_id) REFERENCES products(id)
+)
+
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.handleException(DefaultSqlScriptExecutor.java:267) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:222) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.execute(DefaultSqlScriptExecutor.java:126) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.executeOnce(SqlMigrationExecutor.java:68) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.lambda$execute$0(SqlMigrationExecutor.java:57) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.database.DefaultExecutionStrategy.execute(DefaultExecutionStrategy.java:27) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.execute(SqlMigrationExecutor.java:56) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:374) ~[flyway-core-9.22.3.jar:na]
+	... 34 common frames omitted
+Caused by: java.sql.SQLException: Cannot add foreign key constraint
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.0.1.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.executeStatement(JdbcTemplate.java:201) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.ParsedSqlStatement.execute(ParsedSqlStatement.java:95) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:210) ~[flyway-core-9.22.3.jar:na]
+	... 40 common frames omitted
+
+2024-12-05T09:58:10.812+07:00  INFO 21964 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Starting GoldenNestApplication using Java 21.0.2 with PID 21964 (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes started by ntb09 in E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE)
+2024-12-05T09:58:10.816+07:00  INFO 21964 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-12-05T09:58:11.679+07:00  INFO 21964 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-05T09:58:11.739+07:00  INFO 21964 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 1 JPA repository interface.
+2024-12-05T09:58:12.570+07:00  INFO 21964 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2024-12-05T09:58:12.584+07:00  INFO 21964 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-05T09:58:12.584+07:00  INFO 21964 --- [GoldenNest] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-12-05T09:58:12.690+07:00  INFO 21964 --- [GoldenNest] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-05T09:58:12.691+07:00  INFO 21964 --- [GoldenNest] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1827 ms
+2024-12-05T09:58:12.845+07:00  INFO 21964 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-05T09:58:13.373+07:00  INFO 21964 --- [GoldenNest] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4466cf5d
+2024-12-05T09:58:13.377+07:00  INFO 21964 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-05T09:58:13.467+07:00  INFO 21964 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2024-12-05T09:58:13.467+07:00  INFO 21964 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-12-05T09:58:13.467+07:00  INFO 21964 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : 
+2024-12-05T09:58:13.493+07:00  INFO 21964 --- [GoldenNest] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/GoldenNest (MySQL 8.0)
+2024-12-05T09:58:13.531+07:00  INFO 21964 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `goldennest`.`flyway_schema_history` does not exist yet
+2024-12-05T09:58:13.536+07:00  INFO 21964 --- [GoldenNest] [main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.025s)
+2024-12-05T09:58:13.561+07:00  INFO 21964 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `goldennest`.`flyway_schema_history` ...
+2024-12-05T09:58:13.680+07:00  INFO 21964 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `goldennest`: << Empty Schema >>
+2024-12-05T09:58:13.703+07:00  INFO 21964 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "1 - Create Table"
+2024-12-05T09:58:13.713+07:00  WARN 21964 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.users' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:58:13.784+07:00  WARN 21964 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.products' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:58:13.846+07:00  WARN 21964 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.orders' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:58:13.923+07:00  WARN 21964 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.order_details' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:58:14.017+07:00  WARN 21964 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.categories' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:58:14.078+07:00  WARN 21964 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.reviews' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:58:14.159+07:00  WARN 21964 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.carts' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:58:14.277+07:00  WARN 21964 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.favorites' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:58:14.377+07:00 ERROR 21964 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migration of schema `goldennest` to version "1 - Create Table" failed! Please restore backups and roll back database and code!
+2024-12-05T09:58:14.410+07:00  WARN 21964 --- [GoldenNest] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V1__Create_Table.sql failed
+-------------------------------------
+SQL State  : HY000
+Error Code : 1215
+Message    : Cannot add foreign key constraint
+Location   : db/migration/V1__Create_Table.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V1__Create_Table.sql)
+Line       : 98
+Statement  : -- Tạo bảng favorites
+CREATE TABLE favorites (
+                        id CHAR(36) PRIMARY KEY,
+                        user_id CHAR(36) NOT NULL,
+                        product_id INT NOT NULL,
+                        added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                        FOREIGN KEY (user_id) REFERENCES users(id),
+                        FOREIGN KEY (product_id) REFERENCES products(id)
+)
+
+2024-12-05T09:58:14.411+07:00  INFO 21964 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-05T09:58:14.418+07:00  INFO 21964 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-05T09:58:14.420+07:00  INFO 21964 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-12-05T09:58:14.430+07:00  INFO 21964 --- [GoldenNest] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-12-05T09:58:14.448+07:00 ERROR 21964 --- [GoldenNest] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V1__Create_Table.sql failed
+-------------------------------------
+SQL State  : HY000
+Error Code : 1215
+Message    : Cannot add foreign key constraint
+Location   : db/migration/V1__Create_Table.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V1__Create_Table.sql)
+Line       : 98
+Statement  : -- Tạo bảng favorites
+CREATE TABLE favorites (
+                        id CHAR(36) PRIMARY KEY,
+                        user_id CHAR(36) NOT NULL,
+                        product_id INT NOT NULL,
+                        added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                        FOREIGN KEY (user_id) REFERENCES users(id),
+                        FOREIGN KEY (product_id) REFERENCES products(id)
+)
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.4.jar:3.2.4]
+	at com.example.GoldenNest.GoldenNestApplication.main(GoldenNestApplication.java:10) ~[classes/:na]
+Caused by: org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: Migration V1__Create_Table.sql failed
+-------------------------------------
+SQL State  : HY000
+Error Code : 1215
+Message    : Cannot add foreign key constraint
+Location   : db/migration/V1__Create_Table.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V1__Create_Table.sql)
+Line       : 98
+Statement  : -- Tạo bảng favorites
+CREATE TABLE favorites (
+                        id CHAR(36) PRIMARY KEY,
+                        user_id CHAR(36) NOT NULL,
+                        product_id INT NOT NULL,
+                        added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                        FOREIGN KEY (user_id) REFERENCES users(id),
+                        FOREIGN KEY (product_id) REFERENCES products(id)
+)
+
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:382) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$applyMigrations$1(DbMigrate.java:272) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:55) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.applyMigrations(DbMigrate.java:271) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:244) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$migrateAll$0(DbMigrate.java:139) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.database.mysql.MySQLNamedLockTemplate.execute(MySQLNamedLockTemplate.java:58) ~[flyway-mysql-9.22.3.jar:na]
+	at org.flywaydb.database.mysql.MySQLConnection.lock(MySQLConnection.java:152) ~[flyway-mysql-9.22.3.jar:na]
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:144) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:139) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:97) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.Flyway.lambda$migrate$0(Flyway.java:188) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:213) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140) ~[flyway-core-9.22.3.jar:na]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.2.4.jar:3.2.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-6.1.5.jar:6.1.5]
+	... 18 common frames omitted
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: Migration V1__Create_Table.sql failed
+-------------------------------------
+SQL State  : HY000
+Error Code : 1215
+Message    : Cannot add foreign key constraint
+Location   : db/migration/V1__Create_Table.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V1__Create_Table.sql)
+Line       : 98
+Statement  : -- Tạo bảng favorites
+CREATE TABLE favorites (
+                        id CHAR(36) PRIMARY KEY,
+                        user_id CHAR(36) NOT NULL,
+                        product_id INT NOT NULL,
+                        added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                        FOREIGN KEY (user_id) REFERENCES users(id),
+                        FOREIGN KEY (product_id) REFERENCES products(id)
+)
+
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.handleException(DefaultSqlScriptExecutor.java:267) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:222) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.execute(DefaultSqlScriptExecutor.java:126) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.executeOnce(SqlMigrationExecutor.java:68) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.lambda$execute$0(SqlMigrationExecutor.java:57) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.database.DefaultExecutionStrategy.execute(DefaultExecutionStrategy.java:27) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.execute(SqlMigrationExecutor.java:56) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:374) ~[flyway-core-9.22.3.jar:na]
+	... 34 common frames omitted
+Caused by: java.sql.SQLException: Cannot add foreign key constraint
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.0.1.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.executeStatement(JdbcTemplate.java:201) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.ParsedSqlStatement.execute(ParsedSqlStatement.java:95) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:210) ~[flyway-core-9.22.3.jar:na]
+	... 40 common frames omitted
+
+2024-12-05T09:58:31.648+07:00  INFO 23296 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Starting GoldenNestApplication using Java 21.0.2 with PID 23296 (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes started by ntb09 in E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE)
+2024-12-05T09:58:31.650+07:00  INFO 23296 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-12-05T09:58:32.483+07:00  INFO 23296 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-05T09:58:32.543+07:00  INFO 23296 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 1 JPA repository interface.
+2024-12-05T09:58:33.350+07:00  INFO 23296 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2024-12-05T09:58:33.361+07:00  INFO 23296 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-05T09:58:33.362+07:00  INFO 23296 --- [GoldenNest] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-12-05T09:58:33.460+07:00  INFO 23296 --- [GoldenNest] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-05T09:58:33.461+07:00  INFO 23296 --- [GoldenNest] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1762 ms
+2024-12-05T09:58:33.612+07:00  INFO 23296 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-05T09:58:34.047+07:00  INFO 23296 --- [GoldenNest] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5ac044ef
+2024-12-05T09:58:34.048+07:00  INFO 23296 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-05T09:58:34.134+07:00  INFO 23296 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2024-12-05T09:58:34.135+07:00  INFO 23296 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-12-05T09:58:34.135+07:00  INFO 23296 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : 
+2024-12-05T09:58:34.151+07:00  INFO 23296 --- [GoldenNest] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/GoldenNest (MySQL 8.0)
+2024-12-05T09:58:34.188+07:00  INFO 23296 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `goldennest`.`flyway_schema_history` does not exist yet
+2024-12-05T09:58:34.193+07:00  INFO 23296 --- [GoldenNest] [main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.023s)
+2024-12-05T09:58:34.219+07:00  INFO 23296 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `goldennest`.`flyway_schema_history` ...
+2024-12-05T09:58:34.326+07:00  INFO 23296 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `goldennest`: << Empty Schema >>
+2024-12-05T09:58:34.348+07:00  INFO 23296 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "1 - Create Table"
+2024-12-05T09:58:34.358+07:00  WARN 23296 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.users' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:58:34.425+07:00  WARN 23296 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.products' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:58:34.487+07:00  WARN 23296 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.orders' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:58:34.565+07:00  WARN 23296 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.order_details' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:58:34.672+07:00  WARN 23296 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.categories' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:58:34.768+07:00  WARN 23296 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.reviews' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:58:34.917+07:00  WARN 23296 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.carts' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:58:35.010+07:00  WARN 23296 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.favorites' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:58:35.103+07:00  WARN 23296 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.product_media' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:58:35.180+07:00  WARN 23296 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.coupons' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:58:35.255+07:00  WARN 23296 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.payments' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T09:58:35.376+07:00  INFO 23296 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "2 - Add Column To Table"
+2024-12-05T09:58:35.420+07:00  INFO 23296 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "3 - Insert Data"
+2024-12-05T09:58:35.457+07:00  INFO 23296 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema `goldennest`, now at version v3 (execution time 00:01.010s)
+2024-12-05T09:58:38.253+07:00  INFO 23296 --- [GoldenNest] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4ec28534, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@921dbcf, org.springframework.security.web.context.SecurityContextHolderFilter@21143041, org.springframework.security.web.header.HeaderWriterFilter@5c815478, org.springframework.web.filter.CorsFilter@163b8acc, org.springframework.security.web.authentication.logout.LogoutFilter@44872224, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@611f28f5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7806db3f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@24090832, org.springframework.security.web.session.SessionManagementFilter@1e470a51, org.springframework.security.web.access.ExceptionTranslationFilter@65e4eba5, org.springframework.security.web.access.intercept.AuthorizationFilter@6dae5562]
+2024-12-05T09:58:38.703+07:00  INFO 23296 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path ''
+2024-12-05T09:58:38.712+07:00  INFO 23296 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Started GoldenNestApplication in 7.55 seconds (process running for 8.083)
+2024-12-05T09:59:34.391+07:00  INFO 23296 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-05T09:59:34.400+07:00  INFO 23296 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-05T10:10:49.057+07:00  INFO 33916 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Starting GoldenNestApplication using Java 21.0.2 with PID 33916 (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes started by ntb09 in E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE)
+2024-12-05T10:10:49.060+07:00  INFO 33916 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-12-05T10:10:49.969+07:00  INFO 33916 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-05T10:10:50.021+07:00  INFO 33916 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 1 JPA repository interface.
+2024-12-05T10:10:50.825+07:00  INFO 33916 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2024-12-05T10:10:50.840+07:00  INFO 33916 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-05T10:10:50.841+07:00  INFO 33916 --- [GoldenNest] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-12-05T10:10:50.943+07:00  INFO 33916 --- [GoldenNest] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-05T10:10:50.944+07:00  INFO 33916 --- [GoldenNest] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1836 ms
+2024-12-05T10:10:51.134+07:00  INFO 33916 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-05T10:10:51.646+07:00  INFO 33916 --- [GoldenNest] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3915e7c3
+2024-12-05T10:10:51.649+07:00  INFO 33916 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-05T10:10:51.737+07:00  INFO 33916 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2024-12-05T10:10:51.737+07:00  INFO 33916 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-12-05T10:10:51.737+07:00  INFO 33916 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : 
+2024-12-05T10:10:51.757+07:00  INFO 33916 --- [GoldenNest] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/GoldenNest (MySQL 8.0)
+2024-12-05T10:10:51.798+07:00  INFO 33916 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `goldennest`.`flyway_schema_history` does not exist yet
+2024-12-05T10:10:51.806+07:00  INFO 33916 --- [GoldenNest] [main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.029s)
+2024-12-05T10:10:51.826+07:00  INFO 33916 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `goldennest`.`flyway_schema_history` ...
+2024-12-05T10:10:51.947+07:00  INFO 33916 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `goldennest`: << Empty Schema >>
+2024-12-05T10:10:51.972+07:00  INFO 33916 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "1 - Create Table"
+2024-12-05T10:10:51.979+07:00  WARN 33916 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.users' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T10:10:52.039+07:00  WARN 33916 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.products' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T10:10:52.101+07:00  WARN 33916 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.orders' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T10:10:52.213+07:00  WARN 33916 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.order_details' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T10:10:52.289+07:00  WARN 33916 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.categories' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T10:10:52.364+07:00  WARN 33916 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.reviews' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T10:10:52.459+07:00  WARN 33916 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.carts' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T10:10:52.516+07:00  WARN 33916 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.favorites' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T10:10:52.602+07:00  WARN 33916 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.product_media' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T10:10:52.670+07:00  WARN 33916 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.coupons' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T10:10:52.717+07:00  WARN 33916 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.payments' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T10:10:52.812+07:00  INFO 33916 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "2 - Add Column To Table"
+2024-12-05T10:10:52.854+07:00  INFO 33916 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "3 - Insert Data"
+2024-12-05T10:10:52.891+07:00  INFO 33916 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema `goldennest`, now at version v3 (execution time 00:00.817s)
+2024-12-05T10:11:08.256+07:00  INFO 33916 --- [GoldenNest] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7719b257, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4a571516, org.springframework.security.web.context.SecurityContextHolderFilter@70c68e4e, org.springframework.security.web.header.HeaderWriterFilter@1150b923, org.springframework.web.filter.CorsFilter@681302ad, org.springframework.security.web.authentication.logout.LogoutFilter@834529e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@21a14c45, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b7648f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@594793d1, org.springframework.security.web.session.SessionManagementFilter@ca31ad7, org.springframework.security.web.access.ExceptionTranslationFilter@200cbb63, org.springframework.security.web.access.intercept.AuthorizationFilter@1766b009]
+2024-12-05T10:11:08.657+07:00  INFO 33916 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path ''
+2024-12-05T10:11:08.668+07:00  INFO 33916 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Started GoldenNestApplication in 20.112 seconds (process running for 20.689)
+2024-12-05T10:11:08.681+07:00  INFO 33916 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-05T10:11:08.688+07:00  INFO 33916 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-05T10:11:10.708+07:00  INFO 1448 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Starting GoldenNestApplication using Java 21.0.2 with PID 1448 (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes started by ntb09 in E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE)
+2024-12-05T10:11:10.710+07:00  INFO 1448 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-12-05T10:11:11.620+07:00  INFO 1448 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-05T10:11:11.685+07:00  INFO 1448 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interface.
+2024-12-05T10:11:12.457+07:00  INFO 1448 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2024-12-05T10:11:12.469+07:00  INFO 1448 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-05T10:11:12.470+07:00  INFO 1448 --- [GoldenNest] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-12-05T10:11:12.563+07:00  INFO 1448 --- [GoldenNest] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-05T10:11:12.563+07:00  INFO 1448 --- [GoldenNest] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1799 ms
+2024-12-05T10:11:12.712+07:00  INFO 1448 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-05T10:11:13.144+07:00  INFO 1448 --- [GoldenNest] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5ac044ef
+2024-12-05T10:11:13.147+07:00  INFO 1448 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-05T10:11:13.230+07:00  INFO 1448 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2024-12-05T10:11:13.230+07:00  INFO 1448 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-12-05T10:11:13.231+07:00  INFO 1448 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : 
+2024-12-05T10:11:13.254+07:00  INFO 1448 --- [GoldenNest] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/GoldenNest (MySQL 8.0)
+2024-12-05T10:11:13.317+07:00  INFO 1448 --- [GoldenNest] [main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.031s)
+2024-12-05T10:11:13.334+07:00  INFO 1448 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `goldennest`: 3
+2024-12-05T10:11:13.338+07:00  INFO 1448 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Schema `goldennest` is up to date. No migration necessary.
+2024-12-05T10:11:16.047+07:00  INFO 1448 --- [GoldenNest] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@c53c04e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@18f493d7, org.springframework.security.web.context.SecurityContextHolderFilter@25a81f28, org.springframework.security.web.header.HeaderWriterFilter@13482361, org.springframework.web.filter.CorsFilter@2d036335, org.springframework.security.web.authentication.logout.LogoutFilter@221ef0f0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@753cfae3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@326320bb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a3e1b5d, org.springframework.security.web.session.SessionManagementFilter@61f2bf3a, org.springframework.security.web.access.ExceptionTranslationFilter@35ec3604, org.springframework.security.web.access.intercept.AuthorizationFilter@7388d94d]
+2024-12-05T10:11:16.471+07:00  INFO 1448 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path ''
+2024-12-05T10:11:16.480+07:00  INFO 1448 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Started GoldenNestApplication in 6.252 seconds (process running for 6.806)
+2024-12-05T10:12:28.672+07:00  INFO 1448 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-05T10:12:28.678+07:00  INFO 1448 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-05T10:12:30.529+07:00  INFO 12616 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Starting GoldenNestApplication using Java 21.0.2 with PID 12616 (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes started by ntb09 in E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE)
+2024-12-05T10:12:30.531+07:00  INFO 12616 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-12-05T10:12:31.368+07:00  INFO 12616 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-05T10:12:31.427+07:00  INFO 12616 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 1 JPA repository interface.
+2024-12-05T10:12:32.209+07:00  INFO 12616 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2024-12-05T10:12:32.219+07:00  INFO 12616 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-05T10:12:32.220+07:00  INFO 12616 --- [GoldenNest] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-12-05T10:12:32.311+07:00  INFO 12616 --- [GoldenNest] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-05T10:12:32.311+07:00  INFO 12616 --- [GoldenNest] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1735 ms
+2024-12-05T10:12:32.456+07:00  INFO 12616 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-05T10:12:32.913+07:00  INFO 12616 --- [GoldenNest] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c33fcf8
+2024-12-05T10:12:32.915+07:00  INFO 12616 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-05T10:12:32.998+07:00  INFO 12616 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2024-12-05T10:12:32.999+07:00  INFO 12616 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-12-05T10:12:32.999+07:00  INFO 12616 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : 
+2024-12-05T10:12:33.017+07:00  INFO 12616 --- [GoldenNest] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/GoldenNest (MySQL 8.0)
+2024-12-05T10:12:33.059+07:00  INFO 12616 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `goldennest`.`flyway_schema_history` does not exist yet
+2024-12-05T10:12:33.063+07:00  INFO 12616 --- [GoldenNest] [main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.022s)
+2024-12-05T10:12:33.082+07:00  INFO 12616 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `goldennest`.`flyway_schema_history` ...
+2024-12-05T10:12:33.219+07:00  INFO 12616 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `goldennest`: << Empty Schema >>
+2024-12-05T10:12:33.241+07:00  INFO 12616 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "1 - Create Table"
+2024-12-05T10:12:33.250+07:00  WARN 12616 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.users' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T10:12:33.318+07:00  WARN 12616 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.products' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T10:12:33.401+07:00  WARN 12616 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.orders' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T10:12:33.549+07:00  WARN 12616 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.order_details' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T10:12:33.650+07:00  WARN 12616 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.categories' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T10:12:33.762+07:00  WARN 12616 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.reviews' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T10:12:33.858+07:00  WARN 12616 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.carts' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T10:12:33.953+07:00  WARN 12616 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.favorites' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T10:12:34.044+07:00  WARN 12616 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.product_media' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T10:12:34.123+07:00  WARN 12616 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.coupons' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T10:12:34.174+07:00  WARN 12616 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.payments' (SQL State: 42S02 - Error Code: 1051)
+2024-12-05T10:12:34.259+07:00  INFO 12616 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "2 - Add Column To Table"
+2024-12-05T10:12:34.301+07:00  INFO 12616 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "3 - Insert Data"
+2024-12-05T10:12:34.344+07:00  INFO 12616 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema `goldennest`, now at version v3 (execution time 00:00.999s)
+2024-12-05T10:12:39.344+07:00  INFO 12616 --- [GoldenNest] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@14f8fdae, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4414ee28, org.springframework.security.web.context.SecurityContextHolderFilter@73625632, org.springframework.security.web.header.HeaderWriterFilter@524945e2, org.springframework.web.filter.CorsFilter@3533b614, org.springframework.security.web.authentication.logout.LogoutFilter@5988e36e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2591477f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@761d3c20, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1caa1866, org.springframework.security.web.session.SessionManagementFilter@1150b923, org.springframework.security.web.access.ExceptionTranslationFilter@519e0814, org.springframework.security.web.access.intercept.AuthorizationFilter@4f67d628]
+2024-12-05T10:12:39.788+07:00  INFO 12616 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path ''
+2024-12-05T10:12:39.801+07:00  INFO 12616 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Started GoldenNestApplication in 9.748 seconds (process running for 10.269)
+2024-12-05T10:14:42.375+07:00  INFO 12616 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-05T10:14:42.380+07:00  INFO 12616 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-05T10:16:10.382+07:00  INFO 31464 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Starting GoldenNestApplication using Java 21.0.2 with PID 31464 (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes started by ntb09 in E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE)
+2024-12-05T10:16:10.385+07:00  INFO 31464 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-12-05T10:16:11.398+07:00  INFO 31464 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-05T10:16:11.480+07:00  INFO 31464 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 1 JPA repository interface.
+2024-12-05T10:16:12.368+07:00  INFO 31464 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2024-12-05T10:16:12.381+07:00  INFO 31464 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-05T10:16:12.381+07:00  INFO 31464 --- [GoldenNest] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-12-05T10:16:12.483+07:00  INFO 31464 --- [GoldenNest] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-05T10:16:12.486+07:00  INFO 31464 --- [GoldenNest] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2053 ms
+2024-12-05T10:16:12.682+07:00  INFO 31464 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-05T10:16:13.158+07:00  INFO 31464 --- [GoldenNest] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18c880ea
+2024-12-05T10:16:13.160+07:00  INFO 31464 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-05T10:16:13.259+07:00  INFO 31464 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2024-12-05T10:16:13.259+07:00  INFO 31464 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-12-05T10:16:13.259+07:00  INFO 31464 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : 
+2024-12-05T10:16:13.282+07:00  INFO 31464 --- [GoldenNest] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/GoldenNest (MySQL 8.0)
+2024-12-05T10:16:13.371+07:00  INFO 31464 --- [GoldenNest] [main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.058s)
+2024-12-05T10:16:13.406+07:00  INFO 31464 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `goldennest`: 3
+2024-12-05T10:16:13.412+07:00  INFO 31464 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Schema `goldennest` is up to date. No migration necessary.
+2024-12-05T10:16:16.423+07:00  INFO 31464 --- [GoldenNest] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@68596992, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5f0c45ae, org.springframework.security.web.context.SecurityContextHolderFilter@4203190, org.springframework.security.web.header.HeaderWriterFilter@75c5ab79, org.springframework.web.filter.CorsFilter@66d62c59, org.springframework.security.web.authentication.logout.LogoutFilter@72769bf5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@72f5fb36, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@300b839c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@f1b006b, org.springframework.security.web.session.SessionManagementFilter@57573880, org.springframework.security.web.access.ExceptionTranslationFilter@e38b953, org.springframework.security.web.access.intercept.AuthorizationFilter@64abb917]
+2024-12-05T10:16:16.825+07:00  INFO 31464 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path ''
+2024-12-05T10:16:16.837+07:00  INFO 31464 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Started GoldenNestApplication in 6.979 seconds (process running for 7.543)
+2024-12-05T10:16:52.444+07:00  INFO 31464 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-05T10:16:52.450+07:00  INFO 31464 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

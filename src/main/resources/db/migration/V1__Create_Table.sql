@@ -25,9 +25,8 @@ CREATE TABLE products (
                           name VARCHAR(255) NOT NULL,
                           description TEXT NOT NULL,
                           price DECIMAL(10, 2) NOT NULL,
-                          stock_quantity INT NOT NULL, -- Số lượng sản phẩm trong kho
-                          category VARCHAR(255) NOT NULL, -- Loại sản phẩm (e.g., yến thô, yến tinh chế)
-                          image_url VARCHAR(255) NULL, -- Ảnh sản phẩm
+                          stock_quantity INT NOT NULL,
+                          category VARCHAR(255) NOT NULL,
                           created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                           updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
@@ -108,9 +107,9 @@ DROP TABLE IF EXISTS `product_media`;
 -- Tạo bảng product_media
 CREATE TABLE product_media (
                             id CHAR(36) PRIMARY KEY,
+                            base_name VARCHAR(255) NOT NULL,
+                            public_url VARCHAR(2083) NOT NULL,
                             product_id CHAR(36) NOT NULL,
-                            url VARCHAR(2083) NOT NULL,
-                            media_type ENUM('Image', 'Video') DEFAULT 'Image',
                             FOREIGN KEY (product_id) REFERENCES products(id)
 );
 
@@ -134,3 +133,16 @@ CREATE TABLE payments (
                         payment_method ENUM('Credit Card', 'PayPal', 'Cash') DEFAULT 'Credit Card',
                         FOREIGN KEY (order_id) REFERENCES orders(id)
 );
+
+-- Tạo bảng news
+DROP TABLE IF EXISTS `news`;
+CREATE TABLE news (
+                      id CHAR(36) PRIMARY KEY,
+                      title VARCHAR(255) NOT NULL,
+                      content TEXT NOT NULL,
+                      image_url VARCHAR(255) NULL,
+                      source VARCHAR(255) NULL,
+                      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                      updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+

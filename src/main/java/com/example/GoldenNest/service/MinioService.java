@@ -2,7 +2,6 @@ package com.example.GoldenNest.service;
 
 import io.minio.*;
 import io.minio.errors.MinioException;
-import lombok.Getter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -18,17 +17,15 @@ public class MinioService {
     private final MinioClient minioClient;
     private final Logger logger = LoggerFactory.getLogger(MinioService.class);
 
-    @Getter
-    private final String bucketName = "avatar";
-
     public MinioService(MinioClient minioClient) {
         this.minioClient = minioClient;
     }
 
     /**
      * Kiểm tra và tạo bucket nếu chưa tồn tại.
+     * @param bucketName Tên bucket cần kiểm tra và tạo.
      */
-    public void ensureBucketExists() {
+    public void ensureBucketExists(String bucketName) {
         try {
             boolean bucketExists = minioClient.bucketExists(
                     BucketExistsArgs.builder().bucket(bucketName).build()
@@ -46,16 +43,17 @@ public class MinioService {
     }
 
     /**
-     * Tải tệp lên MinIO.
+     * Tải tệp lên MinIO cho một bucket cụ thể.
      *
+     * @param bucketName  Tên bucket nơi sẽ lưu trữ tệp
      * @param objectName  Tên tệp trên MinIO
      * @param inputStream Luồng dữ liệu tệp
      * @param size        Kích thước tệp
-     * @param contentType Loại MIME
+     * @param contentType Loại MIME của tệp
      */
-    public void uploadFile(String objectName, InputStream inputStream, long size, String contentType) {
+    public void uploadFile(String bucketName, String objectName, InputStream inputStream, long size, String contentType) {
         try {
-            ensureBucketExists();
+            ensureBucketExists(bucketName);
             minioClient.putObject(
                     PutObjectArgs.builder()
                             .bucket(bucketName)
@@ -72,11 +70,12 @@ public class MinioService {
     }
 
     /**
-     * Xóa tệp từ MinIO.
+     * Xóa tệp từ MinIO trong một bucket cụ thể.
      *
+     * @param bucketName Tên bucket chứa tệp
      * @param objectName Tên tệp trên MinIO
      */
-    public void deleteFile(String objectName) {
+    public void deleteFile(String bucketName, String objectName) {
         try {
             minioClient.removeObject(
                     RemoveObjectArgs.builder()
@@ -106,7 +105,7 @@ public class MinioService {
             case "png" -> "image/png";
             case "gif" -> "image/gif";
             case "bmp" -> "image/bmp";
-            default -> "application/octet-stream"; // Kiểu MIME mặc định
+            default -> "application/octet-stream";
         };
     }
 

@@ -13,7 +13,7 @@ import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 
 @RestController
-@RequestMapping("/avatar")
+@RequestMapping("/api/avatar")
 public class AvatarController {
 
     private final AvatarService avatarService;

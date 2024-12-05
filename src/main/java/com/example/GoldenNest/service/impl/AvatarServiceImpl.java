@@ -38,12 +38,15 @@ public class AvatarServiceImpl implements AvatarService {
         Users currentUser = usersRepository.findByUsername(currentUsername);
         String userId = currentUser.getId();
 
+        // Define the bucket as "avatar"
+        String bucketName = "avatar";
+
         try (InputStream inputStream = new BufferedInputStream(file.getInputStream())) {
             String objectName = userId + "/" + file.getOriginalFilename();
             String contentType = minioService.getContentType(objectName);
-            minioService.uploadFile(objectName, inputStream, inputStream.available(), contentType);
+            minioService.uploadFile(bucketName, objectName, inputStream, inputStream.available(), contentType);
 
-            String avatarUrl = minioService.getBucketName() + "/" + objectName;
+            String avatarUrl = bucketName + "/" + objectName;
             currentUser.setAvatar(avatarUrl);
             usersRepository.save(currentUser);
             logger.info("Tệp {} đã được tải lên thành công cho người dùng {}", file.getOriginalFilename(), currentUsername);
@@ -57,9 +60,12 @@ public class AvatarServiceImpl implements AvatarService {
         Users currentUser = usersRepository.findByUsername(currentUsername);
         String userId = currentUser.getId();
 
+        // Define the bucket as "avatar"
+        String bucketName = "avatar";
+
         try {
             String filepath = userId + "/" + objectName;
-            minioService.deleteFile(filepath);
+            minioService.deleteFile(bucketName, filepath);
             currentUser.setAvatar(null);
             usersRepository.save(currentUser);
             logger.info("Avatar deleted successfully for user: {}", currentUsername);

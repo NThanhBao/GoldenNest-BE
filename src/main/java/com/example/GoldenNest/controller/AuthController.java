@@ -36,11 +36,18 @@ public class AuthController {
         }
     }
 
-    // Phương thức cập nhật thông tin người dùng
+    // Cập nhật thông tin người dùng
     @CheckLogin
     @PutMapping("/update")
-    public ResponseEntity<String> updateUser(@RequestBody UserDTO updatedUserDto) {
+    public ResponseEntity<String> updateUser(@RequestBody AuthDTO updatedUserDto) {
         return authService.updateUser(updatedUserDto);
+    }
+
+    // Xóa người dùng (vô hiệu hóa tài khoản)
+    @CheckLogin
+    @DeleteMapping("/delete/{username}")
+    public ResponseEntity<String> deleteUser(@PathVariable String username) {
+        return authService.deleteUser(username);
     }
 
 }

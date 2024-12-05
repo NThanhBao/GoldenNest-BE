@@ -1359,3 +1359,91 @@ Caused by: java.sql.SQLException: Cannot add foreign key constraint
 2024-12-05T10:16:16.837+07:00  INFO 31464 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Started GoldenNestApplication in 6.979 seconds (process running for 7.543)
 2024-12-05T10:16:52.444+07:00  INFO 31464 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-12-05T10:16:52.450+07:00  INFO 31464 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-05T10:26:55.704+07:00  INFO 5684 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Starting GoldenNestApplication using Java 21.0.2 with PID 5684 (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes started by ntb09 in E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE)
+2024-12-05T10:26:55.705+07:00  INFO 5684 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-12-05T10:26:56.557+07:00  INFO 5684 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-05T10:26:56.617+07:00  INFO 5684 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 1 JPA repository interface.
+2024-12-05T10:26:57.422+07:00  INFO 5684 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2024-12-05T10:26:57.435+07:00  INFO 5684 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-05T10:26:57.436+07:00  INFO 5684 --- [GoldenNest] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-12-05T10:26:57.536+07:00  INFO 5684 --- [GoldenNest] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-05T10:26:57.536+07:00  INFO 5684 --- [GoldenNest] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1780 ms
+2024-12-05T10:26:57.683+07:00  INFO 5684 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-05T10:26:58.068+07:00  INFO 5684 --- [GoldenNest] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@53feeac9
+2024-12-05T10:26:58.070+07:00  INFO 5684 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-05T10:26:58.158+07:00  INFO 5684 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2024-12-05T10:26:58.158+07:00  INFO 5684 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-12-05T10:26:58.158+07:00  INFO 5684 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : 
+2024-12-05T10:26:58.177+07:00  INFO 5684 --- [GoldenNest] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/GoldenNest (MySQL 8.0)
+2024-12-05T10:26:58.246+07:00  INFO 5684 --- [GoldenNest] [main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.033s)
+2024-12-05T10:26:58.262+07:00  INFO 5684 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `goldennest`: 3
+2024-12-05T10:26:58.266+07:00  INFO 5684 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Schema `goldennest` is up to date. No migration necessary.
+2024-12-05T10:27:01.146+07:00  INFO 5684 --- [GoldenNest] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@36b6802f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7d2d5625, org.springframework.security.web.context.SecurityContextHolderFilter@558fa64a, org.springframework.security.web.header.HeaderWriterFilter@4adb2b87, org.springframework.web.filter.CorsFilter@29a51ff1, org.springframework.security.web.authentication.logout.LogoutFilter@39240aa3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@68d1f4e2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@72769bf5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6dacde96, org.springframework.security.web.session.SessionManagementFilter@34ad750f, org.springframework.security.web.access.ExceptionTranslationFilter@40ff56f7, org.springframework.security.web.access.intercept.AuthorizationFilter@2acfd27b]
+2024-12-05T10:27:01.589+07:00  INFO 5684 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path ''
+2024-12-05T10:27:01.599+07:00  INFO 5684 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Started GoldenNestApplication in 6.408 seconds (process running for 6.967)
+2024-12-05T10:27:13.877+07:00  INFO 5684 --- [GoldenNest] [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-05T10:27:13.877+07:00  INFO 5684 --- [GoldenNest] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-05T10:27:13.879+07:00  INFO 5684 --- [GoldenNest] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-12-05T10:27:14.614+07:00  INFO 5684 --- [GoldenNest] [http-nio-8083-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 337 ms
+2024-12-05T10:27:47.301+07:00  INFO 5684 --- [GoldenNest] [http-nio-8083-exec-1] c.e.G.service.impl.AuthServiceImpl       : Đã tìm thấy người dùng: user1
+2024-12-05T10:27:47.369+07:00  INFO 5684 --- [GoldenNest] [http-nio-8083-exec-1] c.e.G.service.impl.AuthServiceImpl       : --LOGIN SUCCESSFUL FOR USER-- : user1
+2024-12-05T10:27:47.451+07:00  INFO 5684 --- [GoldenNest] [http-nio-8083-exec-1] c.e.G.service.impl.AuthServiceImpl       : Token for user user1: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVVNFUiIsInVzZXJJZCI6ImRlZmFmZWRkLWIyYjYtMTFlZi04Mjk3LTJjZjA1ZGI2NTkyOSIsInN1YiI6InVzZXIxIiwiaWF0IjoxNzMzMzY5MjY3LCJleHAiOjE3MzYwNDc2Njd9.K18gLvbCKObqmXqiEjWYE6A-TWmLBpw9sfaxdFeAVik
+2024-12-05T10:31:28.979+07:00  INFO 5684 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-05T10:31:28.988+07:00  INFO 5684 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-05T10:31:33.094+07:00  INFO 11320 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Starting GoldenNestApplication using Java 21.0.2 with PID 11320 (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes started by ntb09 in E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE)
+2024-12-05T10:31:33.097+07:00  INFO 11320 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-12-05T10:31:34.056+07:00  INFO 11320 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-05T10:31:34.114+07:00  INFO 11320 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 1 JPA repository interface.
+2024-12-05T10:31:34.948+07:00  INFO 11320 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2024-12-05T10:31:34.960+07:00  INFO 11320 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-05T10:31:34.961+07:00  INFO 11320 --- [GoldenNest] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-12-05T10:31:35.062+07:00  INFO 11320 --- [GoldenNest] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-05T10:31:35.063+07:00  INFO 11320 --- [GoldenNest] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1907 ms
+2024-12-05T10:31:35.230+07:00  INFO 11320 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-05T10:31:35.728+07:00  INFO 11320 --- [GoldenNest] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45e140ae
+2024-12-05T10:31:35.730+07:00  INFO 11320 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-05T10:31:35.814+07:00  INFO 11320 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2024-12-05T10:31:35.814+07:00  INFO 11320 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-12-05T10:31:35.814+07:00  INFO 11320 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : 
+2024-12-05T10:31:35.832+07:00  INFO 11320 --- [GoldenNest] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/GoldenNest (MySQL 8.0)
+2024-12-05T10:31:35.884+07:00  INFO 11320 --- [GoldenNest] [main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.032s)
+2024-12-05T10:31:35.904+07:00  INFO 11320 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `goldennest`: 3
+2024-12-05T10:31:35.910+07:00  INFO 11320 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Schema `goldennest` is up to date. No migration necessary.
+2024-12-05T10:31:38.740+07:00  INFO 11320 --- [GoldenNest] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@729a98e9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@51c7d472, org.springframework.security.web.context.SecurityContextHolderFilter@5cc85ffc, org.springframework.security.web.header.HeaderWriterFilter@53c39950, org.springframework.web.filter.CorsFilter@3aa4d595, org.springframework.security.web.authentication.logout.LogoutFilter@4e6881e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@57386162, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7388d94d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@e50e308, org.springframework.security.web.session.SessionManagementFilter@5a63de07, org.springframework.security.web.access.ExceptionTranslationFilter@5317a7ef, org.springframework.security.web.access.intercept.AuthorizationFilter@7892635c]
+2024-12-05T10:31:39.182+07:00  INFO 11320 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path ''
+2024-12-05T10:31:39.190+07:00  INFO 11320 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Started GoldenNestApplication in 6.59 seconds (process running for 7.151)
+2024-12-05T10:31:51.979+07:00  INFO 11320 --- [GoldenNest] [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-05T10:31:51.979+07:00  INFO 11320 --- [GoldenNest] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-05T10:31:51.981+07:00  INFO 11320 --- [GoldenNest] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-05T10:31:52.425+07:00  INFO 11320 --- [GoldenNest] [http-nio-8083-exec-1] c.e.G.service.impl.AuthServiceImpl       : Tài khoản của người dùng 'user1' đã bị vô hiệu hóa
+2024-12-05T10:32:38.025+07:00 ERROR 11320 --- [GoldenNest] [http-nio-8083-exec-2] c.e.G.service.impl.AuthServiceImpl       : Tài khoản của người dùng 'user1' đã bị vô hiệu hóa.
+2024-12-05T10:36:01.333+07:00  INFO 11320 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-05T10:36:01.339+07:00  INFO 11320 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-05T10:36:05.481+07:00  INFO 28296 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Starting GoldenNestApplication using Java 21.0.2 with PID 28296 (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes started by ntb09 in E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE)
+2024-12-05T10:36:05.483+07:00  INFO 28296 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-12-05T10:36:06.486+07:00  INFO 28296 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-05T10:36:06.551+07:00  INFO 28296 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 1 JPA repository interface.
+2024-12-05T10:36:07.454+07:00  INFO 28296 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2024-12-05T10:36:07.470+07:00  INFO 28296 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-05T10:36:07.470+07:00  INFO 28296 --- [GoldenNest] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-12-05T10:36:07.580+07:00  INFO 28296 --- [GoldenNest] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-05T10:36:07.581+07:00  INFO 28296 --- [GoldenNest] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2054 ms
+2024-12-05T10:36:07.760+07:00  INFO 28296 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-05T10:36:08.189+07:00  INFO 28296 --- [GoldenNest] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@440ef8d
+2024-12-05T10:36:08.191+07:00  INFO 28296 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-05T10:36:08.276+07:00  INFO 28296 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2024-12-05T10:36:08.276+07:00  INFO 28296 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-12-05T10:36:08.276+07:00  INFO 28296 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : 
+2024-12-05T10:36:08.293+07:00  INFO 28296 --- [GoldenNest] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/GoldenNest (MySQL 8.0)
+2024-12-05T10:36:08.343+07:00  INFO 28296 --- [GoldenNest] [main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.032s)
+2024-12-05T10:36:08.362+07:00  INFO 28296 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `goldennest`: 3
+2024-12-05T10:36:08.369+07:00  INFO 28296 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Schema `goldennest` is up to date. No migration necessary.
+2024-12-05T10:36:11.322+07:00  INFO 28296 --- [GoldenNest] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2acfd27b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5e8359da, org.springframework.security.web.context.SecurityContextHolderFilter@2a5917f6, org.springframework.security.web.header.HeaderWriterFilter@64648af1, org.springframework.web.filter.CorsFilter@36b6802f, org.springframework.security.web.authentication.logout.LogoutFilter@61f18997, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@558fa64a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a55b4f9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7d2d5625, org.springframework.security.web.session.SessionManagementFilter@6d58ed12, org.springframework.security.web.access.ExceptionTranslationFilter@77fa2dcc, org.springframework.security.web.access.intercept.AuthorizationFilter@6ea0dfaa]
+2024-12-05T10:36:11.788+07:00  INFO 28296 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path ''
+2024-12-05T10:36:11.800+07:00  INFO 28296 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Started GoldenNestApplication in 6.875 seconds (process running for 7.46)
+2024-12-05T10:36:12.834+07:00  INFO 28296 --- [GoldenNest] [http-nio-8083-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-05T10:36:12.835+07:00  INFO 28296 --- [GoldenNest] [http-nio-8083-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-05T10:36:12.836+07:00  INFO 28296 --- [GoldenNest] [http-nio-8083-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-05T10:36:13.518+07:00  INFO 28296 --- [GoldenNest] [http-nio-8083-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 345 ms
+2024-12-05T10:36:35.971+07:00  INFO 28296 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-05T10:36:35.978+07:00  INFO 28296 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

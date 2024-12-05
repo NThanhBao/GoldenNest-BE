@@ -7,6 +7,7 @@ import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -28,7 +29,7 @@ public class LoginCheckAspect {
             HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
             String authHeader = request.getHeader("Authorization");
             if (authHeader == null || !authHeader.startsWith("Bearer ")) {
-                throw new UnauthorizedException("Không tìm thấy token.");
+                throw new UnauthorizedException("Không tìm thấy token trong header hoặc token không hợp lệ.");
             }
 
             String token = authHeader.substring(7);
@@ -40,25 +41,25 @@ public class LoginCheckAspect {
 
             // Kiểm tra xem token đã hợp lệ hay không
             if (!jwtTokenService.isTokenValid(token)) {
-                throw new UnauthorizedException("Token không có thông tin.");
+                throw new UnauthorizedException("Token không hợp lệ hoặc không có thông tin.");
             }
 
             // Kiểm tra xem token đã hết hạn chưa
             if (jwtTokenService.isTokenExpired(token)) {
-                throw new UnauthorizedException("Token đã hết hạn");
+                throw new UnauthorizedException("Token đã hết hạn.");
             }
 
             // Nếu tất cả các kiểm tra đều thành công, trả về thông tin người dùng
             Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-            if (!(authentication instanceof AnonymousAuthenticationToken)) {
+            if (authentication != null && !(authentication instanceof AnonymousAuthenticationToken)) {
                 String currentUserName = authentication.getName();
                 return ResponseEntity.ok(currentUserName);
             }
-            throw new UnauthorizedException("Có lỗi xảy rasssss!");
+            throw new UnauthorizedException("Không có thông tin người dùng trong phiên đăng nhập.");
         } catch (UnauthorizedException e) {
-            throw e;
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).body(e.getMessage());
         } catch (Exception e) {
-            throw new UnauthorizedException("Có lỗi xảy ra!");
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Lỗi hệ thống: " + e.getMessage());
         }
     }
 }

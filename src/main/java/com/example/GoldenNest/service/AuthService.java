@@ -17,5 +17,7 @@ public interface AuthService extends UserDetailsService {
 
     Users getUserByUsername(String username);
 
-    ResponseEntity<String> updateUser(UserDTO updatedUserDto);
+    ResponseEntity<String> updateUser(AuthDTO updatedUserDto);
+
+    ResponseEntity<String> deleteUser(String username);
 }

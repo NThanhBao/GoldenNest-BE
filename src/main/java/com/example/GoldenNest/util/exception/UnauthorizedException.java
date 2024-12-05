@@ -5,8 +5,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.io.Serial;
 
+//FORBIDDEN (403)
 @ResponseStatus(HttpStatus.FORBIDDEN)
-public class UnauthorizedException extends RuntimeException{
+public class UnauthorizedException extends RuntimeException {
     @Serial
     private static final long serialVersionUID = -4893320765855582206L;
 

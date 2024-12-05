@@ -120,12 +120,11 @@ public class AuthServiceImpl implements AuthService {
     }
 
     @Override
-    public ResponseEntity<String> updateUser(UserDTO updatedUserDto) {
+    public ResponseEntity<String> updateUser(AuthDTO updatedUserDto) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         String currentUsername = auth.getName();
         Users existingUser = userRepository.findByUsername(currentUsername);
 
-        // Kiểm tra xem người dùng có tồn tại không
         if (existingUser == null) {
             logger.warn("Không tìm thấy người dùng với username: '{}'", currentUsername);
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Không tìm thấy người dùng");
@@ -145,6 +144,25 @@ public class AuthServiceImpl implements AuthService {
         logger.info("Thông tin của người dùng '{}' đã được cập nhật thành công", currentUsername);
         return ResponseEntity.ok("Cập nhật thành công thông tin người dùng");
     }
+
+    @Override
+    public ResponseEntity<String> deleteUser(String username) {
+        Users existingUser = userRepository.findByUsername(username);
+
+        if (existingUser == null) {
+            logger.warn("Không tìm thấy người dùng với username: '{}'", username);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Không tìm thấy người dùng");
+        }
+
+        // Chuyển enableType thành FALSE để vô hiệu hóa tài khoản
+        existingUser.setEnableType(EnableType.FALSE);
+        userRepository.save(existingUser);
+
+        logger.info("Tài khoản của người dùng '{}' đã bị vô hiệu hóa", username);
+        return ResponseEntity.ok("Tài khoản đã bị vô hiệu hóa");
+    }
+
+
 
     private boolean isUserExists(AuthDTO registerDTO) {
         return userRepository.existsByUsername(registerDTO.getUsername()) ||

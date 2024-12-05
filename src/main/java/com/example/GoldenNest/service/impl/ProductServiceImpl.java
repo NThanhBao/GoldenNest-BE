@@ -7,9 +7,7 @@ import com.example.GoldenNest.model.entity.Users;
 import com.example.GoldenNest.repositories.ProductMediaRepository;
 import com.example.GoldenNest.repositories.ProductRepository;
 import com.example.GoldenNest.repositories.UsersRepository;
-import com.example.GoldenNest.service.MinioService;
 import com.example.GoldenNest.service.ProductService;
-import io.minio.errors.MinioException;
 import jakarta.persistence.EntityNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,10 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
 
-import java.io.InputStream;
-import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -31,14 +26,12 @@ public class ProductServiceImpl implements ProductService {
 
     private final ProductRepository productRepository;
     private final UsersRepository usersRepository;
-    private final MinioService minioService;
     private final ProductMediaRepository productMediaRepository;
     private static final Logger logger = LoggerFactory.getLogger(ProductServiceImpl.class);
     @Autowired
-    public ProductServiceImpl(ProductRepository productRepository, UsersRepository usersRepository, MinioService minioService, ProductMediaRepository productMediaRepository) {
+    public ProductServiceImpl(ProductRepository productRepository, UsersRepository usersRepository, ProductMediaRepository productMediaRepository) {
         this.productRepository = productRepository;
         this.usersRepository = usersRepository;
-        this.minioService = minioService;
         this.productMediaRepository = productMediaRepository;
     }
 

@@ -2,18 +2,15 @@ package com.example.GoldenNest.controller;
 
 import com.example.GoldenNest.model.dto.ProductDTO;
 import com.example.GoldenNest.model.entity.Product;
-import com.example.GoldenNest.model.entity.ProductMedia;
 import com.example.GoldenNest.service.ProductMediaService;
 import com.example.GoldenNest.service.ProductService;
 import com.example.GoldenNest.util.annotation.CheckLogin;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.util.List;
 
 import static com.example.GoldenNest.service.impl.AuthServiceImpl.logger;
 
@@ -21,11 +18,14 @@ import static com.example.GoldenNest.service.impl.AuthServiceImpl.logger;
 @RequestMapping("/api/products")
 public class ProductController {
 
-    @Autowired
-    private ProductService productService;
+    private final ProductService productService;
 
-    @Autowired
-    private ProductMediaService productMediaService;
+    private final ProductMediaService productMediaService;
+
+    public ProductController(ProductService productService, ProductMediaService productMediaService) {
+        this.productService = productService;
+        this.productMediaService = productMediaService;
+    }
 
     @CheckLogin
     @PostMapping(value = "/upload", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})

@@ -1,7 +1,6 @@
 package com.example.GoldenNest.controller;
 
 import com.example.GoldenNest.model.dto.AuthDTO;
-import com.example.GoldenNest.model.dto.UserDTO;
 import com.example.GoldenNest.service.AuthService;
 import com.example.GoldenNest.util.annotation.CheckLogin;
 import org.springframework.beans.factory.annotation.Autowired;

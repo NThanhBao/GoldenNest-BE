@@ -1,7 +1,6 @@
 package com.example.GoldenNest.service;
 
 import com.example.GoldenNest.model.dto.AuthDTO;
-import com.example.GoldenNest.model.dto.UserDTO;
 import com.example.GoldenNest.model.entity.Users;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;

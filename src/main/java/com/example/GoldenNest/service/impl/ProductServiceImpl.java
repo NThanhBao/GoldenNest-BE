@@ -2,64 +2,88 @@ package com.example.GoldenNest.service.impl;
 
 import com.example.GoldenNest.model.dto.ProductDTO;
 import com.example.GoldenNest.model.entity.Product;
+import com.example.GoldenNest.model.entity.ProductMedia;
+import com.example.GoldenNest.model.entity.Users;
+import com.example.GoldenNest.repositories.ProductMediaRepository;
 import com.example.GoldenNest.repositories.ProductRepository;
+import com.example.GoldenNest.repositories.UsersRepository;
 import com.example.GoldenNest.service.MinioService;
 import com.example.GoldenNest.service.ProductService;
+import io.minio.errors.MinioException;
+import jakarta.persistence.EntityNotFoundException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.InputStream;
+import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class ProductServiceImpl implements ProductService {
 
     private final ProductRepository productRepository;
+    private final UsersRepository usersRepository;
     private final MinioService minioService;
-
+    private final ProductMediaRepository productMediaRepository;
+    private static final Logger logger = LoggerFactory.getLogger(ProductServiceImpl.class);
     @Autowired
-    public ProductServiceImpl(ProductRepository productRepository, MinioService minioService) {
+    public ProductServiceImpl(ProductRepository productRepository, UsersRepository usersRepository, MinioService minioService, ProductMediaRepository productMediaRepository) {
         this.productRepository = productRepository;
+        this.usersRepository = usersRepository;
         this.minioService = minioService;
+        this.productMediaRepository = productMediaRepository;
     }
 
     // Add product and handle image upload
     @Override
-    public Product addProduct(ProductDTO productDTO) throws Exception {
-        // Create a new Product entity from the DTO
+    public Product createPosts(ProductDTO productDTO) {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String currentUsername = auth.getName();
+        logger.info("Current username: {}", currentUsername);
+
+        Users currentUser = usersRepository.findByUsername(currentUsername);
+        String userId = currentUser != null ? currentUser.getId() : null;
+        logger.info("Current user ID: {}", userId);
+
+        if (currentUser == null) {
+            throw new EntityNotFoundException("Current user not found");
+        }
+
         Product product = new Product();
+        product.setId(UUID.randomUUID().toString());
         product.setName(productDTO.getName());
         product.setDescription(productDTO.getDescription());
         product.setPrice(productDTO.getPrice());
-        product.setStockQuantity(productDTO.getStockQuantity());
         product.setCategory(productDTO.getCategory());
+        product.setStockQuantity(productDTO.getStockQuantity());
+        product.setUserId(currentUser);
 
-        // Handle image upload if a file is provided
-        if (productDTO.getImageFile() != null && !productDTO.getImageFile().isEmpty()) {
-            String imageUrl = uploadProductImage(productDTO.getImageFile());
-            product.setImageUrl(imageUrl);  // Set the image URL for the product
+        // Thêm media vào danh sách của bài viết
+        List<ProductMedia> medias = new ArrayList<>();
+        for (String mediaId : productDTO.getMediasId()) {
+            Optional<ProductMedia> mediaOptional = productMediaRepository.findById(mediaId);
+            if (mediaOptional.isPresent()) {
+                ProductMedia media = mediaOptional.get();
+                // Cập nhật trường postsId của media
+                media.setProduct(product);
+                medias.add(media);
+            }
         }
+        product.setMedias(medias);
 
-        // Save the product to the database
-        return productRepository.save(product);
-    }
+        Product createdPost = productRepository.save(product);
+        logger.info("New post created with ID: {}", createdPost.getId());
 
-    // Upload the image file to MinIO and return the image URL
-    private String uploadProductImage(MultipartFile imageFile) throws Exception {
-        // Ensure that the bucket exists in MinIO
-        String bucketName = "products";
-        minioService.ensureBucketExists(bucketName);
+        logger.info("Post creation process completed successfully");
 
-        // Generate a unique object name for the image
-        String objectName = "product/" + System.currentTimeMillis() + "-" + imageFile.getOriginalFilename();
-        String contentType = minioService.getContentType(imageFile.getOriginalFilename());
-
-        // Upload the image file to MinIO
-        try (InputStream inputStream = imageFile.getInputStream()) {
-            minioService.uploadFile(bucketName, objectName, inputStream, inputStream.available(), contentType);
-        }
-
-        // Return the URL of the uploaded image
-        return bucketName + "/" + objectName;
+        return createdPost;
     }
 }

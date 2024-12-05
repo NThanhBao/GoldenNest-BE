@@ -23,7 +23,7 @@ import org.slf4j.LoggerFactory;
 @Service
 public class AuthServiceImpl implements AuthService {
 
-    private static final Logger logger = LoggerFactory.getLogger(AuthServiceImpl.class);
+    public static final Logger logger = LoggerFactory.getLogger(AuthServiceImpl.class);
     private final UsersRepository userRepository;
     private final BCryptPasswordEncoder encoder;
     private final JwtTokenService jwtTokenService;

@@ -1,10 +1,12 @@
 package com.example.GoldenNest.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -34,14 +36,19 @@ public class Product {
     @Column(nullable = false)
     private String category;
 
-    @Column(name = "image_url")
-    private String imageUrl;
-
     @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
 
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
+
+    @ManyToOne
+    @JoinColumn(name = "created_by")
+    private Users userId;
+
+    @JsonManagedReference
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<ProductMedia> medias;
 
     public Product() {
         this.id = UUID.randomUUID().toString();

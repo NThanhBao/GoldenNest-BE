@@ -109,7 +109,7 @@ CREATE TABLE product_media (
                             id CHAR(36) PRIMARY KEY,
                             base_name VARCHAR(255) NOT NULL,
                             public_url VARCHAR(2083) NOT NULL,
-                            product_id CHAR(36) NOT NULL,
+                            product_id CHAR(36),
                             FOREIGN KEY (product_id) REFERENCES products(id)
 );
 

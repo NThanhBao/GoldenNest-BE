@@ -45,9 +45,9 @@ public class AuthController {
 
     // Xóa người dùng (vô hiệu hóa tài khoản)
     @CheckLogin
-    @DeleteMapping("/delete/{username}")
-    public ResponseEntity<String> deleteUser(@PathVariable String username) {
-        return authService.deleteUser(username);
+    @DeleteMapping("/delete")
+    public ResponseEntity<String> deleteUser() {
+        return authService.deleteUser();
     }
 
 }

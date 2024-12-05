@@ -3,12 +3,10 @@ package com.example.GoldenNest.service.impl;
 import com.example.GoldenNest.config.security.CustomUserDetailsService;
 import com.example.GoldenNest.config.security.JwtTokenService;
 import com.example.GoldenNest.model.dto.AuthDTO;
-import com.example.GoldenNest.model.dto.UserDTO;
 import com.example.GoldenNest.model.entity.Enum.EnableType;
 import com.example.GoldenNest.model.entity.Users;
 import com.example.GoldenNest.repositories.UsersRepository;
 import com.example.GoldenNest.service.AuthService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -27,14 +25,13 @@ public class AuthServiceImpl implements AuthService {
 
     private static final Logger logger = LoggerFactory.getLogger(AuthServiceImpl.class);
     private final UsersRepository userRepository;
+    private final BCryptPasswordEncoder encoder;
+    private final JwtTokenService jwtTokenService;
 
-    @Autowired
-    private BCryptPasswordEncoder encoder;
-    @Autowired
-    private JwtTokenService jwtTokenService;
-
-    public AuthServiceImpl(UsersRepository registerRepository) {
+    public AuthServiceImpl(UsersRepository registerRepository, BCryptPasswordEncoder encoder, JwtTokenService jwtTokenService) {
         this.userRepository = registerRepository;
+        this.encoder = encoder;
+        this.jwtTokenService = jwtTokenService;
     }
 
     //    Lấy thông tin người dùng theo username.
@@ -136,6 +133,7 @@ public class AuthServiceImpl implements AuthService {
         existingUser.setGender(updatedUserDto.isGender());
         existingUser.setPhoneNumber(updatedUserDto.getPhoneNumber());
         existingUser.setDateOfBirth(updatedUserDto.getDateOfBirth());
+        existingUser.setAddress(updatedUserDto.getAddress());
         existingUser.setMail(updatedUserDto.getMail());
 
         // Lưu thông tin cập nhật vào cơ sở dữ liệu
@@ -146,11 +144,16 @@ public class AuthServiceImpl implements AuthService {
     }
 
     @Override
-    public ResponseEntity<String> deleteUser(String username) {
-        Users existingUser = userRepository.findByUsername(username);
+    public ResponseEntity<String> deleteUser() {
+        // Lấy tên người dùng hiện tại từ SecurityContextHolder
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String currentUsername = auth.getName();
+
+        // Tìm người dùng trong cơ sở dữ liệu
+        Users existingUser = userRepository.findByUsername(currentUsername);
 
         if (existingUser == null) {
-            logger.warn("Không tìm thấy người dùng với username: '{}'", username);
+            logger.warn("Không tìm thấy người dùng với username: '{}'", currentUsername);
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Không tìm thấy người dùng");
         }
 
@@ -158,9 +161,10 @@ public class AuthServiceImpl implements AuthService {
         existingUser.setEnableType(EnableType.FALSE);
         userRepository.save(existingUser);
 
-        logger.info("Tài khoản của người dùng '{}' đã bị vô hiệu hóa", username);
+        logger.info("Tài khoản của người dùng '{}' đã bị vô hiệu hóa", currentUsername);
         return ResponseEntity.ok("Tài khoản đã bị vô hiệu hóa");
     }
+
 
 
 

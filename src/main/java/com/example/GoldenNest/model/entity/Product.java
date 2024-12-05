@@ -1,12 +1,21 @@
 package com.example.GoldenNest.model.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+import lombok.*;
+
 import java.time.LocalDateTime;
 
 @Entity
+@Data
+@Getter
+@Setter
 @Table(name = "products")
 public class Product {
     @Id
+    @Column(length = 36)
+    @NotNull
+    @EqualsAndHashCode.Include
     private String id;
 
     @Column(nullable = false)

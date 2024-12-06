@@ -1,5 +1,6 @@
 package com.example.GoldenNest.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
@@ -50,6 +51,10 @@ public class Product {
     @JsonManagedReference
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<ProductMedia> medias;
+
+    @OneToOne
+    @JoinColumn(name = "coupon_id")
+    private Coupon coupon;
 
     public Product() {
         this.id = UUID.randomUUID().toString();

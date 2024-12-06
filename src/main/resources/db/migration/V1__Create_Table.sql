@@ -73,7 +73,7 @@ CREATE TABLE reviews (
                          id CHAR(36) PRIMARY KEY,
                          product_id CHAR(36) NOT NULL,
                          user_id CHAR(36) NOT NULL,
-                         rating INT NOT NULL CHECK (rating BETWEEN 1 AND 5), -- Thang điểm 1-5
+                         rating INT NOT NULL CHECK (rating BETWEEN 1 AND 5),
                          comment TEXT NULL,
                          created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                          FOREIGN KEY (product_id) REFERENCES products(id),
@@ -87,7 +87,7 @@ CREATE TABLE carts (
                        user_id CHAR(36) NOT NULL,
                        product_id CHAR(36) NOT NULL,
                        quantity INT NOT NULL DEFAULT 1,
-                       added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                        FOREIGN KEY (user_id) REFERENCES users(id),
                        FOREIGN KEY (product_id) REFERENCES products(id)
 );

@@ -1,6 +1,5 @@
 package com.example.GoldenNest.model.entity;
 
-import com.example.GoldenNest.model.entity.Enum.MediaType;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Getter;

@@ -9,6 +9,8 @@ import java.util.List;
 @Setter
 public class ProductDTO {
 
+    private String id;
+
     private String name;
 
     private String description;

@@ -11,11 +11,16 @@ import com.example.GoldenNest.service.CartService;
 import jakarta.persistence.EntityNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+
 @Service
 public class CartServiceImpl implements CartService {
 
@@ -111,5 +116,29 @@ public class CartServiceImpl implements CartService {
         existingCart.setQuantity(newQuantity);
         logger.info("Decreased quantity for product in cart: {}", newQuantity);
         return cartRepository.save(existingCart);
+    }
+
+    @Override
+    public Page<CartDTO> getCartForCurrentUser(Pageable pageable) {
+        // Lấy thông tin người dùng từ SecurityContext
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String currentUsername = auth.getName();
+
+        // Tìm người dùng từ username
+        Users currentUser = usersRepository.findByUsername(currentUsername);
+        if (currentUser == null) {
+            throw new EntityNotFoundException("Current user not found");
+        }
+
+        // Lấy danh sách giỏ hàng với phân trang
+        Page<Cart> cartPage = cartRepository.findByUserId(currentUser.getId(), pageable);
+
+        // Chuyển đổi danh sách `Cart` thành `CartDTO`
+        return cartPage.map(cart -> {
+            CartDTO dto = new CartDTO();
+            dto.setProductId(cart.getProduct().getId());
+            dto.setQuantity(cart.getQuantity());
+            return dto;
+        });
     }
 }

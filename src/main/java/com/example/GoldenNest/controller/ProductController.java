@@ -1,6 +1,8 @@
 package com.example.GoldenNest.controller;
 
+import com.example.GoldenNest.model.dto.CartDTO;
 import com.example.GoldenNest.model.dto.ProductDTO;
+import com.example.GoldenNest.model.entity.Category;
 import com.example.GoldenNest.model.entity.Product;
 import com.example.GoldenNest.service.ProductMediaService;
 import com.example.GoldenNest.service.ProductService;
@@ -48,10 +50,10 @@ public class ProductController {
     }
 
     @GetMapping("/")
-    public ResponseEntity<Page<Product>> getAllProducts(@RequestParam int page, @RequestParam int size) {
+    public Page<Product> getAllProducts(@RequestParam(defaultValue = "0") int page,
+                                        @RequestParam(defaultValue = "10") int size) {
         Pageable pageable = PageRequest.of(page, size);
-        Page<Product> products = productService.getAllProducts(pageable);
-        return ResponseEntity.ok().body(products);
+        return productService.getAllProducts(pageable);
     }
 
     @CheckLogin

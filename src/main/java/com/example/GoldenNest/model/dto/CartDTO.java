@@ -8,6 +8,7 @@ import lombok.Setter;
 public class CartDTO {
 
     private String productId;
+    private int quantity;
 
     // Getters và Setters
 }

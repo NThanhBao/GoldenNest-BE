@@ -123,6 +123,17 @@ CREATE TABLE coupons (
                          is_active BOOLEAN DEFAULT TRUE
 );
 
+-- Tạo bảng product_coupons
+DROP TABLE IF EXISTS `product_coupons`;
+CREATE TABLE product_coupons (
+                                 product_id CHAR(36),
+                                 coupon_id CHAR(36),
+                                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                                 PRIMARY KEY (product_id, coupon_id),
+                                 FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE ON UPDATE CASCADE,
+                                 FOREIGN KEY (coupon_id) REFERENCES coupons(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
 -- Tạo bảng payments
 DROP TABLE IF EXISTS `payments`;
 CREATE TABLE payments (

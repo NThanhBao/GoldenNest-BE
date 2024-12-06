@@ -8,10 +8,16 @@ import java.util.List;
 @Getter
 @Setter
 public class ProductDTO {
+
     private String name;
+
     private String description;
+
     private Double price;
+
     private Integer stockQuantity;
-    private String category;
+
+    private String categoryId;
+
     private List<String> mediasId;
 }

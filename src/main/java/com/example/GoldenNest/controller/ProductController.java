@@ -5,6 +5,10 @@ import com.example.GoldenNest.model.entity.Product;
 import com.example.GoldenNest.service.ProductMediaService;
 import com.example.GoldenNest.service.ProductService;
 import com.example.GoldenNest.util.annotation.CheckLogin;
+import jakarta.persistence.EntityNotFoundException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -43,6 +47,13 @@ public class ProductController {
         }
     }
 
+    @GetMapping("/")
+    public ResponseEntity<Page<Product>> getAllProducts(@RequestParam int page, @RequestParam int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        Page<Product> products = productService.getAllProducts(pageable);
+        return ResponseEntity.ok().body(products);
+    }
+
     @CheckLogin
     @PostMapping("/create")
     public ResponseEntity<Product> createPosts(@RequestBody ProductDTO productDTO) {
@@ -50,4 +61,25 @@ public class ProductController {
         return new ResponseEntity<>(newPost, HttpStatus.CREATED);
     }
 
+    @CheckLogin
+    @PutMapping("/{id}")
+    public ResponseEntity<Product> updateProduct(@PathVariable String id, @RequestBody ProductDTO productDTO) {
+        try {
+            Product updatedProduct = productService.updateProduct(id, productDTO);
+            return new ResponseEntity<>(updatedProduct, HttpStatus.OK);
+        } catch (EntityNotFoundException e) {
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @CheckLogin
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteProduct(@PathVariable String id) {
+        try {
+            productService.deleteProduct(id);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } catch (EntityNotFoundException e) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
 }

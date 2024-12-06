@@ -116,3 +116,17 @@ INSERT INTO categories (id, name, description, created_at, updated_at) VALUES
     (UUID(), 'Hướng dẫn & kiến thức', 'Các tài liệu hướng dẫn về cách sử dụng, chế biến và bảo quản yến sào, giúp người tiêu dùng hiểu rõ hơn về sản phẩm.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
     (UUID(), 'Sản phẩm bổ trợ', 'Các sản phẩm được chế biến từ yến, như yến chưng sẵn, yến tiềm thuốc bắc, hay các món ăn chế biến sẵn từ yến, giúp tăng cường giá trị dinh dưỡng và tiện lợi cho người sử dụng.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
     (UUID(), 'Phụ kiện và sản phẩm liên quan', 'Các sản phẩm phụ kiện, thiết bị đi kèm, hỗ trợ quá trình sử dụng và bảo quản tổ yến.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO coupons (id, code, discount_amount, expiry_date, is_active)
+VALUES
+    (UUID(), 'DISCOUNT10', 10.00, '2025-12-31', TRUE),
+    (UUID(), 'SALE20', 20.00, '2025-11-30', TRUE),
+    (UUID(), 'WELCOME15', 15.00, '2025-12-15', FALSE),
+    (UUID(), 'BLACKFRIDAY25', 25.00, '2025-11-29', TRUE),
+    (UUID(), 'XMAS30', 30.00, '2025-12-25', TRUE),
+    (UUID(), 'SPRING15', 15.00, '2025-03-31', TRUE),
+    (UUID(), 'SUMMER20', 20.00, '2025-06-30', TRUE),
+    (UUID(), 'NEWYEAR10', 10.00, '2025-01-15', TRUE),
+    (UUID(), 'VIP30', 30.00, '2025-12-31', TRUE),
+    (UUID(), 'OFFER50', 50.00, '2025-11-15', TRUE);
+

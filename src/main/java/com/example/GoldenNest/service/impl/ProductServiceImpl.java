@@ -1,9 +1,11 @@
 package com.example.GoldenNest.service.impl;
 
 import com.example.GoldenNest.model.dto.ProductDTO;
+import com.example.GoldenNest.model.entity.Category;
 import com.example.GoldenNest.model.entity.Product;
 import com.example.GoldenNest.model.entity.ProductMedia;
 import com.example.GoldenNest.model.entity.Users;
+import com.example.GoldenNest.repositories.CategoryRepository;
 import com.example.GoldenNest.repositories.ProductMediaRepository;
 import com.example.GoldenNest.repositories.ProductRepository;
 import com.example.GoldenNest.repositories.UsersRepository;
@@ -12,6 +14,9 @@ import jakarta.persistence.EntityNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
@@ -27,15 +32,25 @@ public class ProductServiceImpl implements ProductService {
     private final ProductRepository productRepository;
     private final UsersRepository usersRepository;
     private final ProductMediaRepository productMediaRepository;
+    private final CategoryRepository categoryRepository;
     private static final Logger logger = LoggerFactory.getLogger(ProductServiceImpl.class);
     @Autowired
-    public ProductServiceImpl(ProductRepository productRepository, UsersRepository usersRepository, ProductMediaRepository productMediaRepository) {
+    public ProductServiceImpl(ProductRepository productRepository, UsersRepository usersRepository, ProductMediaRepository productMediaRepository, CategoryRepository categoryRepository) {
         this.productRepository = productRepository;
         this.usersRepository = usersRepository;
         this.productMediaRepository = productMediaRepository;
+        this.categoryRepository = categoryRepository;
     }
 
-    // Add product and handle image upload
+    @Override
+    public Page<Product> getAllProducts(Pageable pageable) {
+        Page<Product> products = productRepository.findAll(pageable);
+        if (products.isEmpty()) {
+            logger.warn("No products found.");
+        }
+        return products;
+    }
+
     @Override
     public Product createPosts(ProductDTO productDTO) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
@@ -55,28 +70,76 @@ public class ProductServiceImpl implements ProductService {
         product.setName(productDTO.getName());
         product.setDescription(productDTO.getDescription());
         product.setPrice(productDTO.getPrice());
-        product.setCategory(productDTO.getCategory());
         product.setStockQuantity(productDTO.getStockQuantity());
         product.setUserId(currentUser);
 
-        // Thêm media vào danh sách của bài viết
+        Optional<Category> categoryOptional = categoryRepository.findById(productDTO.getCategoryId());
+        if (categoryOptional.isPresent()) {
+            product.setCategory(categoryOptional.get());
+        } else {
+            throw new EntityNotFoundException("Category not found with ID: " + productDTO.getCategoryId());
+        }
+
         List<ProductMedia> medias = new ArrayList<>();
         for (String mediaId : productDTO.getMediasId()) {
             Optional<ProductMedia> mediaOptional = productMediaRepository.findById(mediaId);
             if (mediaOptional.isPresent()) {
                 ProductMedia media = mediaOptional.get();
-                // Cập nhật trường postsId của media
+
                 media.setProduct(product);
                 medias.add(media);
             }
         }
         product.setMedias(medias);
 
-        Product createdPost = productRepository.save(product);
-        logger.info("New post created with ID: {}", createdPost.getId());
+        Product createdProduct = productRepository.save(product);
+        logger.info("New product created with ID: {}", createdProduct.getId());
 
-        logger.info("Post creation process completed successfully");
-
-        return createdPost;
+        return createdProduct;
     }
+
+    @Override
+    public Product updateProduct(String productId, ProductDTO productDTO) {
+        Optional<Product> productOptional = productRepository.findById(productId);
+        if (productOptional.isPresent()) {
+            Product product = productOptional.get();
+            product.setName(productDTO.getName());
+            product.setDescription(productDTO.getDescription());
+            product.setPrice(productDTO.getPrice());
+            product.setStockQuantity(productDTO.getStockQuantity());
+
+            Optional<Category> categoryOptional = categoryRepository.findById(productDTO.getCategoryId());
+            categoryOptional.ifPresent(product::setCategory);
+
+            List<ProductMedia> medias = new ArrayList<>();
+            for (String mediaId : productDTO.getMediasId()) {
+                Optional<ProductMedia> mediaOptional = productMediaRepository.findById(mediaId);
+                mediaOptional.ifPresent(media -> {
+                    media.setProduct(product);
+                    medias.add(media);
+                });
+            }
+            product.setMedias(medias);
+
+            Product updatedProduct = productRepository.save(product);
+            logger.info("Product with ID: {} updated successfully", updatedProduct.getId());
+
+            return updatedProduct;
+        } else {
+            throw new EntityNotFoundException("Product not found with ID: " + productId);
+        }
+    }
+
+
+    @Override
+    public void deleteProduct(String productId) {
+        Optional<Product> productOptional = productRepository.findById(productId);
+        if (productOptional.isPresent()) {
+            productRepository.deleteById(productId);
+            logger.info("Product with ID: {} deleted successfully", productId);
+        } else {
+            throw new EntityNotFoundException("Product not found with ID: " + productId);
+        }
+    }
+
 }

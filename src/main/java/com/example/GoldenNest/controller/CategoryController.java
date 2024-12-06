@@ -8,6 +8,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/categories")
 public class CategoryController {
@@ -18,8 +20,13 @@ public class CategoryController {
         this.categoryService = categoryService;
     }
 
+    @GetMapping("/")
+    public List<Category> getAllCategories() {
+        return categoryService.getAllCategories();
+    }
+
     @CheckLogin
-    @PostMapping
+    @PostMapping("/create")
     public ResponseEntity<Category> addCategory(@RequestBody CategoryDTO categoryDTO) {
         try {
             Category category = categoryService.addCategory(categoryDTO);

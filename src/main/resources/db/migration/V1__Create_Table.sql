@@ -1,21 +1,31 @@
+-- Tạo bảng categories
+DROP TABLE IF EXISTS `categories`;
+CREATE TABLE categories (
+                            id CHAR(36) PRIMARY KEY,
+                            name VARCHAR(255) NOT NULL UNIQUE,
+                            description TEXT NULL,
+                            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                            updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
 -- Tạo bảng users
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE users (
-                    id CHAR(36) PRIMARY KEY,
-                    username VARCHAR(255) NOT NULL,
-                    password VARCHAR(255) NOT NULL,
-                    first_name VARCHAR(255) NOT NULL,
-                    last_name VARCHAR(255) NOT NULL,
-                    role ENUM('ADMIN', 'USER') DEFAULT 'USER',
-                    gender BOOLEAN NOT NULL,
-                    phone_number VARCHAR(255) NOT NULL,
-                    date_of_birth TIMESTAMP NOT NULL,
-                    mail VARCHAR(255) NOT NULL,
-                    avatar VARCHAR(255) NULL,
-                    enable BOOLEAN NOT NULL,
-                    address VARCHAR(255),
-                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                       id CHAR(36) PRIMARY KEY,
+                       username VARCHAR(255) NOT NULL,
+                       password VARCHAR(255) NOT NULL,
+                       first_name VARCHAR(255) NOT NULL,
+                       last_name VARCHAR(255) NOT NULL,
+                       role ENUM('ADMIN', 'USER') DEFAULT 'USER',
+                       gender BOOLEAN NOT NULL,
+                       phone_number VARCHAR(255) NOT NULL,
+                       date_of_birth TIMESTAMP NOT NULL,
+                       mail VARCHAR(255) NOT NULL,
+                       avatar VARCHAR(255) NULL,
+                       enable BOOLEAN NOT NULL,
+                       address VARCHAR(255),
+                       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                       updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 -- Tạo bảng products
@@ -26,18 +36,19 @@ CREATE TABLE products (
                           description TEXT NOT NULL,
                           price DECIMAL(10, 2) NOT NULL,
                           stock_quantity INT NOT NULL,
-                          category VARCHAR(255) NOT NULL,
+                          category_id CHAR(36) NOT NULL,
                           created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                          updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+                          updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+                          FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 -- Tạo bảng orders
 DROP TABLE IF EXISTS `orders`;
 CREATE TABLE orders (
                         id CHAR(36) PRIMARY KEY,
-                        user_id CHAR(36) NOT NULL, -- Khách hàng đặt đơn
+                        user_id CHAR(36) NOT NULL,
                         total_price DECIMAL(10, 2) NOT NULL,
-                        status VARCHAR(50) NOT NULL, -- pending, processing, completed, canceled
+                        status VARCHAR(50) NOT NULL,
                         shipping_address TEXT NOT NULL,
                         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                         updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -56,17 +67,6 @@ CREATE TABLE order_details (
                                FOREIGN KEY (product_id) REFERENCES products(id)
 );
 
-
-DROP TABLE IF EXISTS `categories`;
-CREATE TABLE categories (
-                            id CHAR(36) PRIMARY KEY,
-                            name VARCHAR(255) NOT NULL UNIQUE,
-                            description TEXT NULL,
-                            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                            updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
-
-
 -- Tạo bảng reviews
 DROP TABLE IF EXISTS `reviews`;
 CREATE TABLE reviews (
@@ -80,58 +80,58 @@ CREATE TABLE reviews (
                          FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
-DROP TABLE IF EXISTS `carts`;
 -- Tạo bảng carts
+DROP TABLE IF EXISTS `carts`;
 CREATE TABLE carts (
-                    id CHAR(36) PRIMARY KEY,
-                    user_id CHAR(36) NOT NULL,
-                    product_id CHAR(36) NOT NULL,
-                    quantity INT NOT NULL DEFAULT 1,
-                    added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                    FOREIGN KEY (user_id) REFERENCES users(id),
-                    FOREIGN KEY (product_id) REFERENCES products(id)
+                       id CHAR(36) PRIMARY KEY,
+                       user_id CHAR(36) NOT NULL,
+                       product_id CHAR(36) NOT NULL,
+                       quantity INT NOT NULL DEFAULT 1,
+                       added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                       FOREIGN KEY (user_id) REFERENCES users(id),
+                       FOREIGN KEY (product_id) REFERENCES products(id)
 );
 
-DROP TABLE IF EXISTS `favorites`;
 -- Tạo bảng favorites
+DROP TABLE IF EXISTS `favorites`;
 CREATE TABLE favorites (
-                        id CHAR(36) PRIMARY KEY,
-                        user_id CHAR(36) NOT NULL,
-                        product_id CHAR(36) NOT NULL,
-                        added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                        FOREIGN KEY (user_id) REFERENCES users(id),
-                        FOREIGN KEY (product_id) REFERENCES products(id)
+                           id CHAR(36) PRIMARY KEY,
+                           user_id CHAR(36) NOT NULL,
+                           product_id CHAR(36) NOT NULL,
+                           added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                           FOREIGN KEY (user_id) REFERENCES users(id),
+                           FOREIGN KEY (product_id) REFERENCES products(id)
 );
 
-DROP TABLE IF EXISTS `product_media`;
 -- Tạo bảng product_media
+DROP TABLE IF EXISTS `product_media`;
 CREATE TABLE product_media (
-                            id CHAR(36) PRIMARY KEY,
-                            base_name VARCHAR(255) NOT NULL,
-                            public_url VARCHAR(2083) NOT NULL,
-                            product_id CHAR(36),
-                            FOREIGN KEY (product_id) REFERENCES products(id)
+                               id CHAR(36) PRIMARY KEY,
+                               base_name VARCHAR(255) NOT NULL,
+                               public_url VARCHAR(2083) NOT NULL,
+                               product_id CHAR(36),
+                               FOREIGN KEY (product_id) REFERENCES products(id)
 );
 
 -- Tạo bảng coupons
 DROP TABLE IF EXISTS `coupons`;
 CREATE TABLE coupons (
-                        id CHAR(36) PRIMARY KEY,
-                        code VARCHAR(50) NOT NULL UNIQUE,
-                        discount_amount DECIMAL(10, 2) NOT NULL,
-                        expiry_date DATE NOT NULL,
-                        is_active BOOLEAN DEFAULT TRUE
+                         id CHAR(36) PRIMARY KEY,
+                         code VARCHAR(50) NOT NULL UNIQUE,
+                         discount_amount DECIMAL(10, 2) NOT NULL,
+                         expiry_date DATE NOT NULL,
+                         is_active BOOLEAN DEFAULT TRUE
 );
 
 -- Tạo bảng payments
 DROP TABLE IF EXISTS `payments`;
 CREATE TABLE payments (
-                        id CHAR(36) PRIMARY KEY,
-                        order_id CHAR(36) NOT NULL,
-                        payment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                        amount DECIMAL(10, 2) NOT NULL,
-                        payment_method ENUM('Credit Card', 'PayPal', 'Cash') DEFAULT 'Credit Card',
-                        FOREIGN KEY (order_id) REFERENCES orders(id)
+                          id CHAR(36) PRIMARY KEY,
+                          order_id CHAR(36) NOT NULL,
+                          payment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                          amount DECIMAL(10, 2) NOT NULL,
+                          payment_method ENUM('Credit Card', 'PayPal', 'Cash') DEFAULT 'Credit Card',
+                          FOREIGN KEY (order_id) REFERENCES orders(id)
 );
 
 -- Tạo bảng news
@@ -145,4 +145,3 @@ CREATE TABLE news (
                       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                       updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
-

@@ -104,3 +104,15 @@ VALUES
     (UUID(), 'user98', '$2a$10$t/RTB.ibPOuwYATBeg9is.qyvcMDJDbHSQl7yF5dK2v.04s18fV1y', 'James', 'Lewis', 'user', TRUE, '0978123456', '1990-05-20', 'user98@example.com', '', 'Denver', TRUE),
     (UUID(), 'user99', '$2a$10$t/RTB.ibPOuwYATBeg9is.qyvcMDJDbHSQl7yF5dK2v.04s18fV1y', 'Jessica', 'Walker', 'user', TRUE, '0934567123', '1991-07-10', 'user99@example.com', '', 'Louisville', TRUE),
     (UUID(), 'user100', '$2a$10$t/RTB.ibPOuwYATBeg9is.qyvcMDJDbHSQl7yF5dK2v.04s18fV1y', 'Michael', 'Young', 'user', FALSE, '0912345678', '1988-09-25', 'user100@example.com', '', 'San Bernardino', TRUE);
+
+INSERT INTO categories (id, name, description, created_at, updated_at) VALUES
+    (UUID(), 'Yến tinh chế', 'Tổ yến đã được làm sạch, tinh chế sẵn, tiện lợi cho sử dụng.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    (UUID(), 'Yến thô', 'Tổ yến nguyên bản, chưa qua sơ chế, giữ nguyên hương vị tự nhiên.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    (UUID(), 'Yến chưng sẵn', 'Sản phẩm yến chưng sẵn, chế biến nhanh chóng, sử dụng tiện lợi.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    (UUID(), 'Yến sấy khô', 'Tổ yến đã được sấy khô, bảo quản lâu dài.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    (UUID(), 'Tổ yến nguyên tổ', 'Tổ yến nguyên vẹn, cao cấp, phù hợp làm quà tặng.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    (UUID(), 'Tổ yến vụn', 'Tổ yến bị vỡ vụn, thích hợp cho chế biến các món ăn gia đình.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    (UUID(), 'Nguyên liệu chưng yến', 'Các nguyên liệu hỗ trợ quá trình chưng yến, đảm bảo chất lượng và hương vị tốt nhất.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    (UUID(), 'Hướng dẫn & kiến thức', 'Các tài liệu hướng dẫn về cách sử dụng, chế biến và bảo quản yến sào, giúp người tiêu dùng hiểu rõ hơn về sản phẩm.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    (UUID(), 'Sản phẩm bổ trợ', 'Các sản phẩm được chế biến từ yến, như yến chưng sẵn, yến tiềm thuốc bắc, hay các món ăn chế biến sẵn từ yến, giúp tăng cường giá trị dinh dưỡng và tiện lợi cho người sử dụng.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    (UUID(), 'Phụ kiện và sản phẩm liên quan', 'Các sản phẩm phụ kiện, thiết bị đi kèm, hỗ trợ quá trình sử dụng và bảo quản tổ yến.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);

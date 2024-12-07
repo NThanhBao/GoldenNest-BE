@@ -19,7 +19,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 public class CartServiceImpl implements CartService {
@@ -37,12 +36,11 @@ public class CartServiceImpl implements CartService {
 
     @Override
     public Cart addToCart(CartDTO cartDTO) {
-        // Lấy thông tin người dùng hiện tại từ SecurityContext
+
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         String currentUsername = auth.getName();
         logger.info("Current username: {}", currentUsername);
 
-        // Tìm kiếm thông tin người dùng từ username
         Users currentUser = usersRepository.findByUsername(currentUsername);
         if (currentUser == null) {
             throw new EntityNotFoundException("Current user not found");
@@ -50,30 +48,26 @@ public class CartServiceImpl implements CartService {
         String userId = currentUser.getId();
         logger.info("Current user ID: {}", userId);
 
-        // Lấy productId từ CartDTO
         String productId = cartDTO.getProductId();
 
-        // Kiểm tra sự tồn tại của sản phẩm
         Optional<Product> productOpt = productRepository.findById(productId);
         if (productOpt.isEmpty()) {
             throw new EntityNotFoundException("Product not found with ID: " + productId);
         }
         Product product = productOpt.get();
 
-        // Kiểm tra nếu sản phẩm đã tồn tại trong giỏ hàng của người dùng
         Cart existingCart = cartRepository.findByUserIdAndProductId(userId, productId);
         if (existingCart != null) {
-            // Nếu sản phẩm đã tồn tại, tăng số lượng
+
             existingCart.setQuantity(existingCart.getQuantity() + 1);
             logger.info("Updated quantity for product in cart: {}", existingCart.getQuantity());
             return cartRepository.save(existingCart);
         }
 
-        // Nếu sản phẩm chưa tồn tại trong giỏ hàng, tạo mới
         Cart newCart = new Cart();
-        newCart.setUser(currentUser); // Gán thông tin người dùng
-        newCart.setProduct(product);  // Gán sản phẩm
-        newCart.setQuantity(1); // Mặc định số lượng là 1
+        newCart.setUser(currentUser);
+        newCart.setProduct(product);
+        newCart.setQuantity(1);
 
         logger.info("Added new product to cart: {}", productId);
         return cartRepository.save(newCart);
@@ -81,12 +75,11 @@ public class CartServiceImpl implements CartService {
 
     @Override
     public Cart decreaseQuantity(CartDTO cartDTO) {
-        // Lấy thông tin người dùng hiện tại từ SecurityContext
+
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         String currentUsername = auth.getName();
         logger.info("Current username: {}", currentUsername);
 
-        // Tìm kiếm thông tin người dùng từ username
         Users currentUser = usersRepository.findByUsername(currentUsername);
         if (currentUser == null) {
             throw new EntityNotFoundException("Current user not found");
@@ -94,25 +87,21 @@ public class CartServiceImpl implements CartService {
         String userId = currentUser.getId();
         logger.info("Current user ID: {}", userId);
 
-        // Lấy productId từ CartDTO
         String productId = cartDTO.getProductId();
 
-        // Kiểm tra sự tồn tại của sản phẩm trong giỏ hàng
         Cart existingCart = cartRepository.findByUserIdAndProductId(userId, productId);
         if (existingCart == null) {
             throw new EntityNotFoundException("Product not found in cart with ID: " + productId);
         }
 
-        // Giảm số lượng sản phẩm
         int newQuantity = existingCart.getQuantity() - 1;
         if (newQuantity <= 0) {
-            // Xóa sản phẩm khỏi giỏ hàng nếu số lượng <= 0
+
             cartRepository.delete(existingCart);
             logger.info("Removed product from cart: {}", productId);
-            return null; // Trả về null hoặc thông báo khác tùy yêu cầu
+            return null;
         }
 
-        // Cập nhật số lượng sản phẩm
         existingCart.setQuantity(newQuantity);
         logger.info("Decreased quantity for product in cart: {}", newQuantity);
         return cartRepository.save(existingCart);
@@ -120,7 +109,7 @@ public class CartServiceImpl implements CartService {
 
     @Override
     public Page<CartDTO> getCartForCurrentUser(Pageable pageable) {
-        // Lấy thông tin người dùng từ SecurityContext
+
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         String currentUsername = auth.getName();
 
@@ -130,10 +119,8 @@ public class CartServiceImpl implements CartService {
             throw new EntityNotFoundException("Current user not found");
         }
 
-        // Lấy danh sách giỏ hàng với phân trang
         Page<Cart> cartPage = cartRepository.findByUserId(currentUser.getId(), pageable);
 
-        // Chuyển đổi danh sách `Cart` thành `CartDTO`
         return cartPage.map(cart -> {
             CartDTO dto = new CartDTO();
             dto.setProductId(cart.getProduct().getId());
@@ -141,4 +128,57 @@ public class CartServiceImpl implements CartService {
             return dto;
         });
     }
+
+    @Override
+    public int getCartItemCount() {
+        // Lấy thông tin người dùng hiện tại từ SecurityContext
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String currentUsername = auth.getName();
+        logger.info("Current username: {}", currentUsername);
+
+        Users currentUser = usersRepository.findByUsername(currentUsername);
+        if (currentUser == null) {
+            throw new EntityNotFoundException("Current user not found");
+        }
+        String userId = currentUser.getId();
+        logger.info("Current user ID: {}", userId);
+
+        Page<Cart> userCart = cartRepository.findByUserId(userId, Pageable.unpaged());
+
+        if (userCart.isEmpty()) {
+            return 0;
+        }
+
+        int totalQuantity = userCart.getContent().stream()
+                .mapToInt(Cart::getQuantity)
+                .sum();
+
+        logger.info("Total cart item count for user {}: {}", userId, totalQuantity);
+        return totalQuantity;
+    }
+
+    @Override
+    public void clearCartForCurrentUser() {
+        // Lấy thông tin người dùng hiện tại từ SecurityContext
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String currentUsername = auth.getName();
+        logger.info("Current username: {}", currentUsername);
+
+        Users currentUser = usersRepository.findByUsername(currentUsername);
+        if (currentUser == null) {
+            throw new EntityNotFoundException("Current user not found");
+        }
+        String userId = currentUser.getId();
+        logger.info("Current user ID: {}", userId);
+
+        List<Cart> userCart = cartRepository.findByUserId(userId, Pageable.unpaged()).getContent();
+        if (userCart.isEmpty()) {
+            logger.info("Cart is empty for user {}", userId);
+            return;  // Nếu giỏ hàng trống, không cần làm gì thêm
+        }
+
+        cartRepository.deleteAll(userCart);
+        logger.info("All items removed from cart for user {}", userId);
+    }
+
 }

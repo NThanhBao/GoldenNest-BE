@@ -1411,3 +1411,250 @@ jakarta.persistence.EntityNotFoundException: No products found with coupon ID: 3
 2024-12-07T08:24:18.272+07:00  INFO 19452 --- [GoldenNest] [http-nio-8080-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 843 ms
 2024-12-07T08:25:38.500+07:00  INFO 19452 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-12-07T08:25:38.506+07:00  INFO 19452 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-07T08:27:09.315+07:00  INFO 21068 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Starting GoldenNestApplication using Java 21.0.2 with PID 21068 (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes started by ntb09 in E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE)
+2024-12-07T08:27:09.317+07:00  INFO 21068 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-12-07T08:27:10.288+07:00  INFO 21068 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-07T08:27:10.371+07:00  INFO 21068 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 7 JPA repository interfaces.
+2024-12-07T08:27:11.197+07:00  INFO 21068 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-07T08:27:11.210+07:00  INFO 21068 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-07T08:27:11.211+07:00  INFO 21068 --- [GoldenNest] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-12-07T08:27:11.315+07:00  INFO 21068 --- [GoldenNest] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-07T08:27:11.316+07:00  INFO 21068 --- [GoldenNest] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1948 ms
+2024-12-07T08:27:11.460+07:00  INFO 21068 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-07T08:27:11.869+07:00  INFO 21068 --- [GoldenNest] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@28989415
+2024-12-07T08:27:11.872+07:00  INFO 21068 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-07T08:27:11.970+07:00  INFO 21068 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2024-12-07T08:27:11.970+07:00  INFO 21068 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-12-07T08:27:11.970+07:00  INFO 21068 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : 
+2024-12-07T08:27:11.989+07:00  INFO 21068 --- [GoldenNest] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/GoldenNest (MySQL 8.0)
+2024-12-07T08:27:12.037+07:00  INFO 21068 --- [GoldenNest] [main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.030s)
+2024-12-07T08:27:12.054+07:00  INFO 21068 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `goldennest`: 3
+2024-12-07T08:27:12.057+07:00  INFO 21068 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Schema `goldennest` is up to date. No migration necessary.
+2024-12-07T08:27:14.439+07:00  INFO 21068 --- [GoldenNest] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-07T08:27:15.470+07:00  INFO 21068 --- [GoldenNest] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5b12157b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@73760b13, org.springframework.security.web.context.SecurityContextHolderFilter@4758f533, org.springframework.security.web.header.HeaderWriterFilter@20961f8b, org.springframework.web.filter.CorsFilter@6b5df313, org.springframework.security.web.authentication.logout.LogoutFilter@7bbd133c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@262e2c8c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@636e6791, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a6aecec, org.springframework.security.web.session.SessionManagementFilter@5bb1c104, org.springframework.security.web.access.ExceptionTranslationFilter@4c39eac6, org.springframework.security.web.access.intercept.AuthorizationFilter@4cda8d3b]
+2024-12-07T08:27:15.894+07:00  INFO 21068 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-12-07T08:27:15.904+07:00  INFO 21068 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Started GoldenNestApplication in 7.081 seconds (process running for 7.645)
+2024-12-07T08:27:31.348+07:00  INFO 21068 --- [GoldenNest] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-07T08:27:31.349+07:00  INFO 21068 --- [GoldenNest] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-07T08:27:31.351+07:00  INFO 21068 --- [GoldenNest] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-12-07T08:27:32.497+07:00  INFO 21068 --- [GoldenNest] [http-nio-8080-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 851 ms
+2024-12-07T08:38:55.150+07:00  INFO 21068 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-07T08:38:55.157+07:00  INFO 21068 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-07T08:38:59.332+07:00  INFO 10428 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Starting GoldenNestApplication using Java 21.0.2 with PID 10428 (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes started by ntb09 in E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE)
+2024-12-07T08:38:59.335+07:00  INFO 10428 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-12-07T08:39:00.243+07:00  INFO 10428 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-07T08:39:00.317+07:00  INFO 10428 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 7 JPA repository interfaces.
+2024-12-07T08:39:01.237+07:00  INFO 10428 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-07T08:39:01.251+07:00  INFO 10428 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-07T08:39:01.252+07:00  INFO 10428 --- [GoldenNest] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-12-07T08:39:01.362+07:00  INFO 10428 --- [GoldenNest] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-07T08:39:01.363+07:00  INFO 10428 --- [GoldenNest] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1979 ms
+2024-12-07T08:39:01.512+07:00  INFO 10428 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-07T08:39:01.949+07:00  INFO 10428 --- [GoldenNest] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7d66a126
+2024-12-07T08:39:01.953+07:00  INFO 10428 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-07T08:39:02.065+07:00  INFO 10428 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2024-12-07T08:39:02.065+07:00  INFO 10428 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-12-07T08:39:02.065+07:00  INFO 10428 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : 
+2024-12-07T08:39:02.085+07:00  INFO 10428 --- [GoldenNest] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/GoldenNest (MySQL 8.0)
+2024-12-07T08:39:02.137+07:00  INFO 10428 --- [GoldenNest] [main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.032s)
+2024-12-07T08:39:02.156+07:00  INFO 10428 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `goldennest`: 3
+2024-12-07T08:39:02.162+07:00  INFO 10428 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Schema `goldennest` is up to date. No migration necessary.
+2024-12-07T08:39:04.783+07:00  INFO 10428 --- [GoldenNest] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-07T08:39:05.978+07:00  INFO 10428 --- [GoldenNest] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@79a1f0a1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5bf97be9, org.springframework.security.web.context.SecurityContextHolderFilter@5e7d994c, org.springframework.security.web.header.HeaderWriterFilter@5bb1c104, org.springframework.web.filter.CorsFilter@5af535ff, org.springframework.security.web.authentication.logout.LogoutFilter@c7485d2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3077e4aa, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3518882c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@161138c8, org.springframework.security.web.session.SessionManagementFilter@7241872c, org.springframework.security.web.access.ExceptionTranslationFilter@3afe1020, org.springframework.security.web.access.intercept.AuthorizationFilter@4788c0a1]
+2024-12-07T08:39:06.427+07:00  INFO 10428 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-12-07T08:39:06.438+07:00  INFO 10428 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Started GoldenNestApplication in 7.58 seconds (process running for 8.117)
+2024-12-07T08:42:28.243+07:00  INFO 10428 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-07T08:42:28.250+07:00  INFO 10428 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-07T08:43:43.040+07:00  INFO 24192 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Starting GoldenNestApplication using Java 21.0.2 with PID 24192 (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes started by ntb09 in E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE)
+2024-12-07T08:43:43.041+07:00  INFO 24192 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-12-07T08:43:44.087+07:00  INFO 24192 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-07T08:43:44.179+07:00  INFO 24192 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84 ms. Found 7 JPA repository interfaces.
+2024-12-07T08:43:45.131+07:00  INFO 24192 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-07T08:43:45.145+07:00  INFO 24192 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-07T08:43:45.146+07:00  INFO 24192 --- [GoldenNest] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-12-07T08:43:45.255+07:00  INFO 24192 --- [GoldenNest] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-07T08:43:45.255+07:00  INFO 24192 --- [GoldenNest] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2168 ms
+2024-12-07T08:43:45.404+07:00  INFO 24192 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-07T08:43:45.808+07:00  INFO 24192 --- [GoldenNest] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3a2546d6
+2024-12-07T08:43:45.810+07:00  INFO 24192 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-07T08:43:45.915+07:00  INFO 24192 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2024-12-07T08:43:45.915+07:00  INFO 24192 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-12-07T08:43:45.915+07:00  INFO 24192 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : 
+2024-12-07T08:43:45.947+07:00  INFO 24192 --- [GoldenNest] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/GoldenNest (MySQL 8.0)
+2024-12-07T08:43:46.005+07:00  INFO 24192 --- [GoldenNest] [main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.034s)
+2024-12-07T08:43:46.026+07:00  INFO 24192 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `goldennest`: 3
+2024-12-07T08:43:46.034+07:00  INFO 24192 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Schema `goldennest` is up to date. No migration necessary.
+2024-12-07T08:43:48.727+07:00  INFO 24192 --- [GoldenNest] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-07T08:43:49.725+07:00  INFO 24192 --- [GoldenNest] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5bf41334, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4e216b7e, org.springframework.security.web.context.SecurityContextHolderFilter@13ea9afc, org.springframework.security.web.header.HeaderWriterFilter@cea6297, org.springframework.web.filter.CorsFilter@750afe12, org.springframework.security.web.authentication.logout.LogoutFilter@a9339e5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7241872c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3094111c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4788c0a1, org.springframework.security.web.session.SessionManagementFilter@631ff7a2, org.springframework.security.web.access.ExceptionTranslationFilter@1a48e48e, org.springframework.security.web.access.intercept.AuthorizationFilter@12f52ca4]
+2024-12-07T08:43:50.202+07:00  INFO 24192 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-12-07T08:43:50.212+07:00  INFO 24192 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Started GoldenNestApplication in 7.668 seconds (process running for 8.199)
+2024-12-07T08:43:52.985+07:00  INFO 24192 --- [GoldenNest] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-07T08:43:52.985+07:00  INFO 24192 --- [GoldenNest] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-07T08:43:52.987+07:00  INFO 24192 --- [GoldenNest] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-12-07T08:43:54.399+07:00  INFO 24192 --- [GoldenNest] [http-nio-8080-exec-10] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 1109 ms
+2024-12-07T08:44:19.413+07:00  INFO 24192 --- [GoldenNest] [http-nio-8080-exec-9] c.e.G.service.impl.CartServiceImpl       : Current username: admin1
+2024-12-07T08:44:19.522+07:00  INFO 24192 --- [GoldenNest] [http-nio-8080-exec-9] c.e.G.service.impl.CartServiceImpl       : Current user ID: 33136e34-b3e7-11ef-a8fe-2cf05db65929
+2024-12-07T08:44:19.534+07:00 ERROR 24192 --- [GoldenNest] [http-nio-8080-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: jakarta.persistence.EntityNotFoundException: Product not found in cart with ID: 9570f45c-5c7f-4769-80a2-9bb07a70da68] with root cause
+
+jakarta.persistence.EntityNotFoundException: Product not found in cart with ID: 9570f45c-5c7f-4769-80a2-9bb07a70da68
+	at com.example.GoldenNest.service.impl.CartServiceImpl.decreaseQuantity(CartServiceImpl.java:103) ~[classes/:na]
+	at com.example.GoldenNest.controller.CartController.decreaseQuantity(CartController.java:49) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:173) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717) ~[spring-aop-6.1.5.jar:6.1.5]
+	at com.example.GoldenNest.controller.CartController$$SpringCGLIB$$0.decreaseQuantity(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:925) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2024-12-07T08:44:48.739+07:00  INFO 24192 --- [GoldenNest] [http-nio-8080-exec-1] c.e.G.service.impl.CartServiceImpl       : Current username: admin1
+2024-12-07T08:44:48.744+07:00  INFO 24192 --- [GoldenNest] [http-nio-8080-exec-1] c.e.G.service.impl.CartServiceImpl       : Current user ID: 33136e34-b3e7-11ef-a8fe-2cf05db65929
+2024-12-07T08:44:48.771+07:00  INFO 24192 --- [GoldenNest] [http-nio-8080-exec-1] c.e.G.service.impl.CartServiceImpl       : Added new product to cart: 9570f45c-5c7f-4769-80a2-9bb07a70da68
+2024-12-07T08:45:15.091+07:00  INFO 24192 --- [GoldenNest] [http-nio-8080-exec-6] c.e.G.service.impl.CartServiceImpl       : Current username: admin1
+2024-12-07T08:45:15.099+07:00  INFO 24192 --- [GoldenNest] [http-nio-8080-exec-6] c.e.G.service.impl.CartServiceImpl       : Current user ID: 33136e34-b3e7-11ef-a8fe-2cf05db65929
+2024-12-07T08:45:15.119+07:00  INFO 24192 --- [GoldenNest] [http-nio-8080-exec-6] c.e.G.service.impl.CartServiceImpl       : Updated quantity for product in cart: 2
+2024-12-07T08:45:16.171+07:00  INFO 24192 --- [GoldenNest] [http-nio-8080-exec-8] c.e.G.service.impl.CartServiceImpl       : Current username: admin1
+2024-12-07T08:45:16.175+07:00  INFO 24192 --- [GoldenNest] [http-nio-8080-exec-8] c.e.G.service.impl.CartServiceImpl       : Current user ID: 33136e34-b3e7-11ef-a8fe-2cf05db65929
+2024-12-07T08:45:16.188+07:00  INFO 24192 --- [GoldenNest] [http-nio-8080-exec-8] c.e.G.service.impl.CartServiceImpl       : Updated quantity for product in cart: 3
+2024-12-07T08:45:17.041+07:00  INFO 24192 --- [GoldenNest] [http-nio-8080-exec-7] c.e.G.service.impl.CartServiceImpl       : Current username: admin1
+2024-12-07T08:45:17.052+07:00  INFO 24192 --- [GoldenNest] [http-nio-8080-exec-7] c.e.G.service.impl.CartServiceImpl       : Current user ID: 33136e34-b3e7-11ef-a8fe-2cf05db65929
+2024-12-07T08:45:17.071+07:00  INFO 24192 --- [GoldenNest] [http-nio-8080-exec-7] c.e.G.service.impl.CartServiceImpl       : Updated quantity for product in cart: 4
+2024-12-07T08:45:30.117+07:00  INFO 24192 --- [GoldenNest] [http-nio-8080-exec-9] c.e.G.service.impl.CartServiceImpl       : Current username: admin1
+2024-12-07T08:45:30.122+07:00  INFO 24192 --- [GoldenNest] [http-nio-8080-exec-9] c.e.G.service.impl.CartServiceImpl       : Current user ID: 33136e34-b3e7-11ef-a8fe-2cf05db65929
+2024-12-07T08:45:30.136+07:00  INFO 24192 --- [GoldenNest] [http-nio-8080-exec-9] c.e.G.service.impl.CartServiceImpl       : Decreased quantity for product in cart: 3
+2024-12-07T08:58:40.646+07:00  INFO 24192 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-07T08:58:40.653+07:00  INFO 24192 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-07T09:22:41.858+07:00  INFO 13380 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Starting GoldenNestApplication using Java 21.0.2 with PID 13380 (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes started by ntb09 in E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE)
+2024-12-07T09:22:41.865+07:00  INFO 13380 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-12-07T09:22:42.874+07:00  INFO 13380 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-07T09:22:42.957+07:00  INFO 13380 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82 ms. Found 7 JPA repository interfaces.
+2024-12-07T09:22:43.774+07:00  INFO 13380 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-07T09:22:43.802+07:00  INFO 13380 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-07T09:22:43.802+07:00  INFO 13380 --- [GoldenNest] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-12-07T09:22:43.897+07:00  INFO 13380 --- [GoldenNest] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-07T09:22:43.897+07:00  INFO 13380 --- [GoldenNest] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1989 ms
+2024-12-07T09:22:44.030+07:00  INFO 13380 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-07T09:22:44.425+07:00  INFO 13380 --- [GoldenNest] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6eda012b
+2024-12-07T09:22:44.425+07:00  INFO 13380 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-07T09:22:44.540+07:00  INFO 13380 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2024-12-07T09:22:44.541+07:00  INFO 13380 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-12-07T09:22:44.541+07:00  INFO 13380 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : 
+2024-12-07T09:22:44.558+07:00  INFO 13380 --- [GoldenNest] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/GoldenNest (MySQL 8.0)
+2024-12-07T09:22:44.605+07:00  INFO 13380 --- [GoldenNest] [main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.029s)
+2024-12-07T09:22:44.608+07:00  INFO 13380 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `goldennest`: 3
+2024-12-07T09:22:44.625+07:00  INFO 13380 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Schema `goldennest` is up to date. No migration necessary.
+2024-12-07T09:22:47.260+07:00  INFO 13380 --- [GoldenNest] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-07T09:22:48.408+07:00  INFO 13380 --- [GoldenNest] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5b12157b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@73760b13, org.springframework.security.web.context.SecurityContextHolderFilter@4758f533, org.springframework.security.web.header.HeaderWriterFilter@20961f8b, org.springframework.web.filter.CorsFilter@6b5df313, org.springframework.security.web.authentication.logout.LogoutFilter@7bbd133c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@262e2c8c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@636e6791, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a6aecec, org.springframework.security.web.session.SessionManagementFilter@5bb1c104, org.springframework.security.web.access.ExceptionTranslationFilter@4c39eac6, org.springframework.security.web.access.intercept.AuthorizationFilter@4cda8d3b]
+2024-12-07T09:22:48.846+07:00  INFO 13380 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-12-07T09:22:48.858+07:00  INFO 13380 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Started GoldenNestApplication in 7.472 seconds (process running for 8.059)
+2024-12-07T09:22:50.825+07:00  INFO 13380 --- [GoldenNest] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-07T09:22:50.825+07:00  INFO 13380 --- [GoldenNest] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-07T09:22:50.825+07:00  INFO 13380 --- [GoldenNest] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-12-07T09:22:52.276+07:00  INFO 13380 --- [GoldenNest] [http-nio-8080-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 1136 ms
+2024-12-07T09:23:18.207+07:00  INFO 13380 --- [GoldenNest] [http-nio-8080-exec-1] c.e.G.service.impl.CartServiceImpl       : Current username: admin1
+2024-12-07T09:23:18.315+07:00  INFO 13380 --- [GoldenNest] [http-nio-8080-exec-1] c.e.G.service.impl.CartServiceImpl       : Current user ID: 33136e34-b3e7-11ef-a8fe-2cf05db65929
+2024-12-07T09:23:18.352+07:00  INFO 13380 --- [GoldenNest] [http-nio-8080-exec-1] c.e.G.service.impl.CartServiceImpl       : Total cart item count for user 33136e34-b3e7-11ef-a8fe-2cf05db65929: 3
+2024-12-07T09:25:22.433+07:00  INFO 13380 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-07T09:25:22.439+07:00  INFO 13380 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

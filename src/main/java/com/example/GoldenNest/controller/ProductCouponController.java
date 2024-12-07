@@ -10,10 +10,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 
 @RestController
-@RequestMapping("/api/products")
+@RequestMapping("/api/product-coupon")
 public class ProductCouponController {
 
     private final ProductCouponService productCouponService;

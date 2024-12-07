@@ -1,9 +1,11 @@
 package com.example.GoldenNest.controller;
 
-import com.example.GoldenNest.model.entity.Coupon;
 import com.example.GoldenNest.model.entity.Product;
 import com.example.GoldenNest.service.ProductCouponService;
 import com.example.GoldenNest.util.annotation.CheckLogin;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -45,4 +47,15 @@ public class ProductCouponController {
         }
     }
 
+    @GetMapping("/products/{couponId}")
+    public ResponseEntity<Page<Product>> getProductsByCouponId(
+            @PathVariable String couponId,
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size) {
+
+        Pageable pageable = PageRequest.of(page, size);
+        Page<Product> products = productCouponService.getProductsByCouponId(couponId, pageable);
+
+        return ResponseEntity.ok(products);
+    }
 }

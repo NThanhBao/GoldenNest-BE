@@ -142,4 +142,20 @@ public class ProductServiceImpl implements ProductService {
         }
     }
 
+    @Override
+    public Page<Product> getProductsByCategoryId(String categoryId, Pageable pageable) {
+        Optional<Category> categoryOptional = categoryRepository.findById(categoryId);
+        if (categoryOptional.isEmpty()) {
+            throw new EntityNotFoundException("Category not found with ID: " + categoryId);
+        }
+
+        Page<Product> products = productRepository.findByCategoryId(categoryId, pageable);
+        if (products.isEmpty()) {
+            logger.warn("No products found for Category ID: {}", categoryId);
+        }
+
+        return products;
+    }
+
+
 }

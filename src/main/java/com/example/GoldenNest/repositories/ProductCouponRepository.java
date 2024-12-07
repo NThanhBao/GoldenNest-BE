@@ -10,4 +10,5 @@ import java.util.List;
 @Repository
 public interface ProductCouponRepository extends JpaRepository<Product, String> {
 
+
 }

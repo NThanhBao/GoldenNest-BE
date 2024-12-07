@@ -1,14 +1,19 @@
 package com.example.GoldenNest.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
 
 @Entity
+@Getter
+@Setter
 @Table(name = "coupons")
 public class Coupon {
 
@@ -31,6 +36,7 @@ public class Coupon {
     private Boolean isActive;
 
     @OneToOne(mappedBy = "coupon", fetch = FetchType.LAZY)
+    @JsonIgnore
     private Product product;
 
     public Coupon() {

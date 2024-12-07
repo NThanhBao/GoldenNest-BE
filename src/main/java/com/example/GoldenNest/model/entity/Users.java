@@ -2,6 +2,7 @@ package com.example.GoldenNest.model.entity;
 
 import com.example.GoldenNest.model.entity.Enum.EnableType;
 import com.example.GoldenNest.model.entity.Enum.RoleType;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.EqualsAndHashCode;
@@ -74,6 +75,14 @@ public class Users {
     @Column(name = "updated_at")
     private Timestamp updateAt;
 
+    @JsonIgnore
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "favorites",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "product_id")
+    )
+    private List<Product> favoritesProduct;
 
     @PrePersist
     protected void onCreate() {

@@ -9,6 +9,7 @@ import lombok.Setter;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 
 @Entity
@@ -35,9 +36,9 @@ public class Coupon {
     @Column(name = "is_active", nullable = false)
     private Boolean isActive;
 
-    @OneToOne(mappedBy = "coupon", fetch = FetchType.LAZY)
+    @ManyToMany(mappedBy = "coupons")
     @JsonIgnore
-    private Product product;
+    private Set<Product> products;
 
     public Coupon() {
         this.id = UUID.randomUUID().toString();

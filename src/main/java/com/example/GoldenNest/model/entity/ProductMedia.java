@@ -12,8 +12,8 @@ import java.util.UUID;
 @Entity
 @Getter
 @Setter
-@Table(name = "product_media")
-public class ProductMedia {
+@Table(name = "medias")
+public class Medias {
 
     @Id
     @Column(name = "id", columnDefinition = "CHAR(36)")
@@ -21,7 +21,7 @@ public class ProductMedia {
 
     @ManyToOne
     @JsonBackReference
-    @JoinColumn(name = "product_id")
+    @JoinColumn(name = "id")
     private Product product;
 
     @Column(name = "base_name")
@@ -38,7 +38,7 @@ public class ProductMedia {
         createAt = new Timestamp(new Date().getTime());
     }
 
-    public ProductMedia() {
+    public Medias() {
         this.id = UUID.randomUUID().toString();  // Khởi tạo UUID thủ công
     }
     // Getters and Setters

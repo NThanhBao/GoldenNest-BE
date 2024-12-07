@@ -17,17 +17,6 @@ public interface ProductRepository extends JpaRepository<Product, String> {
 
     Page<Product> findByCategoryId(String categoryId, Pageable pageable);
 
-    @Modifying
-    @Query(value = "INSERT INTO product_coupons (product_id, coupon_id) VALUES (:productId, :couponId)",
-            nativeQuery = true)
-    void addCouponToProduct(@Param("productId") String productId, @Param("couponId") String couponId);
+    Page<Product> findByNameContainingIgnoreCase(String name, Pageable pageable);
 
-    @Modifying
-    @Query(value = "DELETE FROM product_coupons WHERE product_id = :productId AND coupon_id = :couponId",
-            nativeQuery = true)
-    int removeCouponFromProduct(@Param("productId") String productId, @Param("couponId") String couponId);
-
-    @EntityGraph(attributePaths = {"category", "userId", "medias", "coupon"})
-    @Query("SELECT p FROM Product p JOIN p.coupon c WHERE c.id = :couponId")
-    List<Product> findProductsByCouponId(@Param("couponId") String couponId);
 }

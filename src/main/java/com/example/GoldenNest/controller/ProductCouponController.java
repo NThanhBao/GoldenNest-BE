@@ -22,22 +22,21 @@ public class ProductCouponController {
     }
 
     @CheckLogin
-    @PostMapping("/{productId}/add-coupon/{couponId}")
+    @PostMapping("/{productId}/{couponId}")
     public ResponseEntity<Product> addCouponToProduct(@PathVariable("productId") String productId,
                                                       @PathVariable("couponId") String couponId) {
         try {
-            // Gọi service để thêm coupon vào sản phẩm
             Product updatedProduct = productCouponService.addCouponToProduct(productId, couponId);
-            return ResponseEntity.ok(updatedProduct);  // Trả về sản phẩm đã cập nhật
+            return ResponseEntity.ok(updatedProduct);
         } catch (RuntimeException e) {
-            // Trường hợp không tìm thấy sản phẩm hoặc coupon
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
         }
     }
 
     @CheckLogin
-    @DeleteMapping("/remove")
-    public ResponseEntity<String> removeCouponFromProduct(@RequestParam String productId, @RequestParam String couponId) {
+    @DeleteMapping("/{productId}/{couponId}")
+    public ResponseEntity<String> removeCouponFromProduct(@PathVariable String productId,
+                                                          @PathVariable String couponId) {
         try {
             productCouponService.removeCouponFromProduct(productId, couponId);
             return new ResponseEntity<>("Coupon removed from product", HttpStatus.OK);
@@ -46,7 +45,7 @@ public class ProductCouponController {
         }
     }
 
-    @GetMapping("/products/{couponId}")
+    @GetMapping("/{couponId}")
     public ResponseEntity<Page<Product>> getProductsByCouponId(
             @PathVariable String couponId,
             @RequestParam(defaultValue = "0") int page,

@@ -21,7 +21,7 @@ public class CartController {
     }
 
     @CheckLogin
-    @GetMapping("/")
+    @GetMapping("/items")
     public Page<CartDTO> getCartForCurrentUser(@RequestParam(defaultValue = "0") int page,
                                                @RequestParam(defaultValue = "10") int size) {
         Pageable pageable = PageRequest.of(page, size);
@@ -29,8 +29,8 @@ public class CartController {
     }
 
     @CheckLogin
-    @PostMapping("/create")
-    public ResponseEntity<Cart> addToCart(@RequestParam String productId) {
+    @PostMapping("/items/{productId}")
+    public ResponseEntity<Cart> addToCart(@PathVariable String productId) {
 
         CartDTO cartDTO = new CartDTO();
         cartDTO.setProductId(productId);
@@ -39,8 +39,8 @@ public class CartController {
     }
 
     @CheckLogin
-    @DeleteMapping("/decrease")
-    public ResponseEntity<Cart> decreaseQuantity(@RequestParam String productId) {
+    @PutMapping("/items/{productId}/decrease")
+    public ResponseEntity<Cart> decreaseQuantity(@PathVariable String productId) {
 
         CartDTO cartDTO = new CartDTO();
         cartDTO.setProductId(productId);
@@ -52,14 +52,14 @@ public class CartController {
     }
 
     @CheckLogin
-    @GetMapping("/cart/item-count")
+    @GetMapping("/items/count")
     public ResponseEntity<Integer> getCartItemCount() {
         int itemCount = cartService.getCartItemCount();
         return ResponseEntity.ok(itemCount);
     }
 
     @CheckLogin
-    @DeleteMapping("/clear")
+    @DeleteMapping("/items/clear")
     public ResponseEntity<String> clearCart() {
         cartService.clearCartForCurrentUser();
         return ResponseEntity.ok("Cart cleared successfully");

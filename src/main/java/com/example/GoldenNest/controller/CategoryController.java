@@ -23,7 +23,7 @@ public class CategoryController {
         this.categoryService = categoryService;
     }
 
-    @GetMapping("/")
+    @GetMapping
     public Page<Category> getAllCategories(@RequestParam(defaultValue = "0") int page,
                                            @RequestParam(defaultValue = "10") int size) {
         Pageable pageable = PageRequest.of(page, size);
@@ -31,7 +31,7 @@ public class CategoryController {
     }
 
     @CheckLogin
-    @PostMapping("/create")
+    @PostMapping
     public ResponseEntity<Category> addCategory(@RequestBody CategoryDTO categoryDTO) {
         try {
             Category category = categoryService.addCategory(categoryDTO);

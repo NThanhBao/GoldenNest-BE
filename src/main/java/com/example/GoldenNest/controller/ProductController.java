@@ -25,7 +25,6 @@ import static com.example.GoldenNest.service.impl.AuthServiceImpl.logger;
 public class ProductController {
 
     private final ProductService productService;
-
     private final ProductMediaService productMediaService;
 
     public ProductController(ProductService productService, ProductMediaService productMediaService) {
@@ -49,7 +48,7 @@ public class ProductController {
         }
     }
 
-    @GetMapping("/")
+    @GetMapping
     public Page<Product> getAllProducts(@RequestParam(defaultValue = "0") int page,
                                         @RequestParam(defaultValue = "10") int size) {
         Pageable pageable = PageRequest.of(page, size);
@@ -57,10 +56,10 @@ public class ProductController {
     }
 
     @CheckLogin
-    @PostMapping("/create")
-    public ResponseEntity<Product> createPosts(@RequestBody ProductDTO productDTO) {
-        Product newPost = productService.createPosts(productDTO);
-        return new ResponseEntity<>(newPost, HttpStatus.CREATED);
+    @PostMapping
+    public ResponseEntity<Product> createProduct(@RequestBody ProductDTO productDTO) {
+        Product newProduct = productService.createPosts(productDTO);
+        return new ResponseEntity<>(newProduct, HttpStatus.CREATED);
     }
 
     @CheckLogin
@@ -85,12 +84,20 @@ public class ProductController {
         }
     }
 
-    @GetMapping("/{categoryId}")
+    @GetMapping("/categories/{categoryId}")
     public Page<Product> getProductsByCategoryId(
             @PathVariable String categoryId,
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size) {
         Pageable pageable = PageRequest.of(page, size);
         return productService.getProductsByCategoryId(categoryId, pageable);
+    }
+
+    @GetMapping("/search")
+    public Page<Product> searchProducts(@RequestParam("name") String name,
+                                        @RequestParam(defaultValue = "0") int page,
+                                        @RequestParam(defaultValue = "10") int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return productService.searchProductsByName(name, pageable);
     }
 }

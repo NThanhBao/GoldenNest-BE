@@ -158,4 +158,14 @@ public class ProductServiceImpl implements ProductService {
     }
 
 
+    @Override
+    public Page<Product> searchProductsByName(String name, Pageable pageable) {
+        // Sử dụng phương thức tìm kiếm trong repository để tìm sản phẩm theo tên
+        Page<Product> products = productRepository.findByNameContainingIgnoreCase(name, pageable);
+        if (products.isEmpty()) {
+            logger.warn("No products found with name: {}", name);
+        }
+        return products;
+    }
+
 }

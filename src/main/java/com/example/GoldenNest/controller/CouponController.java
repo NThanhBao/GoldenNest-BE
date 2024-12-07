@@ -22,7 +22,7 @@ public class CouponController {
         this.couponService = couponService;
     }
 
-    @PostMapping("/create")
+    @PostMapping
     public ResponseEntity<Coupon> createCoupon(@Valid @RequestBody CouponDTO couponDTO) {
         Coupon createdCoupon = couponService.createCoupon(couponDTO);
         return ResponseEntity.ok(createdCoupon);

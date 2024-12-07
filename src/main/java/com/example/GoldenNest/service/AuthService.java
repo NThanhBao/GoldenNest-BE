@@ -18,5 +18,5 @@ public interface AuthService extends UserDetailsService {
 
     ResponseEntity<String> updateUser(AuthDTO updatedUserDto);
 
-    public ResponseEntity<String> deleteUser();
+    ResponseEntity<String> deleteUser();
 }

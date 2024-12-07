@@ -1,8 +1,6 @@
 package com.example.GoldenNest.controller;
 
-import com.example.GoldenNest.model.dto.CartDTO;
 import com.example.GoldenNest.model.dto.ProductDTO;
-import com.example.GoldenNest.model.entity.Category;
 import com.example.GoldenNest.model.entity.Product;
 import com.example.GoldenNest.service.ProductMediaService;
 import com.example.GoldenNest.service.ProductService;

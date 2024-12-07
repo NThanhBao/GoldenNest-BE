@@ -120,3 +120,4 @@ public class MinioService {
         return (lastDotIndex == -1) ? "" : fileName.substring(lastDotIndex + 1);
     }
 }
+

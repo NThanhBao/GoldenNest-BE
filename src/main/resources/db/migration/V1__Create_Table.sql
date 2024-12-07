@@ -153,8 +153,17 @@ CREATE TABLE news (
                       id CHAR(36) PRIMARY KEY,
                       title VARCHAR(255) NOT NULL,
                       content TEXT NOT NULL,
-                      image_url VARCHAR(255) NULL,
                       source VARCHAR(255) NULL,
                       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                       updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Tạo bảng news_media
+DROP TABLE IF EXISTS `news_media`;
+CREATE TABLE news_media (
+                               id CHAR(36) PRIMARY KEY,
+                               base_name VARCHAR(255) NOT NULL,
+                               public_url VARCHAR(2083) NOT NULL,
+                               news_id CHAR(36),
+                               FOREIGN KEY (news_id) REFERENCES news(id)
 );

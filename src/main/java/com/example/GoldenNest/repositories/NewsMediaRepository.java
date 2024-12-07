@@ -1,4 +1,9 @@
 package com.example.GoldenNest.repositories;
 
-public interface NewsMediaRepository {
+import com.example.GoldenNest.model.entity.NewsMedia;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface NewsMediaRepository extends JpaRepository<NewsMedia, String> {
 }

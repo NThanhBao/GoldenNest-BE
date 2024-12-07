@@ -1,8 +1,8 @@
 package com.example.GoldenNest.service.impl;
 
-import com.example.GoldenNest.model.entity.NewsMedia;
-import com.example.GoldenNest.model.entity.Users;
+import com.example.GoldenNest.model.entity.*;
 import com.example.GoldenNest.repositories.NewsMediaRepository;
+import com.example.GoldenNest.repositories.NewsRepository;
 import com.example.GoldenNest.repositories.UsersRepository;
 import com.example.GoldenNest.service.MinioService;
 import com.example.GoldenNest.service.NewsMediaService;
@@ -23,14 +23,16 @@ public class NewsMediaServiceImpl implements NewsMediaService {
 
     private final MinioService minioService;
     private final UsersRepository usersRepository;
+    private final NewsRepository newsRepository;
     private final NewsMediaRepository newsMediaRepository;
     private final Logger logger = LoggerFactory.getLogger(NewsMediaServiceImpl.class);
 
 
-    public NewsMediaServiceImpl(MinioService minioService, UsersRepository usersRepository,
+    public NewsMediaServiceImpl(MinioService minioService, UsersRepository usersRepository, NewsRepository newsRepository,
                                 NewsMediaRepository newsMediaRepository) {
         this.minioService = minioService;
         this.usersRepository = usersRepository;
+        this.newsRepository = newsRepository;
         this.newsMediaRepository = newsMediaRepository;
     }
 
@@ -74,6 +76,9 @@ public class NewsMediaServiceImpl implements NewsMediaService {
             throw new Exception("Error uploading file to MinIO", e);
         }
     }
+
+
+
 
     private String getFileExtension(String fileName) {
         int lastDotIndex = fileName.lastIndexOf('.');

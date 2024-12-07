@@ -9,7 +9,7 @@ public interface ProductService {
 
     Page<Product> getAllProducts(Pageable pageable);
 
-    Product createPosts(ProductDTO post);
+    Product createPosts(ProductDTO productDTO);
 
     Product updateProduct(String productId, ProductDTO productDTO);
 

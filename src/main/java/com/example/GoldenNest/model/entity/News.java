@@ -1,10 +1,12 @@
 package com.example.GoldenNest.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -35,6 +37,10 @@ public class News {
     @ManyToOne
     @JoinColumn(name = "created_by")
     private Users userId;
+
+    @JsonManagedReference
+    @OneToMany(mappedBy = "news", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<NewsMedia> medias;
 
     // Constructor không tham số
     public News() {

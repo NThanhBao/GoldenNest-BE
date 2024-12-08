@@ -5,6 +5,7 @@ import com.example.GoldenNest.model.entity.News;
 import com.example.GoldenNest.model.entity.Product;
 import com.example.GoldenNest.service.NewsMediaService;
 import com.example.GoldenNest.service.NewsService;
+import com.example.GoldenNest.util.annotation.CheckAdmin;
 import com.example.GoldenNest.util.annotation.CheckLogin;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -38,6 +39,7 @@ public class NewsController {
     }
 
     @CheckLogin
+    @CheckAdmin
     @PostMapping(value = "/upload", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     public ResponseEntity<String> uploadMedia(@RequestParam("filePath") MultipartFile filePath) {
         if (filePath.isEmpty()) {
@@ -54,8 +56,9 @@ public class NewsController {
     }
 
     @CheckLogin
+    @CheckAdmin
     @PostMapping
-    public ResponseEntity<News> createProduct(@RequestBody NewsDTO newsDTO) {
+    public ResponseEntity<News> createNews(@RequestBody NewsDTO newsDTO) {
         News newsNews = newsService.createNews(newsDTO);
         return new ResponseEntity<>(newsNews, HttpStatus.CREATED);
     }

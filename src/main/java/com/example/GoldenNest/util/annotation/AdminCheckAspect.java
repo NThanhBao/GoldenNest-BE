@@ -2,6 +2,7 @@ package com.example.GoldenNest.util.annotation;
 
 import com.example.GoldenNest.config.security.JwtTokenService;
 import com.example.GoldenNest.util.exception.UnauthorizedException;
+import io.jsonwebtoken.Claims;
 import jakarta.servlet.http.HttpServletRequest;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
@@ -23,36 +24,35 @@ public class AdminCheckAspect {
     private JwtTokenService jwtTokenService;
 
     @Before("@annotation(CheckAdmin)")
-    public ResponseEntity<?> checkAdmin(JoinPoint joinPoint) {
+    public void checkAdmin(JoinPoint joinPoint) {
         try {
             HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
             String authHeader = request.getHeader("Authorization");
 
-            // Kiểm tra xem token có trong header hay không
+            // Kiểm tra header Authorization
             if (authHeader == null || !authHeader.startsWith("Bearer ")) {
                 throw new UnauthorizedException("Không tìm thấy token trong header hoặc token không hợp lệ.");
             }
 
             String token = authHeader.substring(7);
 
-            // Lấy thông tin người dùng từ token (ví dụ: username hoặc userId)
-            String currentUserName = jwtTokenService.extractUsername(token);
-
-            // Tạo Authentication từ thông tin người dùng
-            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-
-            // Kiểm tra xem người dùng có quyền admin hay không
-            if (!authentication.getAuthorities().contains(AuthorityUtils.createAuthorityList("ROLE_ADMIN").get(0))) {
-                throw new UnauthorizedException("Bạn không có quyền truy cập (Admin required).");
+            // Kiểm tra token
+            if (!jwtTokenService.isTokenFormatValid(token) || !jwtTokenService.isTokenValid(token)) {
+                throw new UnauthorizedException("Token không hợp lệ.");
             }
 
-            // Nếu người dùng có quyền admin, cho phép tiếp tục
-            return ResponseEntity.ok(currentUserName);
+            // Kiểm tra quyền Admin
+            Claims claims = jwtTokenService.extractAllClaims(token);
+            String role = claims.get("role", String.class);
+
+            if (role == null || !role.equals("ADMIN")) {
+                throw new UnauthorizedException("Bạn không có quyền truy cập (Admin required).");
+            }
 
         } catch (UnauthorizedException e) {
             throw e;
         } catch (Exception e) {
-            throw new UnauthorizedException("Có lỗi xảy ra!");
+            throw new UnauthorizedException("Có lỗi xảy ra trong quá trình kiểm tra quyền.");
         }
     }
 }

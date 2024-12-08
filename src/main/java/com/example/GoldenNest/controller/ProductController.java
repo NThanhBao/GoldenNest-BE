@@ -63,6 +63,7 @@ public class ProductController {
     }
 
     @CheckLogin
+    @CheckAdmin
     @PutMapping("/{id}")
     public ResponseEntity<Product> updateProduct(@PathVariable String id, @RequestBody ProductDTO productDTO) {
         try {

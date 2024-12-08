@@ -3,6 +3,7 @@ package com.example.GoldenNest.controller;
 import com.example.GoldenNest.model.dto.CategoryDTO;
 import com.example.GoldenNest.model.entity.Category;
 import com.example.GoldenNest.service.CategoryService;
+import com.example.GoldenNest.util.annotation.CheckAdmin;
 import com.example.GoldenNest.util.annotation.CheckLogin;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -30,6 +31,7 @@ public class CategoryController {
     }
 
     @CheckLogin
+    @CheckAdmin
     @PostMapping
     public ResponseEntity<Category> addCategory(@RequestBody CategoryDTO categoryDTO) {
         try {
@@ -41,6 +43,7 @@ public class CategoryController {
     }
 
     @CheckLogin
+    @CheckAdmin
     @PutMapping("/{id}")
     public ResponseEntity<Category> updateCategory(@PathVariable String id, @RequestBody CategoryDTO categoryDTO) {
         try {
@@ -52,6 +55,7 @@ public class CategoryController {
     }
 
     @CheckLogin
+    @CheckAdmin
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteCategory(@PathVariable String id) {
         try {

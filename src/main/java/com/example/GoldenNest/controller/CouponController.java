@@ -3,6 +3,8 @@ package com.example.GoldenNest.controller;
 import com.example.GoldenNest.model.dto.CouponDTO;
 import com.example.GoldenNest.model.entity.Coupon;
 import com.example.GoldenNest.service.CouponService;
+import com.example.GoldenNest.util.annotation.CheckAdmin;
+import com.example.GoldenNest.util.annotation.CheckLogin;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -21,12 +23,16 @@ public class CouponController {
         this.couponService = couponService;
     }
 
+    @CheckLogin
+    @CheckAdmin
     @PostMapping
     public ResponseEntity<Coupon> createCoupon(@Valid @RequestBody CouponDTO couponDTO) {
         Coupon createdCoupon = couponService.createCoupon(couponDTO);
         return ResponseEntity.ok(createdCoupon);
     }
 
+    @CheckLogin
+    @CheckAdmin
     @GetMapping
     public Page<Coupon> getAllCoupons(@RequestParam(defaultValue = "0") int page,
                                       @RequestParam(defaultValue = "10") int size) {
@@ -34,12 +40,16 @@ public class CouponController {
         return couponService.getAllCoupons(pageable);
     }
 
+    @CheckLogin
+    @CheckAdmin
     @GetMapping("/{id}")
     public ResponseEntity<Coupon> getCouponById(@PathVariable String id) {
         Coupon coupon = couponService.getCouponById(id);
         return ResponseEntity.ok(coupon);
     }
 
+    @CheckLogin
+    @CheckAdmin
     @PutMapping("/{id}")
     public ResponseEntity<Coupon> updateCoupon(
             @PathVariable String id,
@@ -48,6 +58,8 @@ public class CouponController {
         return ResponseEntity.ok(updatedCoupon);
     }
 
+    @CheckLogin
+    @CheckAdmin
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteCoupon(@PathVariable String id) {
         couponService.deleteCoupon(id);

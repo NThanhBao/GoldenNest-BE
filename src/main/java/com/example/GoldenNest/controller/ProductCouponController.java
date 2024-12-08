@@ -2,6 +2,7 @@ package com.example.GoldenNest.controller;
 
 import com.example.GoldenNest.model.entity.Product;
 import com.example.GoldenNest.service.ProductCouponService;
+import com.example.GoldenNest.util.annotation.CheckAdmin;
 import com.example.GoldenNest.util.annotation.CheckLogin;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -22,6 +23,7 @@ public class ProductCouponController {
     }
 
     @CheckLogin
+    @CheckAdmin
     @PostMapping("/{productId}/{couponId}")
     public ResponseEntity<Product> addCouponToProduct(@PathVariable("productId") String productId,
                                                       @PathVariable("couponId") String couponId) {
@@ -34,6 +36,7 @@ public class ProductCouponController {
     }
 
     @CheckLogin
+    @CheckAdmin
     @DeleteMapping("/{productId}/{couponId}")
     public ResponseEntity<String> removeCouponFromProduct(@PathVariable String productId,
                                                           @PathVariable String couponId) {

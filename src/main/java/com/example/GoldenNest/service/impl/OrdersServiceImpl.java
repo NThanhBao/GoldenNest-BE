@@ -101,20 +101,20 @@ public class OrdersServiceImpl implements OrdersService {
 
         switch (order.getStatus()) {
             case PENDING:
-                if (newStatus != OrderStatus.SHIPPED && newStatus != OrderStatus.CANCELLED) {
-                    throw new IllegalArgumentException("Chỉ có thể chuyển từ PENDING sang SHIPPED hoặc CANCELLED.");
-                }
-                break;
-
-            case SHIPPED:
                 if (newStatus != OrderStatus.IN_TRANSIT && newStatus != OrderStatus.CANCELLED) {
-                    throw new IllegalArgumentException("Chỉ có thể chuyển từ SHIPPED sang IN_TRANSIT hoặc CANCELLED.");
+                    throw new IllegalArgumentException("Chỉ có thể chuyển từ PENDING sang IN_TRANSIT hoặc CANCELLED.");
                 }
                 break;
 
             case IN_TRANSIT:
+                if (newStatus != OrderStatus.SHIPPED && newStatus != OrderStatus.CANCELLED) {
+                    throw new IllegalArgumentException("Chỉ có thể chuyển từ IN_TRANSIT sang SHIPPED hoặc CANCELLED.");
+                }
+                break;
+
+            case SHIPPED:
                 if (newStatus != OrderStatus.DELIVERED && newStatus != OrderStatus.CANCELLED) {
-                    throw new IllegalArgumentException("Chỉ có thể chuyển từ IN_TRANSIT sang DELIVERED hoặc CANCELLED.");
+                    throw new IllegalArgumentException("Chỉ có thể chuyển từ SHIPPED sang DELIVERED hoặc CANCELLED.");
                 }
                 break;
 
@@ -133,23 +133,32 @@ public class OrdersServiceImpl implements OrdersService {
         return orderRepository.save(order);
     }
 
-
     @Override
     public void cancelOrder(String orderId) {
         Order order = orderRepository.findById(orderId)
                 .orElseThrow(() -> new EntityNotFoundException("Order not found with ID: " + orderId));
 
-        // Kiểm tra trạng thái đơn hàng trước khi hủy
-        if (order.getStatus() == OrderStatus.DELIVERED || order.getStatus() == OrderStatus.CANCELLED) {
-            throw new IllegalArgumentException("Không thể hủy đơn hàng đã giao hoặc đã hủy.");
+        if (order.getStatus() == OrderStatus.DELIVERED) {
+            throw new IllegalArgumentException("Không thể hủy đơn hàng đã được giao.");
         }
 
-        // Cập nhật trạng thái của người dùng từ PLACED sang CANCELLED
+        if (order.getStatus() == OrderStatus.IN_TRANSIT) {
+            throw new IllegalArgumentException("Không thể hủy đơn hàng đang trong quá trình vận chuyển.");
+        }
+
+        if (order.getStatus() == OrderStatus.SHIPPED) {
+            throw new IllegalArgumentException("Không thể hủy đơn hàng đã được gửi đi.");
+        }
+
+        if (order.getStatus() == OrderStatus.CANCELLED) {
+            throw new IllegalArgumentException("Đơn hàng đã bị hủy và không thể hủy lại.");
+        }
+
         if (order.getUserOrderStatus() == UserOrderStatus.PLACED) {
             order.setUserOrderStatus(UserOrderStatus.CANCELLED);
+        } else {
+            throw new IllegalArgumentException("Không thể hủy đơn hàng không ở trạng thái PLACED.");
         }
-
-        // Lưu thay đổi
         orderRepository.save(order);
     }
 

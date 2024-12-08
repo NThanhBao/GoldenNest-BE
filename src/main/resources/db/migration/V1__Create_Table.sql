@@ -61,6 +61,7 @@ CREATE TABLE orders (
                         user_id CHAR(36) NOT NULL,
                         total_price DECIMAL(10, 2) NOT NULL,
                         status VARCHAR(50) NOT NULL,
+                        user_order_status VARCHAR(50) NOT NULL,
                         shipping_address TEXT NOT NULL,
                         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                         updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -142,7 +143,7 @@ CREATE TABLE payments (
                           order_id CHAR(36) NOT NULL,
                           payment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                           amount DECIMAL(10, 2) NOT NULL,
-                          payment_method ENUM('Credit Card', 'PayPal', 'Cash') DEFAULT 'Credit Card',
+                          payment_method ENUM('CREDIT_CARD', 'PAYPAL', 'CASH', 'PAID') DEFAULT 'CASH',
                           FOREIGN KEY (order_id) REFERENCES orders(id)
 );
 

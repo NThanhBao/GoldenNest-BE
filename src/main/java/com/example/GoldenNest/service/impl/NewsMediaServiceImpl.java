@@ -2,7 +2,6 @@ package com.example.GoldenNest.service.impl;
 
 import com.example.GoldenNest.model.entity.*;
 import com.example.GoldenNest.repositories.NewsMediaRepository;
-import com.example.GoldenNest.repositories.NewsRepository;
 import com.example.GoldenNest.repositories.UsersRepository;
 import com.example.GoldenNest.service.MinioService;
 import com.example.GoldenNest.service.NewsMediaService;
@@ -23,16 +22,14 @@ public class NewsMediaServiceImpl implements NewsMediaService {
 
     private final MinioService minioService;
     private final UsersRepository usersRepository;
-    private final NewsRepository newsRepository;
     private final NewsMediaRepository newsMediaRepository;
     private final Logger logger = LoggerFactory.getLogger(NewsMediaServiceImpl.class);
 
 
-    public NewsMediaServiceImpl(MinioService minioService, UsersRepository usersRepository, NewsRepository newsRepository,
+    public NewsMediaServiceImpl(MinioService minioService, UsersRepository usersRepository,
                                 NewsMediaRepository newsMediaRepository) {
         this.minioService = minioService;
         this.usersRepository = usersRepository;
-        this.newsRepository = newsRepository;
         this.newsMediaRepository = newsMediaRepository;
     }
 

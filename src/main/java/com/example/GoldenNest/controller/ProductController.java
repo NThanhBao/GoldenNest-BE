@@ -4,6 +4,7 @@ import com.example.GoldenNest.model.dto.ProductDTO;
 import com.example.GoldenNest.model.entity.Product;
 import com.example.GoldenNest.service.ProductMediaService;
 import com.example.GoldenNest.service.ProductService;
+import com.example.GoldenNest.util.annotation.CheckAdmin;
 import com.example.GoldenNest.util.annotation.CheckLogin;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.data.domain.Page;
@@ -31,6 +32,7 @@ public class ProductController {
     }
 
     @CheckLogin
+    @CheckAdmin
     @PostMapping(value = "/upload", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     public ResponseEntity<String> uploadMedia(@RequestParam("filePath") MultipartFile filePath) {
         if (filePath.isEmpty()) {
@@ -72,6 +74,7 @@ public class ProductController {
     }
 
     @CheckLogin
+    @CheckAdmin
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteProduct(@PathVariable String id) {
         try {

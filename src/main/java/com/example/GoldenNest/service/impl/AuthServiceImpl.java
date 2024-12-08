@@ -165,7 +165,19 @@ public class AuthServiceImpl implements AuthService {
         return ResponseEntity.ok("Tài khoản đã bị vô hiệu hóa");
     }
 
-
+    @Override
+    public ResponseEntity<String> updatePassword(String email, String newPassword) {
+        Users user = userRepository.findByEmail(email);
+        if (user == null) {
+            logger.warn("Người dùng với email '{}' không tồn tại", email);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Người dùng không tồn tại.");
+        }
+        String encryptedPassword = encoder.encode(newPassword);
+        user.setPassword(encryptedPassword);
+        userRepository.save(user);
+        logger.info("Mật khẩu của người dùng với email '{}' đã được cập nhật thành công", email);
+        return ResponseEntity.ok("Mật khẩu cập nhật thành công.");
+    }
 
 
     private boolean isUserExists(AuthDTO registerDTO) {

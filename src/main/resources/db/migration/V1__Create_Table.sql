@@ -44,6 +44,15 @@ CREATE TABLE products (
                           FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
+-- Tạo bảng coupons
+DROP TABLE IF EXISTS `coupons`;
+CREATE TABLE coupons (
+                         id CHAR(36) PRIMARY KEY,
+                         code VARCHAR(50) NOT NULL UNIQUE,
+                         discount_amount DECIMAL(10, 2) NOT NULL,
+                         expiry_date DATE NOT NULL,
+                         is_active BOOLEAN DEFAULT TRUE
+);
 
 -- Tạo bảng orders
 DROP TABLE IF EXISTS `orders`;
@@ -115,16 +124,6 @@ CREATE TABLE product_media (
                                FOREIGN KEY (product_id) REFERENCES products(id)
 );
 
--- Tạo bảng coupons
-DROP TABLE IF EXISTS `coupons`;
-CREATE TABLE coupons (
-                         id CHAR(36) PRIMARY KEY,
-                         code VARCHAR(50) NOT NULL UNIQUE,
-                         discount_amount DECIMAL(10, 2) NOT NULL,
-                         expiry_date DATE NOT NULL,
-                         is_active BOOLEAN DEFAULT TRUE
-);
-
 -- Tạo bảng product_coupons
 DROP TABLE IF EXISTS `product_coupons`;
 CREATE TABLE product_coupons (
@@ -161,9 +160,22 @@ CREATE TABLE news (
 -- Tạo bảng news_media
 DROP TABLE IF EXISTS `news_media`;
 CREATE TABLE news_media (
-                               id CHAR(36) PRIMARY KEY,
-                               base_name VARCHAR(255) NOT NULL,
-                               public_url VARCHAR(2083) NOT NULL,
-                               news_id CHAR(36),
-                               FOREIGN KEY (news_id) REFERENCES news(id)
+                            id CHAR(36) PRIMARY KEY,
+                            base_name VARCHAR(255) NOT NULL,
+                            public_url VARCHAR(2083) NOT NULL,
+                            news_id CHAR(36),
+                            FOREIGN KEY (news_id) REFERENCES news(id)
+);
+
+-- Tạo bảng OTPs
+DROP TABLE IF EXISTS `OTPs`;
+CREATE TABLE OTPs (
+                      id VARCHAR(36) NOT NULL PRIMARY KEY,
+                      otp VARCHAR(255) UNIQUE,
+                      mail VARCHAR(255) NOT NULL,
+                      expiration_time TIMESTAMP,
+                      create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                      used BOOLEAN DEFAULT FALSE,
+                      created_by VARCHAR(36),
+                      FOREIGN KEY (created_by) REFERENCES users(id)
 );

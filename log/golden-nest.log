@@ -4714,3 +4714,483 @@ java.lang.IllegalArgumentException: Chỉ có thể chuyển từ IN_TRANSIT san
 2024-12-08T17:20:11.046+07:00  INFO 22256 --- [GoldenNest] [http-nio-8080-exec-6] c.e.G.service.impl.ReviewServiceImpl     : Current user ID: 7bbb6ec9-b548-11ef-a8fe-2cf05db65929
 2024-12-08T17:23:14.507+07:00  INFO 22256 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-12-08T17:23:14.515+07:00  INFO 22256 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-08T17:44:50.956+07:00  INFO 21144 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Starting GoldenNestApplication using Java 21.0.2 with PID 21144 (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes started by ntb09 in E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE)
+2024-12-08T17:44:50.960+07:00  INFO 21144 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-12-08T17:44:52.109+07:00  INFO 21144 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08T17:44:52.268+07:00  INFO 21144 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 151 ms. Found 14 JPA repository interfaces.
+2024-12-08T17:44:53.343+07:00  INFO 21144 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-08T17:44:53.367+07:00  INFO 21144 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-08T17:44:53.370+07:00  INFO 21144 --- [GoldenNest] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-12-08T17:44:53.471+07:00  INFO 21144 --- [GoldenNest] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-08T17:44:53.471+07:00  INFO 21144 --- [GoldenNest] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2443 ms
+2024-12-08T17:44:53.653+07:00  INFO 21144 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-08T17:44:54.181+07:00  INFO 21144 --- [GoldenNest] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1544ded3
+2024-12-08T17:44:54.185+07:00  INFO 21144 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-08T17:44:54.281+07:00  INFO 21144 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2024-12-08T17:44:54.281+07:00  INFO 21144 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-12-08T17:44:54.281+07:00  INFO 21144 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : 
+2024-12-08T17:44:54.304+07:00  INFO 21144 --- [GoldenNest] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/GoldenNest (MySQL 8.0)
+2024-12-08T17:44:54.360+07:00  INFO 21144 --- [GoldenNest] [main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.033s)
+2024-12-08T17:44:54.377+07:00  INFO 21144 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `goldennest`: 3
+2024-12-08T17:44:54.384+07:00  INFO 21144 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Schema `goldennest` is up to date. No migration necessary.
+2024-12-08T17:44:57.184+07:00  INFO 21144 --- [GoldenNest] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-08T17:44:59.290+07:00  INFO 21144 --- [GoldenNest] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@14170abd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c2086b4, org.springframework.security.web.context.SecurityContextHolderFilter@a426150, org.springframework.security.web.header.HeaderWriterFilter@5df9d890, org.springframework.web.filter.CorsFilter@31a8b0bb, org.springframework.security.web.authentication.logout.LogoutFilter@207475a2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c156ea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@585bfd45, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@23c2c96d, org.springframework.security.web.session.SessionManagementFilter@6e0d619b, org.springframework.security.web.access.ExceptionTranslationFilter@51dcf51b, org.springframework.security.web.access.intercept.AuthorizationFilter@57e74053]
+2024-12-08T17:44:59.868+07:00  INFO 21144 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-12-08T17:44:59.881+07:00  INFO 21144 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Started GoldenNestApplication in 9.525 seconds (process running for 10.114)
+2024-12-08T17:45:09.728+07:00  INFO 21144 --- [GoldenNest] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-08T17:45:09.729+07:00  INFO 21144 --- [GoldenNest] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-08T17:45:09.731+07:00  INFO 21144 --- [GoldenNest] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-12-08T17:46:01.277+07:00  INFO 21144 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-08T17:46:01.284+07:00  INFO 21144 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-08T18:07:56.661+07:00  INFO 19852 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Starting GoldenNestApplication using Java 21.0.2 with PID 19852 (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes started by ntb09 in E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE)
+2024-12-08T18:07:56.663+07:00  INFO 19852 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-12-08T18:07:57.675+07:00  INFO 19852 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08T18:07:57.831+07:00  INFO 19852 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 148 ms. Found 14 JPA repository interfaces.
+2024-12-08T18:07:58.852+07:00  INFO 19852 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-08T18:07:58.870+07:00  INFO 19852 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-08T18:07:58.871+07:00  INFO 19852 --- [GoldenNest] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-12-08T18:07:58.973+07:00  INFO 19852 --- [GoldenNest] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-08T18:07:58.974+07:00  INFO 19852 --- [GoldenNest] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2260 ms
+2024-12-08T18:07:59.157+07:00  INFO 19852 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-08T18:07:59.621+07:00  INFO 19852 --- [GoldenNest] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2cc75b25
+2024-12-08T18:07:59.629+07:00  INFO 19852 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-08T18:07:59.768+07:00  INFO 19852 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2024-12-08T18:07:59.768+07:00  INFO 19852 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-12-08T18:07:59.768+07:00  INFO 19852 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : 
+2024-12-08T18:07:59.795+07:00  INFO 19852 --- [GoldenNest] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/GoldenNest (MySQL 8.0)
+2024-12-08T18:07:59.849+07:00  INFO 19852 --- [GoldenNest] [main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.034s)
+2024-12-08T18:07:59.869+07:00  INFO 19852 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `goldennest`: 3
+2024-12-08T18:07:59.873+07:00  INFO 19852 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Schema `goldennest` is up to date. No migration necessary.
+2024-12-08T18:08:02.280+07:00  INFO 19852 --- [GoldenNest] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-08T18:08:03.965+07:00  INFO 19852 --- [GoldenNest] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7d710482, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@882c166, org.springframework.security.web.context.SecurityContextHolderFilter@1f9678b0, org.springframework.security.web.header.HeaderWriterFilter@6a2c62ca, org.springframework.web.filter.CorsFilter@67d361fa, org.springframework.security.web.authentication.logout.LogoutFilter@5853431f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4201bd3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@42f2c28d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3c5077f6, org.springframework.security.web.session.SessionManagementFilter@474172e5, org.springframework.security.web.access.ExceptionTranslationFilter@6f4327ab, org.springframework.security.web.access.intercept.AuthorizationFilter@7b828793]
+2024-12-08T18:08:04.507+07:00  INFO 19852 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-12-08T18:08:04.521+07:00  INFO 19852 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Started GoldenNestApplication in 8.362 seconds (process running for 8.957)
+2024-12-08T18:08:30.105+07:00  INFO 19852 --- [GoldenNest] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-08T18:08:30.105+07:00  INFO 19852 --- [GoldenNest] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-08T18:08:30.106+07:00  INFO 19852 --- [GoldenNest] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-08T18:08:30.449+07:00  INFO 19852 --- [GoldenNest] [http-nio-8080-exec-1] c.e.G.service.impl.CartServiceImpl       : Current username: user4
+2024-12-08T18:08:30.574+07:00  INFO 19852 --- [GoldenNest] [http-nio-8080-exec-1] c.e.G.service.impl.CartServiceImpl       : Current user ID: 7bbb6ec9-b548-11ef-a8fe-2cf05db65929
+2024-12-08T18:08:30.605+07:00  INFO 19852 --- [GoldenNest] [http-nio-8080-exec-1] c.e.G.service.impl.CartServiceImpl       : Added new product to cart: 3429de03-6ae5-4928-919c-f19df08c33ef
+2024-12-08T18:08:32.776+07:00  INFO 19852 --- [GoldenNest] [http-nio-8080-exec-2] c.e.G.service.impl.CartServiceImpl       : Current username: user4
+2024-12-08T18:08:32.785+07:00  INFO 19852 --- [GoldenNest] [http-nio-8080-exec-2] c.e.G.service.impl.CartServiceImpl       : Current user ID: 7bbb6ec9-b548-11ef-a8fe-2cf05db65929
+2024-12-08T18:08:32.807+07:00  INFO 19852 --- [GoldenNest] [http-nio-8080-exec-2] c.e.G.service.impl.CartServiceImpl       : Updated quantity for product in cart: 2
+2024-12-08T18:08:33.298+07:00  INFO 19852 --- [GoldenNest] [http-nio-8080-exec-3] c.e.G.service.impl.CartServiceImpl       : Current username: user4
+2024-12-08T18:08:33.310+07:00  INFO 19852 --- [GoldenNest] [http-nio-8080-exec-3] c.e.G.service.impl.CartServiceImpl       : Current user ID: 7bbb6ec9-b548-11ef-a8fe-2cf05db65929
+2024-12-08T18:08:33.334+07:00  INFO 19852 --- [GoldenNest] [http-nio-8080-exec-3] c.e.G.service.impl.CartServiceImpl       : Updated quantity for product in cart: 3
+2024-12-08T18:08:33.706+07:00  INFO 19852 --- [GoldenNest] [http-nio-8080-exec-4] c.e.G.service.impl.CartServiceImpl       : Current username: user4
+2024-12-08T18:08:33.714+07:00  INFO 19852 --- [GoldenNest] [http-nio-8080-exec-4] c.e.G.service.impl.CartServiceImpl       : Current user ID: 7bbb6ec9-b548-11ef-a8fe-2cf05db65929
+2024-12-08T18:08:33.733+07:00  INFO 19852 --- [GoldenNest] [http-nio-8080-exec-4] c.e.G.service.impl.CartServiceImpl       : Updated quantity for product in cart: 4
+2024-12-08T18:14:19.861+07:00  INFO 15020 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Starting GoldenNestApplication using Java 21.0.2 with PID 15020 (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes started by ntb09 in E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE)
+2024-12-08T18:14:19.864+07:00  INFO 15020 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-12-08T18:14:21.051+07:00  INFO 15020 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08T18:14:21.180+07:00  INFO 15020 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 120 ms. Found 14 JPA repository interfaces.
+2024-12-08T18:14:22.202+07:00  INFO 15020 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-08T18:14:22.215+07:00  INFO 15020 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-08T18:14:22.215+07:00  INFO 15020 --- [GoldenNest] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-12-08T18:14:22.307+07:00  INFO 15020 --- [GoldenNest] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-08T18:14:22.308+07:00  INFO 15020 --- [GoldenNest] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2393 ms
+2024-12-08T18:14:22.471+07:00  INFO 15020 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-08T18:14:22.933+07:00  INFO 15020 --- [GoldenNest] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@773eca84
+2024-12-08T18:14:22.935+07:00  INFO 15020 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-08T18:14:23.031+07:00  INFO 15020 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2024-12-08T18:14:23.031+07:00  INFO 15020 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-12-08T18:14:23.031+07:00  INFO 15020 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : 
+2024-12-08T18:14:23.053+07:00  INFO 15020 --- [GoldenNest] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/GoldenNest (MySQL 8.0)
+2024-12-08T18:14:23.096+07:00  INFO 15020 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `goldennest`.`flyway_schema_history` does not exist yet
+2024-12-08T18:14:23.102+07:00  INFO 15020 --- [GoldenNest] [main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.025s)
+2024-12-08T18:14:23.153+07:00  INFO 15020 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `goldennest`.`flyway_schema_history` ...
+2024-12-08T18:14:23.307+07:00  INFO 15020 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `goldennest`: << Empty Schema >>
+2024-12-08T18:14:23.330+07:00  INFO 15020 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "1 - Create Table"
+2024-12-08T18:14:23.340+07:00  WARN 15020 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.categories' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:14:23.440+07:00  WARN 15020 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.users' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:14:23.517+07:00  WARN 15020 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.products' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:14:23.595+07:00  WARN 15020 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.coupons' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:14:23.686+07:00  WARN 15020 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.orders' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:14:23.763+07:00  WARN 15020 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.order_details' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:14:23.849+07:00  WARN 15020 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.reviews' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:14:23.947+07:00  WARN 15020 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.carts' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:14:24.063+07:00  WARN 15020 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.favorites' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:14:24.151+07:00  WARN 15020 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.product_media' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:14:24.228+07:00  WARN 15020 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.product_coupons' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:14:24.305+07:00  WARN 15020 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.payments' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:14:24.429+07:00  WARN 15020 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.news' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:14:24.477+07:00  WARN 15020 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.news_media' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:14:24.530+07:00  WARN 15020 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.otps' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:14:24.618+07:00  INFO 15020 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "2 - Add Column To Table"
+2024-12-08T18:14:24.671+07:00  INFO 15020 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "3 - Insert Data"
+2024-12-08T18:14:24.717+07:00  INFO 15020 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema `goldennest`, now at version v3 (execution time 00:01.283s)
+2024-12-08T18:14:29.573+07:00  INFO 15020 --- [GoldenNest] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-08T18:14:31.138+07:00  INFO 15020 --- [GoldenNest] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5078c8f6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@36d9efa6, org.springframework.security.web.context.SecurityContextHolderFilter@7de54be7, org.springframework.security.web.header.HeaderWriterFilter@2ee4c028, org.springframework.web.filter.CorsFilter@68812b74, org.springframework.security.web.authentication.logout.LogoutFilter@2e5affb3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@60c5c115, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f7bc46e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@f11fad9, org.springframework.security.web.session.SessionManagementFilter@f5a1b27, org.springframework.security.web.access.ExceptionTranslationFilter@52148669, org.springframework.security.web.access.intercept.AuthorizationFilter@5b60accd]
+2024-12-08T18:14:31.589+07:00  INFO 15020 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-12-08T18:14:31.601+07:00  INFO 15020 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Started GoldenNestApplication in 12.259 seconds (process running for 12.866)
+2024-12-08T18:20:51.493+07:00  INFO 15020 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-08T18:20:51.518+07:00  INFO 15020 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-08T18:20:54.002+07:00  INFO 30168 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Starting GoldenNestApplication using Java 21.0.2 with PID 30168 (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes started by ntb09 in E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE)
+2024-12-08T18:20:54.004+07:00  INFO 30168 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-12-08T18:20:55.086+07:00  INFO 30168 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08T18:20:55.221+07:00  INFO 30168 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 123 ms. Found 14 JPA repository interfaces.
+2024-12-08T18:20:56.161+07:00  INFO 30168 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-08T18:20:56.179+07:00  INFO 30168 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-08T18:20:56.180+07:00  INFO 30168 --- [GoldenNest] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-12-08T18:20:56.272+07:00  INFO 30168 --- [GoldenNest] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-08T18:20:56.273+07:00  INFO 30168 --- [GoldenNest] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2221 ms
+2024-12-08T18:20:56.427+07:00  INFO 30168 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-08T18:20:56.864+07:00  INFO 30168 --- [GoldenNest] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@537b3b2e
+2024-12-08T18:20:56.866+07:00  INFO 30168 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-08T18:20:56.965+07:00  INFO 30168 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2024-12-08T18:20:56.965+07:00  INFO 30168 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-12-08T18:20:56.965+07:00  INFO 30168 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : 
+2024-12-08T18:20:56.992+07:00  INFO 30168 --- [GoldenNest] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/GoldenNest (MySQL 8.0)
+2024-12-08T18:20:57.042+07:00  INFO 30168 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `goldennest`.`flyway_schema_history` does not exist yet
+2024-12-08T18:20:57.048+07:00  INFO 30168 --- [GoldenNest] [main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.029s)
+2024-12-08T18:20:57.079+07:00  INFO 30168 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `goldennest`.`flyway_schema_history` ...
+2024-12-08T18:20:57.212+07:00  INFO 30168 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `goldennest`: << Empty Schema >>
+2024-12-08T18:20:57.234+07:00  INFO 30168 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "1 - Create Table"
+2024-12-08T18:20:57.245+07:00  WARN 30168 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.categories' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:20:57.346+07:00  WARN 30168 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.users' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:20:57.405+07:00  WARN 30168 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.products' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:20:57.500+07:00  WARN 30168 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.coupons' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:20:57.578+07:00  WARN 30168 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.orders' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:20:57.655+07:00  WARN 30168 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.order_details' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:20:57.749+07:00  WARN 30168 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.reviews' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:20:57.841+07:00  WARN 30168 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.carts' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:20:57.932+07:00  WARN 30168 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.favorites' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:20:58.026+07:00  WARN 30168 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.product_media' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:20:58.118+07:00  WARN 30168 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.product_coupons' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:20:58.196+07:00  WARN 30168 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.payments' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:20:58.327+07:00  WARN 30168 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.news' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:20:58.413+07:00  WARN 30168 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.news_media' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:20:58.475+07:00  WARN 30168 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.otps' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:20:58.574+07:00  INFO 30168 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "2 - Add Column To Table"
+2024-12-08T18:20:58.622+07:00  INFO 30168 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "3 - Insert Data"
+2024-12-08T18:20:58.667+07:00  INFO 30168 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema `goldennest`, now at version v3 (execution time 00:01.336s)
+2024-12-08T18:21:03.068+07:00  INFO 30168 --- [GoldenNest] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-08T18:21:04.584+07:00  INFO 30168 --- [GoldenNest] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5078c8f6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@36d9efa6, org.springframework.security.web.context.SecurityContextHolderFilter@7de54be7, org.springframework.security.web.header.HeaderWriterFilter@2ee4c028, org.springframework.web.filter.CorsFilter@68812b74, org.springframework.security.web.authentication.logout.LogoutFilter@2e5affb3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@60c5c115, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f7bc46e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@f11fad9, org.springframework.security.web.session.SessionManagementFilter@f5a1b27, org.springframework.security.web.access.ExceptionTranslationFilter@52148669, org.springframework.security.web.access.intercept.AuthorizationFilter@5b60accd]
+2024-12-08T18:21:05.064+07:00  INFO 30168 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-12-08T18:21:05.073+07:00  INFO 30168 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Started GoldenNestApplication in 11.63 seconds (process running for 12.331)
+2024-12-08T18:23:16.430+07:00  INFO 30168 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-08T18:23:16.439+07:00  INFO 30168 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-08T18:23:19.661+07:00  INFO 8748 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Starting GoldenNestApplication using Java 21.0.2 with PID 8748 (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes started by ntb09 in E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE)
+2024-12-08T18:23:19.663+07:00  INFO 8748 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-12-08T18:23:20.714+07:00  INFO 8748 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08T18:23:20.835+07:00  INFO 8748 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 112 ms. Found 14 JPA repository interfaces.
+2024-12-08T18:23:21.772+07:00  INFO 8748 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-08T18:23:21.786+07:00  INFO 8748 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-08T18:23:21.787+07:00  INFO 8748 --- [GoldenNest] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-12-08T18:23:21.875+07:00  INFO 8748 --- [GoldenNest] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-08T18:23:21.875+07:00  INFO 8748 --- [GoldenNest] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2156 ms
+2024-12-08T18:23:22.046+07:00  INFO 8748 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-08T18:23:22.503+07:00  INFO 8748 --- [GoldenNest] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2bcda694
+2024-12-08T18:23:22.507+07:00  INFO 8748 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-08T18:23:22.606+07:00  INFO 8748 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2024-12-08T18:23:22.606+07:00  INFO 8748 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-12-08T18:23:22.607+07:00  INFO 8748 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : 
+2024-12-08T18:23:22.630+07:00  INFO 8748 --- [GoldenNest] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/GoldenNest (MySQL 8.0)
+2024-12-08T18:23:22.674+07:00  INFO 8748 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `goldennest`.`flyway_schema_history` does not exist yet
+2024-12-08T18:23:22.679+07:00  INFO 8748 --- [GoldenNest] [main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.026s)
+2024-12-08T18:23:22.706+07:00  INFO 8748 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `goldennest`.`flyway_schema_history` ...
+2024-12-08T18:23:22.868+07:00  INFO 8748 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `goldennest`: << Empty Schema >>
+2024-12-08T18:23:22.897+07:00  INFO 8748 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "1 - Create Table"
+2024-12-08T18:23:22.906+07:00  WARN 8748 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.categories' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:23:22.975+07:00  WARN 8748 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.users' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:23:23.038+07:00  WARN 8748 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.products' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:23:23.115+07:00  WARN 8748 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.coupons' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:23:23.193+07:00  WARN 8748 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.orders' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:23:23.288+07:00  WARN 8748 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.order_details' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:23:23.457+07:00  WARN 8748 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.reviews' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:23:23.525+07:00  WARN 8748 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.carts' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:23:23.582+07:00  WARN 8748 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.favorites' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:23:23.681+07:00  WARN 8748 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.product_media' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:23:23.738+07:00  WARN 8748 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.product_coupons' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:23:23.800+07:00  WARN 8748 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.payments' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:23:23.860+07:00  WARN 8748 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.news' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:23:23.909+07:00  WARN 8748 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.news_media' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:23:23.969+07:00  WARN 8748 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.otps' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:23:24.067+07:00  INFO 8748 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "2 - Add Column To Table"
+2024-12-08T18:23:24.116+07:00  INFO 8748 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "3 - Insert Data"
+2024-12-08T18:23:24.166+07:00  INFO 8748 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema `goldennest`, now at version v3 (execution time 00:01.170s)
+2024-12-08T18:23:29.113+07:00  INFO 8748 --- [GoldenNest] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-08T18:23:30.807+07:00  INFO 8748 --- [GoldenNest] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3d8bf514, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@52a42e0f, org.springframework.security.web.context.SecurityContextHolderFilter@3e9afede, org.springframework.security.web.header.HeaderWriterFilter@445dc8dc, org.springframework.web.filter.CorsFilter@32be0ebd, org.springframework.security.web.authentication.logout.LogoutFilter@12f1b76c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@12f12982, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3dc455f6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6174ff60, org.springframework.security.web.session.SessionManagementFilter@46b4cddb, org.springframework.security.web.access.ExceptionTranslationFilter@7f0e0db3, org.springframework.security.web.access.intercept.AuthorizationFilter@1bff70a6]
+2024-12-08T18:23:31.315+07:00  INFO 8748 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-12-08T18:23:31.327+07:00  INFO 8748 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Started GoldenNestApplication in 12.224 seconds (process running for 12.791)
+2024-12-08T18:24:30.595+07:00  INFO 8748 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-08T18:24:30.601+07:00  INFO 8748 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-08T18:27:35.663+07:00  INFO 32068 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Starting GoldenNestApplication using Java 21.0.2 with PID 32068 (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes started by ntb09 in E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE)
+2024-12-08T18:27:35.665+07:00  INFO 32068 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-12-08T18:27:36.707+07:00  INFO 32068 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08T18:27:36.834+07:00  INFO 32068 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 117 ms. Found 14 JPA repository interfaces.
+2024-12-08T18:27:37.750+07:00  INFO 32068 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-08T18:27:37.764+07:00  INFO 32068 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-08T18:27:37.765+07:00  INFO 32068 --- [GoldenNest] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-12-08T18:27:37.864+07:00  INFO 32068 --- [GoldenNest] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-08T18:27:37.864+07:00  INFO 32068 --- [GoldenNest] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2142 ms
+2024-12-08T18:27:38.019+07:00  INFO 32068 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-08T18:27:38.480+07:00  INFO 32068 --- [GoldenNest] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@221ca495
+2024-12-08T18:27:38.483+07:00  INFO 32068 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-08T18:27:38.583+07:00  INFO 32068 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2024-12-08T18:27:38.583+07:00  INFO 32068 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-12-08T18:27:38.583+07:00  INFO 32068 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : 
+2024-12-08T18:27:38.606+07:00  INFO 32068 --- [GoldenNest] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/GoldenNest (MySQL 8.0)
+2024-12-08T18:27:38.651+07:00  INFO 32068 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `goldennest`.`flyway_schema_history` does not exist yet
+2024-12-08T18:27:38.656+07:00  INFO 32068 --- [GoldenNest] [main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.029s)
+2024-12-08T18:27:38.682+07:00  INFO 32068 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `goldennest`.`flyway_schema_history` ...
+2024-12-08T18:27:38.824+07:00  INFO 32068 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `goldennest`: << Empty Schema >>
+2024-12-08T18:27:38.847+07:00  INFO 32068 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "1 - Create Table"
+2024-12-08T18:27:38.855+07:00  WARN 32068 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.categories' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:27:38.928+07:00  WARN 32068 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.users' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:27:38.994+07:00  WARN 32068 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.products' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:27:39.154+07:00  WARN 32068 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.coupons' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:27:39.281+07:00  WARN 32068 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.orders' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:27:39.343+07:00  WARN 32068 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.order_details' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:27:39.402+07:00  WARN 32068 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.reviews' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:27:39.466+07:00  WARN 32068 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.carts' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:27:39.524+07:00  WARN 32068 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.favorites' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:27:39.586+07:00  WARN 32068 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.product_media' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:27:39.644+07:00  WARN 32068 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.product_coupons' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:27:39.698+07:00  WARN 32068 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.payments' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:27:39.759+07:00  WARN 32068 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.news' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:27:39.804+07:00  WARN 32068 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.news_media' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:27:39.869+07:00  WARN 32068 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.otps' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:27:39.961+07:00  INFO 32068 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "2 - Add Column To Table"
+2024-12-08T18:27:40.014+07:00  INFO 32068 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "3 - Insert Data"
+2024-12-08T18:27:40.061+07:00  INFO 32068 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema `goldennest`, now at version v3 (execution time 00:01.119s)
+2024-12-08T18:27:54.591+07:00  INFO 32068 --- [GoldenNest] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-08T18:27:56.458+07:00  INFO 32068 --- [GoldenNest] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3b2b9b96, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5078c8f6, org.springframework.security.web.context.SecurityContextHolderFilter@1916d0eb, org.springframework.security.web.header.HeaderWriterFilter@156290d9, org.springframework.web.filter.CorsFilter@36d9efa6, org.springframework.security.web.authentication.logout.LogoutFilter@2c476b8f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@22b9f45f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@60c5c115, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@68812b74, org.springframework.security.web.session.SessionManagementFilter@102e9731, org.springframework.security.web.access.ExceptionTranslationFilter@3cc0efa2, org.springframework.security.web.access.intercept.AuthorizationFilter@74d242b5]
+2024-12-08T18:27:57.138+07:00  INFO 32068 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-12-08T18:27:57.153+07:00  INFO 32068 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Started GoldenNestApplication in 22.025 seconds (process running for 22.639)
+2024-12-08T18:33:23.532+07:00  INFO 32068 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-08T18:33:23.558+07:00  INFO 32068 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-08T18:33:26.051+07:00  INFO 13676 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Starting GoldenNestApplication using Java 21.0.2 with PID 13676 (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes started by ntb09 in E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE)
+2024-12-08T18:33:26.054+07:00  INFO 13676 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-12-08T18:33:27.162+07:00  INFO 13676 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08T18:33:27.318+07:00  INFO 13676 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 143 ms. Found 14 JPA repository interfaces.
+2024-12-08T18:33:28.216+07:00  INFO 13676 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-08T18:33:28.228+07:00  INFO 13676 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-08T18:33:28.228+07:00  INFO 13676 --- [GoldenNest] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-12-08T18:33:28.302+07:00  INFO 13676 --- [GoldenNest] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-08T18:33:28.302+07:00  INFO 13676 --- [GoldenNest] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2191 ms
+2024-12-08T18:33:28.478+07:00  INFO 13676 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-08T18:33:28.963+07:00  INFO 13676 --- [GoldenNest] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@537b3b2e
+2024-12-08T18:33:28.965+07:00  INFO 13676 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-08T18:33:29.066+07:00  INFO 13676 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2024-12-08T18:33:29.066+07:00  INFO 13676 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-12-08T18:33:29.066+07:00  INFO 13676 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : 
+2024-12-08T18:33:29.095+07:00  INFO 13676 --- [GoldenNest] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/GoldenNest (MySQL 8.0)
+2024-12-08T18:33:29.166+07:00  INFO 13676 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `goldennest`.`flyway_schema_history` does not exist yet
+2024-12-08T18:33:29.171+07:00  INFO 13676 --- [GoldenNest] [main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.045s)
+2024-12-08T18:33:29.217+07:00  INFO 13676 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `goldennest`.`flyway_schema_history` ...
+2024-12-08T18:33:29.355+07:00  INFO 13676 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `goldennest`: << Empty Schema >>
+2024-12-08T18:33:29.376+07:00  INFO 13676 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "1 - Create Table"
+2024-12-08T18:33:29.385+07:00  WARN 13676 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.categories' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:33:29.464+07:00  WARN 13676 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.users' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:33:29.526+07:00  WARN 13676 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.products' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:33:29.637+07:00  WARN 13676 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.coupons' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:33:29.713+07:00  WARN 13676 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.orders' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:33:29.791+07:00  WARN 13676 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.order_details' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:33:29.884+07:00  WARN 13676 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.reviews' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:33:30.043+07:00  WARN 13676 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.carts' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:33:30.130+07:00  WARN 13676 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.favorites' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:33:30.210+07:00  WARN 13676 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.product_media' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:33:30.271+07:00  WARN 13676 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.product_coupons' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:33:30.327+07:00  WARN 13676 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.payments' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:33:30.381+07:00  WARN 13676 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.news' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:33:30.445+07:00  WARN 13676 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.news_media' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:33:30.511+07:00  WARN 13676 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.otps' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:33:30.601+07:00  INFO 13676 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "2 - Add Column To Table"
+2024-12-08T18:33:30.659+07:00  INFO 13676 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "3 - Insert Data"
+2024-12-08T18:33:30.708+07:00 ERROR 13676 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migration of schema `goldennest` to version "3 - Insert Data" failed! Please restore backups and roll back database and code!
+2024-12-08T18:33:30.730+07:00  WARN 13676 --- [GoldenNest] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V3__Insert_Data.sql failed
+------------------------------------
+SQL State  : 23000
+Error Code : 1452
+Message    : Cannot add or update a child row: a foreign key constraint fails (`goldennest`.`favorites`, CONSTRAINT `favorites_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`))
+Location   : db/migration/V3__Insert_Data.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V3__Insert_Data.sql)
+Line       : 141
+Statement  : -- Chèn dữ liệu demo vào bảng favorites
+INSERT INTO favorites (user_id, product_id, created_at)
+VALUES
+    ('UUID_user1', 'UUID_product1', CURRENT_TIMESTAMP),
+    ('UUID_user2', 'UUID_product2', CURRENT_TIMESTAMP),
+    ('UUID_user3', 'UUID_product3', CURRENT_TIMESTAMP),
+    ('UUID_user4', 'UUID_product4', CURRENT_TIMESTAMP),
+    ('UUID_user5', 'UUID_product5', CURRENT_TIMESTAMP),
+    ('UUID_user1', 'UUID_product6', CURRENT_TIMESTAMP),
+    ('UUID_user2', 'UUID_product7', CURRENT_TIMESTAMP),
+    ('UUID_user3', 'UUID_product8', CURRENT_TIMESTAMP),
+    ('UUID_user4', 'UUID_product9', CURRENT_TIMESTAMP),
+    ('UUID_user5', 'UUID_product10', CURRENT_TIMESTAMP)
+
+2024-12-08T18:33:30.730+07:00  INFO 13676 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-08T18:33:30.738+07:00  INFO 13676 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-08T18:33:30.741+07:00  INFO 13676 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-12-08T18:33:30.754+07:00  INFO 13676 --- [GoldenNest] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-12-08T18:33:30.780+07:00 ERROR 13676 --- [GoldenNest] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V3__Insert_Data.sql failed
+------------------------------------
+SQL State  : 23000
+Error Code : 1452
+Message    : Cannot add or update a child row: a foreign key constraint fails (`goldennest`.`favorites`, CONSTRAINT `favorites_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`))
+Location   : db/migration/V3__Insert_Data.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V3__Insert_Data.sql)
+Line       : 141
+Statement  : -- Chèn dữ liệu demo vào bảng favorites
+INSERT INTO favorites (user_id, product_id, created_at)
+VALUES
+    ('UUID_user1', 'UUID_product1', CURRENT_TIMESTAMP),
+    ('UUID_user2', 'UUID_product2', CURRENT_TIMESTAMP),
+    ('UUID_user3', 'UUID_product3', CURRENT_TIMESTAMP),
+    ('UUID_user4', 'UUID_product4', CURRENT_TIMESTAMP),
+    ('UUID_user5', 'UUID_product5', CURRENT_TIMESTAMP),
+    ('UUID_user1', 'UUID_product6', CURRENT_TIMESTAMP),
+    ('UUID_user2', 'UUID_product7', CURRENT_TIMESTAMP),
+    ('UUID_user3', 'UUID_product8', CURRENT_TIMESTAMP),
+    ('UUID_user4', 'UUID_product9', CURRENT_TIMESTAMP),
+    ('UUID_user5', 'UUID_product10', CURRENT_TIMESTAMP)
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.4.jar:3.2.4]
+	at com.example.GoldenNest.GoldenNestApplication.main(GoldenNestApplication.java:10) ~[classes/:na]
+Caused by: org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: Migration V3__Insert_Data.sql failed
+------------------------------------
+SQL State  : 23000
+Error Code : 1452
+Message    : Cannot add or update a child row: a foreign key constraint fails (`goldennest`.`favorites`, CONSTRAINT `favorites_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`))
+Location   : db/migration/V3__Insert_Data.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V3__Insert_Data.sql)
+Line       : 141
+Statement  : -- Chèn dữ liệu demo vào bảng favorites
+INSERT INTO favorites (user_id, product_id, created_at)
+VALUES
+    ('UUID_user1', 'UUID_product1', CURRENT_TIMESTAMP),
+    ('UUID_user2', 'UUID_product2', CURRENT_TIMESTAMP),
+    ('UUID_user3', 'UUID_product3', CURRENT_TIMESTAMP),
+    ('UUID_user4', 'UUID_product4', CURRENT_TIMESTAMP),
+    ('UUID_user5', 'UUID_product5', CURRENT_TIMESTAMP),
+    ('UUID_user1', 'UUID_product6', CURRENT_TIMESTAMP),
+    ('UUID_user2', 'UUID_product7', CURRENT_TIMESTAMP),
+    ('UUID_user3', 'UUID_product8', CURRENT_TIMESTAMP),
+    ('UUID_user4', 'UUID_product9', CURRENT_TIMESTAMP),
+    ('UUID_user5', 'UUID_product10', CURRENT_TIMESTAMP)
+
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:382) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$applyMigrations$1(DbMigrate.java:272) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:55) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.applyMigrations(DbMigrate.java:271) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:244) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$migrateAll$0(DbMigrate.java:139) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.database.mysql.MySQLNamedLockTemplate.execute(MySQLNamedLockTemplate.java:58) ~[flyway-mysql-9.22.3.jar:na]
+	at org.flywaydb.database.mysql.MySQLConnection.lock(MySQLConnection.java:152) ~[flyway-mysql-9.22.3.jar:na]
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:144) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:139) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:97) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.Flyway.lambda$migrate$0(Flyway.java:188) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:213) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140) ~[flyway-core-9.22.3.jar:na]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.2.4.jar:3.2.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-6.1.5.jar:6.1.5]
+	... 18 common frames omitted
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: Migration V3__Insert_Data.sql failed
+------------------------------------
+SQL State  : 23000
+Error Code : 1452
+Message    : Cannot add or update a child row: a foreign key constraint fails (`goldennest`.`favorites`, CONSTRAINT `favorites_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`))
+Location   : db/migration/V3__Insert_Data.sql (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes\db\migration\V3__Insert_Data.sql)
+Line       : 141
+Statement  : -- Chèn dữ liệu demo vào bảng favorites
+INSERT INTO favorites (user_id, product_id, created_at)
+VALUES
+    ('UUID_user1', 'UUID_product1', CURRENT_TIMESTAMP),
+    ('UUID_user2', 'UUID_product2', CURRENT_TIMESTAMP),
+    ('UUID_user3', 'UUID_product3', CURRENT_TIMESTAMP),
+    ('UUID_user4', 'UUID_product4', CURRENT_TIMESTAMP),
+    ('UUID_user5', 'UUID_product5', CURRENT_TIMESTAMP),
+    ('UUID_user1', 'UUID_product6', CURRENT_TIMESTAMP),
+    ('UUID_user2', 'UUID_product7', CURRENT_TIMESTAMP),
+    ('UUID_user3', 'UUID_product8', CURRENT_TIMESTAMP),
+    ('UUID_user4', 'UUID_product9', CURRENT_TIMESTAMP),
+    ('UUID_user5', 'UUID_product10', CURRENT_TIMESTAMP)
+
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.handleException(DefaultSqlScriptExecutor.java:267) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:222) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.execute(DefaultSqlScriptExecutor.java:126) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.executeOnce(SqlMigrationExecutor.java:68) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.lambda$execute$0(SqlMigrationExecutor.java:57) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.database.DefaultExecutionStrategy.execute(DefaultExecutionStrategy.java:27) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.execute(SqlMigrationExecutor.java:56) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:374) ~[flyway-core-9.22.3.jar:na]
+	... 34 common frames omitted
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`goldennest`.`favorites`, CONSTRAINT `favorites_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`))
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.0.1.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.executeStatement(JdbcTemplate.java:201) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.ParsedSqlStatement.execute(ParsedSqlStatement.java:95) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:210) ~[flyway-core-9.22.3.jar:na]
+	... 40 common frames omitted
+
+2024-12-08T18:42:06.453+07:00  INFO 29608 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Starting GoldenNestApplication using Java 21.0.2 with PID 29608 (E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE\target\classes started by ntb09 in E:\NTB Source Code\Back-end\Spring Boot\GoldenNest-BE)
+2024-12-08T18:42:06.456+07:00  INFO 29608 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-12-08T18:42:07.586+07:00  INFO 29608 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08T18:42:07.732+07:00  INFO 29608 --- [GoldenNest] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 138 ms. Found 14 JPA repository interfaces.
+2024-12-08T18:42:08.662+07:00  INFO 29608 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-08T18:42:08.674+07:00  INFO 29608 --- [GoldenNest] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-08T18:42:08.675+07:00  INFO 29608 --- [GoldenNest] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-12-08T18:42:08.761+07:00  INFO 29608 --- [GoldenNest] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-08T18:42:08.761+07:00  INFO 29608 --- [GoldenNest] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2255 ms
+2024-12-08T18:42:08.939+07:00  INFO 29608 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-08T18:42:09.416+07:00  INFO 29608 --- [GoldenNest] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@10fb4575
+2024-12-08T18:42:09.419+07:00  INFO 29608 --- [GoldenNest] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-08T18:42:09.527+07:00  INFO 29608 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2024-12-08T18:42:09.527+07:00  INFO 29608 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2024-12-08T18:42:09.527+07:00  INFO 29608 --- [GoldenNest] [main] o.f.c.internal.license.VersionPrinter    : 
+2024-12-08T18:42:09.550+07:00  INFO 29608 --- [GoldenNest] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/GoldenNest (MySQL 8.0)
+2024-12-08T18:42:09.596+07:00  INFO 29608 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `goldennest`.`flyway_schema_history` does not exist yet
+2024-12-08T18:42:09.599+07:00  INFO 29608 --- [GoldenNest] [main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.025s)
+2024-12-08T18:42:09.628+07:00  INFO 29608 --- [GoldenNest] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `goldennest`.`flyway_schema_history` ...
+2024-12-08T18:42:09.767+07:00  INFO 29608 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `goldennest`: << Empty Schema >>
+2024-12-08T18:42:09.789+07:00  INFO 29608 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "1 - Create Table"
+2024-12-08T18:42:09.803+07:00  WARN 29608 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.categories' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:42:09.891+07:00  WARN 29608 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.users' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:42:09.953+07:00  WARN 29608 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.products' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:42:10.033+07:00  WARN 29608 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.coupons' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:42:10.108+07:00  WARN 29608 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.orders' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:42:10.186+07:00  WARN 29608 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.order_details' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:42:10.278+07:00  WARN 29608 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.reviews' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:42:10.372+07:00  WARN 29608 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.carts' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:42:10.464+07:00  WARN 29608 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.favorites' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:42:10.572+07:00  WARN 29608 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.product_media' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:42:10.682+07:00  WARN 29608 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.product_coupons' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:42:10.759+07:00  WARN 29608 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.payments' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:42:10.836+07:00  WARN 29608 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.news' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:42:10.897+07:00  WARN 29608 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.news_media' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:42:10.973+07:00  WARN 29608 --- [GoldenNest] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Unknown table 'goldennest.otps' (SQL State: 42S02 - Error Code: 1051)
+2024-12-08T18:42:11.063+07:00  INFO 29608 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "2 - Add Column To Table"
+2024-12-08T18:42:11.121+07:00  INFO 29608 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `goldennest` to version "3 - Insert Data"
+2024-12-08T18:42:11.183+07:00  INFO 29608 --- [GoldenNest] [main] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema `goldennest`, now at version v3 (execution time 00:01.293s)
+2024-12-08T18:42:15.975+07:00  INFO 29608 --- [GoldenNest] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-08T18:42:17.561+07:00  INFO 29608 --- [GoldenNest] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@52a42e0f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@32be0ebd, org.springframework.security.web.context.SecurityContextHolderFilter@5ea036c3, org.springframework.security.web.header.HeaderWriterFilter@4bb13671, org.springframework.web.filter.CorsFilter@6174ff60, org.springframework.security.web.authentication.logout.LogoutFilter@5b7ee413, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3dc455f6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5441309e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3b5950f, org.springframework.security.web.session.SessionManagementFilter@47d1798c, org.springframework.security.web.access.ExceptionTranslationFilter@10ab3bc0, org.springframework.security.web.access.intercept.AuthorizationFilter@256edef4]
+2024-12-08T18:42:18.070+07:00  INFO 29608 --- [GoldenNest] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-12-08T18:42:18.083+07:00  INFO 29608 --- [GoldenNest] [main] c.e.GoldenNest.GoldenNestApplication     : Started GoldenNestApplication in 12.142 seconds (process running for 12.734)
+2024-12-08T18:43:23.349+07:00  INFO 29608 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-08T18:43:23.354+07:00  INFO 29608 --- [GoldenNest] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -105,28 +105,172 @@ VALUES
     (UUID(), 'user99', '$2a$10$t/RTB.ibPOuwYATBeg9is.qyvcMDJDbHSQl7yF5dK2v.04s18fV1y', 'Jessica', 'Walker', 'user', TRUE, '0934567123', '1991-07-10', 'user99@example.com', '', 'Louisville', TRUE),
     (UUID(), 'user100', '$2a$10$t/RTB.ibPOuwYATBeg9is.qyvcMDJDbHSQl7yF5dK2v.04s18fV1y', 'Michael', 'Young', 'user', FALSE, '0912345678', '1988-09-25', 'user100@example.com', '', 'San Bernardino', TRUE);
 
+-- Chèn dữ liệu demo vào bảng categories
 INSERT INTO categories (id, name, description, created_at, updated_at) VALUES
     (UUID(), 'Yến tinh chế', 'Tổ yến đã được làm sạch, tinh chế sẵn, tiện lợi cho sử dụng.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
     (UUID(), 'Yến thô', 'Tổ yến nguyên bản, chưa qua sơ chế, giữ nguyên hương vị tự nhiên.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
     (UUID(), 'Yến chưng sẵn', 'Sản phẩm yến chưng sẵn, chế biến nhanh chóng, sử dụng tiện lợi.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
     (UUID(), 'Yến sấy khô', 'Tổ yến đã được sấy khô, bảo quản lâu dài.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
     (UUID(), 'Tổ yến nguyên tổ', 'Tổ yến nguyên vẹn, cao cấp, phù hợp làm quà tặng.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
     (UUID(), 'Tổ yến vụn', 'Tổ yến bị vỡ vụn, thích hợp cho chế biến các món ăn gia đình.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
     (UUID(), 'Nguyên liệu chưng yến', 'Các nguyên liệu hỗ trợ quá trình chưng yến, đảm bảo chất lượng và hương vị tốt nhất.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
     (UUID(), 'Hướng dẫn & kiến thức', 'Các tài liệu hướng dẫn về cách sử dụng, chế biến và bảo quản yến sào, giúp người tiêu dùng hiểu rõ hơn về sản phẩm.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
     (UUID(), 'Sản phẩm bổ trợ', 'Các sản phẩm được chế biến từ yến, như yến chưng sẵn, yến tiềm thuốc bắc, hay các món ăn chế biến sẵn từ yến, giúp tăng cường giá trị dinh dưỡng và tiện lợi cho người sử dụng.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
     (UUID(), 'Phụ kiện và sản phẩm liên quan', 'Các sản phẩm phụ kiện, thiết bị đi kèm, hỗ trợ quá trình sử dụng và bảo quản tổ yến.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
+-- Chèn dữ liệu demo vào bảng products
+INSERT INTO products (id, name, description, price, stock_quantity, category_id, created_by, created_at, updated_at)
+VALUES
+    (UUID(), 'Yến tinh chế', 'Sản phẩm yến tinh chế, tiện lợi cho sử dụng.', 1500000.00, 100,
+     (SELECT id FROM categories WHERE name = 'Yến tinh chế' LIMIT 1),
+    (SELECT id FROM users WHERE username = 'admin1' LIMIT 1), CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    (UUID(), 'Yến thô', 'Tổ yến nguyên bản, chưa qua sơ chế.', 1200000.00, 50,
+     (SELECT id FROM categories WHERE name = 'Yến thô' LIMIT 1),
+     (SELECT id FROM users WHERE username = 'admin1' LIMIT 1), CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    (UUID(), 'Yến chưng sẵn', 'Sản phẩm yến chưng sẵn, chế biến nhanh chóng.', 1800000.00, 200,
+     (SELECT id FROM categories WHERE name = 'Yến chưng sẵn' LIMIT 1),
+     (SELECT id FROM users WHERE username = 'admin1' LIMIT 1), CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    (UUID(), 'Yến sấy khô', 'Tổ yến sấy khô, bảo quản lâu dài.', 1400000.00, 300,
+     (SELECT id FROM categories WHERE name = 'Yến sấy khô' LIMIT 1),
+     (SELECT id FROM users WHERE username = 'admin1' LIMIT 1), CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    (UUID(), 'Tổ yến nguyên tổ', 'Tổ yến nguyên tổ, cao cấp, phù hợp làm quà tặng.', 5000000.00, 30,
+     (SELECT id FROM categories WHERE name = 'Tổ yến nguyên tổ' LIMIT 1),
+     (SELECT id FROM users WHERE username = 'admin1' LIMIT 1), CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+-- Chèn dữ liệu demo vào bảng favorites
+INSERT INTO favorites (user_id, product_id, created_at)
+VALUES
+    -- User1 yêu thích 3 sản phẩm
+    ((SELECT id FROM users WHERE username = 'user1' LIMIT 1), (SELECT id FROM products WHERE name = 'Yến tinh chế' LIMIT 1), CURRENT_TIMESTAMP),
+    ((SELECT id FROM users WHERE username = 'user1' LIMIT 1), (SELECT id FROM products WHERE name = 'Yến thô' LIMIT 1), CURRENT_TIMESTAMP),
+    ((SELECT id FROM users WHERE username = 'user1' LIMIT 1), (SELECT id FROM products WHERE name = 'Yến chưng sẵn' LIMIT 1), CURRENT_TIMESTAMP),
+
+    -- User2 yêu thích 4 sản phẩm
+    ((SELECT id FROM users WHERE username = 'user2' LIMIT 1), (SELECT id FROM products WHERE name = 'Yến tinh chế' LIMIT 1), CURRENT_TIMESTAMP),
+    ((SELECT id FROM users WHERE username = 'user2' LIMIT 1), (SELECT id FROM products WHERE name = 'Yến thô' LIMIT 1), CURRENT_TIMESTAMP),
+    ((SELECT id FROM users WHERE username = 'user2' LIMIT 1), (SELECT id FROM products WHERE name = 'Yến sấy khô' LIMIT 1), CURRENT_TIMESTAMP),
+    ((SELECT id FROM users WHERE username = 'user2' LIMIT 1), (SELECT id FROM products WHERE name = 'Tổ yến nguyên tổ' LIMIT 1), CURRENT_TIMESTAMP),
+
+    -- User3 yêu thích 5 sản phẩm
+    ((SELECT id FROM users WHERE username = 'user3' LIMIT 1), (SELECT id FROM products WHERE name = 'Yến tinh chế' LIMIT 1), CURRENT_TIMESTAMP),
+    ((SELECT id FROM users WHERE username = 'user3' LIMIT 1), (SELECT id FROM products WHERE name = 'Yến thô' LIMIT 1), CURRENT_TIMESTAMP),
+    ((SELECT id FROM users WHERE username = 'user3' LIMIT 1), (SELECT id FROM products WHERE name = 'Yến chưng sẵn' LIMIT 1), CURRENT_TIMESTAMP),
+    ((SELECT id FROM users WHERE username = 'user3' LIMIT 1), (SELECT id FROM products WHERE name = 'Yến sấy khô' LIMIT 1), CURRENT_TIMESTAMP),
+    ((SELECT id FROM users WHERE username = 'user3' LIMIT 1), (SELECT id FROM products WHERE name = 'Tổ yến nguyên tổ' LIMIT 1), CURRENT_TIMESTAMP),
+
+    -- User4 yêu thích 3 sản phẩm
+    ((SELECT id FROM users WHERE username = 'user4' LIMIT 1), (SELECT id FROM products WHERE name = 'Yến tinh chế' LIMIT 1), CURRENT_TIMESTAMP),
+    ((SELECT id FROM users WHERE username = 'user4' LIMIT 1), (SELECT id FROM products WHERE name = 'Yến chưng sẵn' LIMIT 1), CURRENT_TIMESTAMP),
+    ((SELECT id FROM users WHERE username = 'user4' LIMIT 1), (SELECT id FROM products WHERE name = 'Yến sấy khô' LIMIT 1), CURRENT_TIMESTAMP),
+
+    -- User5 yêu thích 2 sản phẩm
+    ((SELECT id FROM users WHERE username = 'user5' LIMIT 1), (SELECT id FROM products WHERE name = 'Yến thô' LIMIT 1), CURRENT_TIMESTAMP),
+    ((SELECT id FROM users WHERE username = 'user5' LIMIT 1), (SELECT id FROM products WHERE name = 'Yến sấy khô' LIMIT 1), CURRENT_TIMESTAMP);
+
+
+-- Chèn dữ liệu demo vào bảng coupons
 INSERT INTO coupons (id, code, discount_amount, expiry_date, is_active)
 VALUES
     (UUID(), 'DISCOUNT10', 10.00, '2025-12-31', TRUE),
+
     (UUID(), 'SALE20', 20.00, '2025-11-30', TRUE),
+
     (UUID(), 'WELCOME15', 15.00, '2025-12-15', FALSE),
+
     (UUID(), 'BLACKFRIDAY25', 25.00, '2025-11-29', TRUE),
+
     (UUID(), 'XMAS30', 30.00, '2025-12-25', TRUE),
+
     (UUID(), 'SPRING15', 15.00, '2025-03-31', TRUE),
+
     (UUID(), 'SUMMER20', 20.00, '2025-06-30', TRUE),
+
     (UUID(), 'NEWYEAR10', 10.00, '2025-01-15', TRUE),
+
     (UUID(), 'VIP30', 30.00, '2025-12-31', TRUE),
+
     (UUID(), 'OFFER50', 50.00, '2025-11-15', TRUE);
+
+-- Chèn dữ liệu demo vào bảng product_coupons
+INSERT INTO product_coupons (product_id, coupon_id, created_at)
+VALUES
+    ((SELECT id FROM products WHERE name = 'Yến tinh chế' LIMIT 1),
+    (SELECT id FROM coupons WHERE code = 'DISCOUNT10' LIMIT 1), CURRENT_TIMESTAMP),
+    ((SELECT id FROM products WHERE name = 'Yến thô' LIMIT 1),
+     (SELECT id FROM coupons WHERE code = 'SALE20' LIMIT 1), CURRENT_TIMESTAMP),
+    ((SELECT id FROM products WHERE name = 'Yến chưng sẵn' LIMIT 1),
+     (SELECT id FROM coupons WHERE code = 'WELCOME15' LIMIT 1), CURRENT_TIMESTAMP),
+    ((SELECT id FROM products WHERE name = 'Yến sấy khô' LIMIT 1),
+     (SELECT id FROM coupons WHERE code = 'BLACKFRIDAY25' LIMIT 1), CURRENT_TIMESTAMP),
+    ((SELECT id FROM products WHERE name = 'Tổ yến nguyên tổ' LIMIT 1),
+     (SELECT id FROM coupons WHERE code = 'XMAS30' LIMIT 1), CURRENT_TIMESTAMP),
+    ((SELECT id FROM products WHERE name = 'Yến tinh chế' LIMIT 1),
+     (SELECT id FROM coupons WHERE code = 'SPRING15' LIMIT 1), CURRENT_TIMESTAMP),
+    ((SELECT id FROM products WHERE name = 'Yến thô' LIMIT 1),
+     (SELECT id FROM coupons WHERE code = 'SUMMER20' LIMIT 1), CURRENT_TIMESTAMP),
+    ((SELECT id FROM products WHERE name = 'Yến chưng sẵn' LIMIT 1),
+     (SELECT id FROM coupons WHERE code = 'NEWYEAR10' LIMIT 1), CURRENT_TIMESTAMP),
+    ((SELECT id FROM products WHERE name = 'Yến sấy khô' LIMIT 1),
+     (SELECT id FROM coupons WHERE code = 'VIP30' LIMIT 1), CURRENT_TIMESTAMP),
+    ((SELECT id FROM products WHERE name = 'Tổ yến nguyên tổ' LIMIT 1),
+     (SELECT id FROM coupons WHERE code = 'OFFER50' LIMIT 1), CURRENT_TIMESTAMP);
+
+-- Chèn dữ liệu demo vào bảng carts
+INSERT INTO carts (id, user_id, product_id, quantity, created_at)
+VALUES
+    (UUID(),
+     (SELECT id FROM users WHERE username = 'thanhbaoz' LIMIT 1),
+    (SELECT id FROM products WHERE name = 'Yến tinh chế' LIMIT 1), 2, CURRENT_TIMESTAMP),
+
+    (UUID(),
+     (SELECT id FROM users WHERE username = 'user1' LIMIT 1),
+     (SELECT id FROM products WHERE name = 'Yến thô' LIMIT 1), 1, CURRENT_TIMESTAMP),
+
+    (UUID(),
+     (SELECT id FROM users WHERE username = 'user2' LIMIT 1),
+     (SELECT id FROM products WHERE name = 'Yến chưng sẵn' LIMIT 1), 3, CURRENT_TIMESTAMP),
+
+    (UUID(),
+     (SELECT id FROM users WHERE username = 'user3' LIMIT 1),
+     (SELECT id FROM products WHERE name = 'Yến sấy khô' LIMIT 1), 5, CURRENT_TIMESTAMP),
+
+    (UUID(),
+     (SELECT id FROM users WHERE username = 'user4' LIMIT 1),
+     (SELECT id FROM products WHERE name = 'Tổ yến nguyên tổ' LIMIT 1), 1, CURRENT_TIMESTAMP),
+
+    (UUID(),
+     (SELECT id FROM users WHERE username = 'user5' LIMIT 1),
+     (SELECT id FROM products WHERE name = 'Yến tinh chế' LIMIT 1), 4, CURRENT_TIMESTAMP);
+
+-- Chèn dữ liệu demo vào bảng news
+INSERT INTO news (id, title, content, source, created_at, updated_at)
+VALUES
+    (UUID(), 'GoldenNest - Sản phẩm yến chất lượng cao', 'GoldenNest cung cấp các sản phẩm yến chất lượng cao, đã qua kiểm định và đạt tiêu chuẩn quốc tế. Sản phẩm của chúng tôi được chế biến từ tổ yến tinh khiết, mang lại giá trị dinh dưỡng cao cho người sử dụng.', 'GoldenNest Official Website', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+    (UUID(), 'Khám phá lợi ích sức khỏe từ yến sào', 'Yến sào từ GoldenNest mang lại nhiều lợi ích sức khỏe, giúp tăng cường sức đề kháng, cải thiện làn da và hỗ trợ tiêu hóa. Hãy cùng tìm hiểu cách yến sào có thể giúp bạn duy trì sức khỏe toàn diện.', 'GoldenNest Blog', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+    (UUID(), 'GoldenNest - Đột phá trong ngành thực phẩm dinh dưỡng', 'GoldenNest đang tiên phong trong việc phát triển các sản phẩm yến chế biến sẵn, tiện lợi và dinh dưỡng, phù hợp cho những người bận rộn nhưng vẫn muốn chăm sóc sức khỏe.', 'GoldenNest News', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+    (UUID(), 'Yến sào GoldenNest - Món quà tuyệt vời cho sức khỏe', 'Sản phẩm yến sào của GoldenNest là món quà tuyệt vời cho những ai yêu thích các sản phẩm thiên nhiên. Hãy tìm hiểu về giá trị dinh dưỡng và tác dụng của yến sào đối với cơ thể.', 'GoldenNest Promotions', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+    (UUID(), 'GoldenNest chuẩn bị ra mắt sản phẩm mới', 'GoldenNest sắp ra mắt dòng sản phẩm yến chưng sẵn, mang lại sự tiện lợi tối đa cho người dùng với chất lượng vượt trội. Chúng tôi mong muốn mang lại những sản phẩm chất lượng cao, phục vụ nhu cầu của mọi gia đình.', 'GoldenNest Official', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+    (UUID(), 'GoldenNest và tầm quan trọng của việc bảo vệ sức khỏe', 'GoldenNest cam kết cung cấp các sản phẩm dinh dưỡng an toàn, giúp người tiêu dùng nâng cao sức khỏe và phòng ngừa bệnh tật. Chúng tôi luôn tập trung vào chất lượng sản phẩm để phục vụ cộng đồng.', 'GoldenNest News', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+    (UUID(), 'Yến sào GoldenNest và các nghiên cứu khoa học', 'Nhiều nghiên cứu đã chỉ ra rằng yến sào có khả năng tăng cường miễn dịch và phục hồi sức khỏe nhanh chóng. GoldenNest cung cấp sản phẩm yến chất lượng, được chế biến từ tổ yến thiên nhiên, giúp bảo vệ sức khỏe người tiêu dùng.', 'GoldenNest Research', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+    (UUID(), 'GoldenNest hợp tác với các chuyên gia dinh dưỡng', 'GoldenNest đã hợp tác với các chuyên gia dinh dưỡng hàng đầu để phát triển sản phẩm yến chế biến sẵn, giúp người dùng dễ dàng bổ sung dưỡng chất vào chế độ ăn uống hàng ngày.', 'GoldenNest Collaboration', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+    (UUID(), 'Yến chưng sẵn từ GoldenNest - Tiện lợi và dinh dưỡng', 'Với sản phẩm yến chưng sẵn của GoldenNest, người tiêu dùng không còn phải mất thời gian chế biến mà vẫn có thể tận hưởng hương vị tuyệt vời và giá trị dinh dưỡng của yến sào.', 'GoldenNest Blog', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+    (UUID(), 'GoldenNest - Hướng tới phát triển bền vững', 'GoldenNest cam kết phát triển bền vững trong ngành thực phẩm, với mục tiêu không chỉ mang lại sản phẩm chất lượng mà còn đóng góp vào việc bảo vệ môi trường và phát triển cộng đồng.', 'GoldenNest Sustainability', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 

@@ -4,6 +4,7 @@ import com.example.GoldenNest.model.dto.AuthDTO;
 import com.example.GoldenNest.service.AuthService;
 import com.example.GoldenNest.util.annotation.CheckLogin;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,17 +22,22 @@ public class AuthController {
     // Đăng ký người dùng mới
     @PostMapping("/register")
     public ResponseEntity<String> register(@RequestBody AuthDTO registerDTO) {
-        return authService.register(registerDTO);
+        try {
+            authService.register(registerDTO);
+            return ResponseEntity.ok("Đăng ký thành công với username: " + registerDTO.getUsername());
+        } catch (Exception e) {
+            return ResponseEntity.status(400).body(e.getMessage());
+        }
     }
 
-    // Đăng nhập người dùng
+    // Đăng nhập người dùng và trả về chỉ JWT token
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestParam String username, @RequestParam String password) {
         try {
-            authService.login(username, password);
-            return ResponseEntity.ok("Đăng nhập thành công.");
+            String token = authService.login(username, password);
+            return ResponseEntity.ok(token);
         } catch (Exception e) {
-            return ResponseEntity.status(400).body("Đăng nhập thất bại: " + e.getMessage());
+            return ResponseEntity.status(400).body(e.getMessage());
         }
     }
 

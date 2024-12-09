@@ -10,9 +10,9 @@ public interface AuthService extends UserDetailsService {
 
     UserDetails loadUserByUsername(String username);
 
-    UserDetails login(String username, String password);
+    String login(String username, String password);
 
-    ResponseEntity<String> register(AuthDTO registerDTO);
+    String register(AuthDTO registerDTO);
 
     Users getUserByUsername(String username);
 

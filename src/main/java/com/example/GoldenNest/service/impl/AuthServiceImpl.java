@@ -7,6 +7,8 @@ import com.example.GoldenNest.model.entity.Enum.EnableType;
 import com.example.GoldenNest.model.entity.Users;
 import com.example.GoldenNest.repositories.UsersRepository;
 import com.example.GoldenNest.service.AuthService;
+import com.example.GoldenNest.util.exception.ConflictException;
+import com.example.GoldenNest.util.exception.InvalidRequestException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -56,22 +58,25 @@ public class AuthServiceImpl implements AuthService {
     }
 
     @Override
-    public UserDetails login(String username, String password) {
+    public String login(String username, String password) {
         try {
             UserDetails userDetails = loadUserByUsername(username);
 
             if (!encoder.matches(password, userDetails.getPassword())) {
                 logger.error("--LOGIN FAILED FOR USER: {}", username);
-                throw new BadCredentialsException("Invalid username or password");
+                throw new BadCredentialsException("Tên đăng nhập hoặc mật khẩu không đúng");
             }
 
             logger.info("--LOGIN SUCCESSFUL FOR USER-- : {}", username);
 
+            // Tạo JWT token
             String token = jwtTokenService.generateToken(username);
 
-            logger.info("Token for user {}: {}", username, token);
+            // Ghi lại token cho việc gỡ lỗi (Lưu ý khi sử dụng trong môi trường sản xuất)
+            logger.info("Token cho người dùng {}: {}", username, token);
 
-            return userDetails;
+            // Trả về token
+            return token;
         } catch (UsernameNotFoundException ex) {
             logger.error("--LOGIN FAILED FOR USER: {}", username);
             throw new UsernameNotFoundException("Tài khoản không tồn tại");
@@ -79,24 +84,19 @@ public class AuthServiceImpl implements AuthService {
     }
 
     @Override
-    public ResponseEntity<String> register(AuthDTO registerDTO) {
-        logger.info("Đang thêm người dùng với tên đăng nhập: {}", registerDTO.getUsername());
-
-        // Kiểm tra xem tên người dùng đã tồn tại chưa
+    public String register(AuthDTO registerDTO) {
         if (userRepository.existsByUsername(registerDTO.getUsername())) {
             logger.warn("Tên người dùng '{}' đã tồn tại", registerDTO.getUsername());
-            return ResponseEntity.status(HttpStatus.CONFLICT).body("Tên người dùng đã tồn tại.");
+            throw new UsernameNotFoundException("Tên người dùng đã tồn tại.");
         }
 
-        // Kiểm tra xem người dùng đã tồn tại qua mail hoặc số điện thoại chưa
         if (isUserExists(registerDTO)) {
-            return ResponseEntity.status(HttpStatus.CONFLICT).body("Thông tin đã tồn tại.");
+            throw new ConflictException("Thông tin đã tồn tại.");
         }
 
-        // Kiểm tra tính hợp lệ của mật khẩu
         if (!isPasswordValid(registerDTO.getPassword())) {
             logger.warn("Mật khẩu không đáp ứng yêu cầu: mật khẩu phải chứa ít nhất 8 ký tự, bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt.");
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Mật khẩu phải chứa ít nhất 8 ký tự, bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt.");
+            throw new InvalidRequestException("Mật khẩu phải chứa ít nhất 8 ký tự, bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt.");
         }
 
         Users user = new Users();
@@ -113,7 +113,7 @@ public class AuthServiceImpl implements AuthService {
         userRepository.save(user);
 
         logger.info("User '{}' created successfully", user.getUsername());
-        return ResponseEntity.ok("Đăng ký thành công với tên đăng nhập: " + user.getUsername());
+        return user.getUsername();
     }
 
     @Override
